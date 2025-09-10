@@ -312,6 +312,22 @@ body {
 
 @media (max-width: 768px) {
 
+    .logo-right {
+    display: none;
+  }
+
+  /* Place right logo above social icons */
+  .social-icons {
+    position: relative; /* make it a positioning anchor */
+  }
+
+  .social-icons::before {
+    content: url('../../images/right-logo.png'); /* inject the logo */
+    display: block;
+    margin: 0 auto 10px auto; /* center it and add spacing */
+    width: 80px; /* adjust size */
+  }
+
     .signup-form, 
   #intro .signup-pill {
     flex-direction: column;   /* stack instead of row */
