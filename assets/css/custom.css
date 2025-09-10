@@ -129,7 +129,23 @@ body {
 /* Mobile background (for screens 768px and below) */
 @media (max-width: 768px) {
     #intro {
-        background: url('images/mob-lockers.jpg') center/cover no-repeat;
+        background: url('../../images/mob-lockers.jpg') center/cover no-repeat;
+        flex-direction: row; /* instead of column */
+        flex-wrap: wrap;     /* allow wrapping if needed */
+        justify-content: space-between; /* optional */
+    }
+
+    .logo-left { order: 1; }
+    .logo-right { order: 2; }
+
+    #intro .left-column {
+  flex: 1 1 60%; /* grow/shrink with 60% width */
+  min-width: 280px; /* prevent it from being too narrow */
+    }
+
+    #intro .right-column {
+  flex: 1 1 35%;
+  min-width: 100px; /* enough for logo icons */
     }
 }
 
@@ -403,7 +419,7 @@ body {
         flex-direction: column;        /* stack columns */
         padding: 2rem 1rem;            /* smaller padding */
         text-align: center;            /* optional */
-        background: url('../../images/lockers-mobile.jpg') center/cover no-repeat;
+        background: url('../../images/mob-lockers.jpg') center/cover no-repeat !important;
     }
 
     #intro .left-column,
