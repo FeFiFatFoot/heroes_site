@@ -388,6 +388,29 @@ body {
         width: 100%;
         padding: 14px;
     }
+
+    #intro .left-column h1 {
+        font-size: 2rem;       /* smaller for mobile */
+        line-height: 1.3;      /* keep readable spacing */
+    }
+
+    #intro .left-column p {
+        font-size: 1rem;       /* scale paragraph text */
+        line-height: 1.5;
+    }
+
+    #intro {
+        flex-direction: column;        /* stack columns */
+        padding: 2rem 1rem;            /* smaller padding */
+        text-align: center;            /* optional */
+        background: url('../../images/lockers-mobile.jpg') center/cover no-repeat;
+    }
+
+    #intro .left-column,
+    #intro .right-column {
+        width: 100%;
+        align-items: center;
+    }
 }
 
 
