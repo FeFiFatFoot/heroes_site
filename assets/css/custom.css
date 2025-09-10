@@ -1,0 +1,743 @@
+/* =========================================================
+   00. CUSTOM CSS - JAMES
+   ---------------------------------------------------------
+========================================================= */
+
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+}
+
+body {
+    overflow: hidden; /* disables scrolling for the whole page */
+}
+
+*, *::before, *::after { box-sizing: inherit; }
+
+#wrapper { display: block; margin: 0; padding: 0; }
+
+/* Main template content */
+#main.wrapper,
+#main.wrapper .inner {
+    display: block;
+    flex-direction: initial;
+    align-items: initial;
+    padding-top: initial;
+    padding-bottom: initial;
+    margin: initial;
+}
+
+#main .inner {
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 2rem 1.5rem;
+}
+
+/* =========================================================
+   01. LOGOS
+========================================================= */
+
+/* Desktop: top-left & top-right fixed logos */
+.logo-left, .logo-right {
+    position: fixed;
+    top: 20px;
+    z-index: 1200;
+}
+.logo-left { left: 20px; }
+
+.logo-right { right: 20px; }
+
+/* Left logo */
+.logo-left img {
+    max-width: 150px;   
+    height: auto;
+    display: block;
+}
+
+/* Right logo */
+.logo-right img {
+    max-width: 140px;   
+    height: auto;
+    display: block;
+}
+
+/* Mobile: right logo becomes part of flow */
+@media (max-width: 768px) {
+    .logo-right {
+        position: static;
+        display: block;
+        margin: 0 auto 16px auto;
+    }
+}
+
+/* Centered logo for other pages */
+.logo-center { display: block; margin: 0 auto 30px; max-width: 120px; }
+
+/* =========================================================
+   ABOUT PAGE LOGO OVERRIDE
+   ========================================================= */
+
+/* Force the About page logo size */
+#about .logo-header img {
+    width: 120px !important;       /* force width */
+    max-width: 120px !important;   /* ensure max */
+    height: auto !important;       /* maintain aspect ratio */
+    display: inline-block;
+    margin: 0 auto 30px auto;      /* center with spacing */
+}
+
+/* Make the header behave normally on About page */
+#about .logo-header {
+    position: relative !important;
+    top: 0px !important;
+    left: auto !important;
+    transform: none !important;
+    text-align: center;
+    margin: 0 auto 20px; /* centers horizontally + small gap below */
+    z-index: 2;
+}
+
+
+/* Top-left and top-right logos (if used) */
+#about .logo-left img,
+#about .logo-right img {
+    max-height: 60px;   /* constrain height */
+    width: auto;        /* maintain aspect ratio */
+}
+
+/* =========================================================
+   02. INTRO / HERO SECTION
+========================================================= */
+
+/* Desktop background (default) */
+#intro {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+    height: 100vh;
+    padding: 4.5rem 5%;
+    background: url('images/lockers.jpg') center/cover no-repeat;
+    color: white;
+}
+
+/* Mobile background (for screens 768px and below) */
+@media (max-width: 768px) {
+    #intro {
+        background: url('images/mob-lockers.jpg') center/cover no-repeat;
+    }
+}
+
+/* Columns */
+#intro .columns {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#intro .left-column {
+    width: 55%;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    align-items: flex-start;
+    padding-left: 3rem;  /* add horizontal padding */
+    padding-right: 9rem;  
+    box-sizing: border-box; /* ensures padding doesn't exceed width */
+}
+
+#intro h1 {
+    font-family: 'Montserrat', sans-serif; /* change to desired font */
+    font-weight: 900; /* bold/thick style similar to GT Ultra */
+    font-size: 3rem;  /* adjust as needed */
+    line-height: 1.2;
+    color: white;
+    margin: 0;
+}
+
+#intro p {
+    font-size: 1.25rem;
+    line-height: 1.5;
+    color: white;
+    max-width: 700px;   /* limits paragraph width */
+    word-wrap: break-word; /* ensures long words wrap */
+    overflow-wrap: break-word; /* modern standard */
+    text-align: left; 
+}
+
+/* Right column: social icons horizontal with custom images */
+#intro .right-column {
+    margin-left: auto;          /* push to right side */
+    align-self: flex-end;       /* push to bottom of flex container */
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+}
+
+
+#intro .social-icons {
+    display: flex;                /* horizontal layout */
+    flex-direction: row;           /* make sure it's row */
+    gap: 20px;                     /* space between icons */
+    justify-content: center;       /* center them */
+    align-items: center;
+}
+
+#intro .social-icons a {
+    width: 120px;
+    height: 120px;
+    display: inline-block;
+}
+
+#intro .social-icons a img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;           /* ensures images scale correctly */
+    display: block;
+}
+
+/* Optional hover effect */
+#intro .social-icons a:hover {
+    transform: scale(1.1);
+}
+
+
+/* Responsive stacking */
+@media (max-width: 900px) {
+
+    #intro .right-column {
+        bottom: 15px;
+        right: 15px;
+    }
+    #intro .social-icons a {
+        width: 30px;
+        height: 30px;
+    }
+
+    #intro {
+        flex-direction: column;
+        padding: 3.5rem 2rem;
+        text-align: center;
+    }
+    #intro .left-column, #intro .right-column {
+        width: 100%;
+        align-items: center;
+    }
+    #intro .social-icons {
+        flex-direction: row;
+        gap: 15px;
+        font-size: 2rem;
+        margin-top: 20px;
+        justify-content: flex-start;
+    }
+}
+
+.locker-section {
+    display: flex;
+    align-items: flex-start;  /* aligns top of button with top of text */
+    gap: 20px;                /* space between button and text */
+    flex-wrap: wrap;           /* allows wrapping if screen is too narrow */
+    margin-top: 2rem;
+}
+
+.locker-left {
+    flex: 0 0 auto;           /* button keeps its width */
+}
+
+.locker-right {
+    flex: 1 1 0;              /* text takes remaining space and wraps */
+    min-width: 150px;         /* prevents it from becoming too narrow */
+}
+
+/* Locker section: two columns with wrapping text */
+#intro .locker-section {
+    margin-top: 20px;
+}
+
+#intro .locker-room-wrapper {
+    display: flex;
+    align-items: flex-start;  /* aligns top of button with top of text */
+    gap: 15px;                /* space between button and text */
+    flex-wrap: wrap;          /* allows text to wrap below button on small screens */
+}
+
+#intro .locker-left {
+    flex: 0 0 auto;           /* button keeps its width */
+}
+
+#intro .locker-right {
+    flex: 1 1 0;              /* text takes remaining space */
+    min-width: 150px;         /* prevents collapsing */
+    word-wrap: break-word;    /* forces wrapping if text is long */
+}
+
+#intro .locker-room-text {
+    display: block;
+    line-height: 1.4;
+    font-size: 1rem;
+}
+
+
+
+@media (max-width: 768px) {
+    .locker-section {
+        flex-direction: column; /* stack button and text on small screens */
+        align-items: flex-start;
+    }
+    .locker-right {
+        min-width: auto;
+    }
+}
+
+/* =========================================================
+   03. SIGNUP PILL / BUTTONS
+========================================================= */
+
+/* =========================================================
+   SIGNUP PILL - Responsive with Background Images
+========================================================= */
+
+/* Big pill wrapper */
+.signup-form, #intro .signup-pill {
+    display: flex;
+    align-items: center;
+    background: url('../../images/pill-bg.jpg') center/cover no-repeat;
+    border-radius: 50px;
+    overflow: hidden;
+    width: 100%;
+    max-width: none;
+    height: 70px;          /* fixed height for large pill */
+    padding: 0 10px;       /* horizontal padding only */
+    box-sizing: border-box;
+}
+
+/* Input field inside large pill */
+.signup-form input[type="email"], #intro .signup-pill input[type="email"] {
+    flex: 1;
+    height: 100%;           /* fill the height of the pill */
+    padding: 0 12px;        /* small horizontal padding */
+    font-size: 1rem;
+    border: none;
+    outline: none;
+}
+
+/* Button (small pill inside) */
+.signup-form button, #intro .signup-pill button {
+    flex: 0 0 auto;
+    border: none;
+    padding: 0px 12px;
+    font-weight: 700;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50px;
+    height: 80%;
+    background: url('../../images/button-bg.jpg') center/cover no-repeat; /* button background */
+    color: #fff;
+    transition: transform 0.2s ease;
+}
+
+.signup-form button:hover, #intro .signup-pill button:hover {
+    transform: scale(1.05);
+}
+
+/* Locker button */
+.locker-room, #intro .button.locker {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 9px 18px;
+    border-radius: 28px;
+    background: #ff4081;
+    color: #fff;
+    font-weight: 600;
+    text-decoration: none;
+    transition: background 0.3s ease;
+}
+
+.locker-room:hover, #intro .button.locker:hover {
+    background: #e0336b;
+}
+
+/* =========================
+   RESPONSIVE - Mobile
+========================= */
+@media (max-width: 768px) {
+    .signup-form, #intro .signup-pill {
+        flex-direction: column; /* stack input and button */
+        width: 100%;
+        gap: 10px; /* spacing between input and button */
+    }
+
+    .signup-form input[type="email"], #intro .signup-pill input[type="email"] {
+        width: 100%;
+        padding: 14px;
+        text-align: center;
+    }
+
+    .signup-form button, #intro .signup-pill button {
+        width: 100%;
+        padding: 14px;
+    }
+}
+
+
+/* =========================================================
+   ABOUT PAGE - FULL BACKGROUND & TABS
+========================================================= */
+
+
+/* Full page background */
+#about {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    padding: 20px 20px 60px; /* ⬅ top padding reduced from 60px to 20px */
+    background: url('../images/about-lockers.png') center/cover no-repeat;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    color: #fff;
+    box-sizing: border-box;
+    z-index: 0;
+    overflow: hidden;
+}
+
+/* full viewport background image */
+#about::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: url('../../images/about-lockers.png') no-repeat;
+    background-size: 100% 100%; /* stretch to viewport */
+    background-position: top left; /* align to top-left corner */
+    z-index: -1;
+}
+
+
+/* content wrapper padding only */
+#about #wrapper {
+    width: 100%;
+    max-width: 920px;
+    margin: 0 auto;
+    box-sizing: border-box;
+    padding-top: calc(var(--about-logo-width) + var(--about-logo-gap)) !important;
+}
+
+
+
+
+/* Logo centered, fixed size */
+body.about, #about {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    color: #fff;
+    padding: 60px 20px;
+    box-sizing: border-box;
+    overflow-x: hidden;
+}
+
+
+
+
+#about .logo-header img {
+    max-width: 120px;
+    height: auto;
+    display: inline-block;
+}
+
+/* Tabs Section */
+#about .tabs-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 920px;
+    margin: -20px auto 0; /* negative top margin moves tabs up */
+    z-index: 2;
+    margin-top: 0 !important;
+  /* use small negative translate if you want them a little closer */
+  transform: translateY(-6px); /* tweak value (px) if needed */
+  transform: translateY(-4px);
+}
+
+/* Tab container / pill buttons with image background */
+#about .tabs-section .tab-container {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    margin-bottom: 20px;
+    padding: 3px 4px;
+    width: fit-content;
+        transform: scale(0.7);  /* scales the whole pill down */
+    transform-origin: center; /* keep it centered */
+    border-radius: 999px;
+/* Image background */
+    background: url('../../images/tab-pill-bg.jpg') center/cover no-repeat;
+    position: relative;
+}
+
+
+#about .tabs-section .tab-container::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: 999px;
+    padding: 1px; /* border thickness */
+    background: orange;
+    -webkit-mask:
+        linear-gradient(#000 0 0) content-box,
+        linear-gradient(#000 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+
+    /* pixelation effect */
+    image-rendering: pixelated;
+    box-shadow:
+        -6px -2px 0 0 orange,
+        -4px -6px 0 0 orange,
+        -8px  2px 0 0 orange,
+         6px -2px 0 0 orange,
+         4px -6px 0 0 orange,
+         8px  2px 0 0 orange,
+        -2px  6px 0 0 orange,
+         2px  8px 0 0 orange,
+        -6px  8px 0 0 orange,
+         6px  8px 0 0 orange,
+        -10px 4px 0 0 orange,
+         10px -4px 0 0 orange;
+}
+
+#about .tabs-section .tab-link {
+    background: rgba(255, 255, 255, 0.2); /* semi-transparent over image */
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 999px;
+    font-weight: 600;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.2s ease;
+    display: flex;
+    align-items: center;   /* vertical centering */
+    justify-content: center; /* optional: also center horizontally */
+    height: 80px;          /* give it a fixed height so text centers nicely */
+    line-height: normal;   /* prevent line-height hacks */
+}
+
+#about .tabs-section .tab-link.active {
+    background: rgba(255, 255, 255, 0.8); /* highlight active */
+    color: #000;
+}
+
+/* Tab content */
+#about .tabs-section .tab-card {
+    width: 100%;
+    max-width: 900px;
+    margin: 0 auto 40px;
+}
+
+#about .tabs-section .tab-content {
+    display: none;                  /* hide all by default */
+    height: calc(65vh);               /* scrollable height */
+    overflow-y: auto;
+    background: #fff;               /* solid white */
+    color: #111;
+    border-radius: 8px;
+    padding: 25px 20px;
+    position: relative;
+    z-index: 2;
+    min-height: calc(60vh);  /* adjust 180px for header + tabs + gap */
+    max-height: calc(100vh - 150px);  /* 150px accounts for logo + tabs + 30px bottom gap */
+    margin-bottom: 30px;
+    /* 3D purple shadow */
+    box-shadow:
+        3px 3px 0px rgba(138, 43, 226, 0.9),
+        4px 4px 0px rgba(138, 43, 226, 0.9),
+        5px 5px 0px rgba(138, 43, 226, 0.9),   /* dark purple */
+        6px 6px 0px rgba(138, 43, 226, 0.9), 
+        7px 7px 0px rgba(138, 43, 226, 0.9),
+        8px 8px 0px rgba(138, 43, 226, 0.9),   
+        9px 9px 0px rgba(138, 43, 226, 0.9), 
+        10px 10px 0px rgba(138, 43, 226, 0.9),  
+        12px 12px 0px rgba(138, 43, 226, 0.9), 
+        15px 15px 0px rgba(138, 43, 226, 0.9);
+    transition: all 0.3s ease;
+
+    font-family: 'Montserrat', sans-serif; 
+    font-size: 1rem;       /* default paragraph size */
+    line-height: 1.6;      /* improves readability */
+    color: #01001f;;           /* dark text */
+}
+
+#about .tabs-section .tab-content {
+    text-align: left;
+}
+
+#about .tabs-section .tab-content h1 {
+    color: #01001f !important; /* Dark text */
+}
+
+#about .tabs-section .tab-content h2 {
+    font-family: 'Montserrat', sans-serif; /* heading font */
+    font-size: 1.8rem;
+    margin-bottom: 16px;
+    color: #01001f; 
+}
+
+#about .tabs-section .tab-content a {
+    color: #408cff;         
+    text-decoration: underline;
+    transition: color 0.3s ease;
+}
+
+#about .tabs-section .tab-content a:hover {
+    color: #408cff;
+}
+
+/* Lists */
+#about .tabs-section .tab-content ul,
+#about .tabs-section .tab-content ol {
+    margin-left: 20px;
+    margin-bottom: 16px;
+}
+
+#about .tabs-section .tab-content li {
+    margin-bottom: 8px;
+}
+
+/* Optional: code or special text */
+#about .tabs-section .tab-content code {
+    font-family: 'Courier New', monospace;
+    background: #f3f3f6;
+    padding: 2px 4px;
+    border-radius: 4px;
+}
+
+#about .tabs-section .tab-content p {
+    margin-bottom: 16px;
+}
+
+#about .tabs-section .tab-content.active {
+    display: block;
+}
+
+/* Scrollbars */
+#about .tabs-section .tab-content::-webkit-scrollbar { width: 9px; }
+#about .tabs-section .tab-content::-webkit-scrollbar-track { background: #f3f3f6; border-radius: 8px; }
+#about .tabs-section .tab-content::-webkit-scrollbar-thumb { background: linear-gradient(180deg,#b97cff,#6f2be0); border-radius: 8px; }
+#about .tabs-section .tab-content::-webkit-scrollbar-thumb:hover { background: linear-gradient(180deg,#cf9bff,#b97cff); }
+#about .tabs-section .tab-content { scrollbar-width: thin; scrollbar-color: #6f2be0 #f3f3f6; }
+
+
+
+
+/* =========================================================
+   05. UTILITIES / HELPERS
+========================================================= */
+
+.tab-buttons { display:flex; justify-content:center; gap:10px; margin-bottom:15px; }
+
+/* =========================================================
+   06. RESPONSIVE (≤ 900px)
+========================================================= */
+
+@media (max-width: 900px) {
+
+       #intro .right-column {
+        width: 100%;             /* full width on small screens */
+        margin-top: 20px;        /* space between left and right columns */
+    }
+
+    #intro .social-icons {
+        gap: 15px;               /* smaller spacing between icons */
+        justify-content: center; /* keep centered */
+    }
+
+    #intro .social-icons a {
+        width: 30px;              /* smaller icon size */
+        height: 30px;
+    }
+
+
+
+    /* Intro stacking */
+    #intro { flex-direction: column; padding: 3.5rem 2rem; text-align: center; }
+    #intro .left-column, #intro .right-column { width: 100%; align-items: center; }
+
+    #about.wrapper.style2.fullscreen {
+        padding: 40px 15px;
+    }
+
+    .tabs-section .tab-card { width: 95%; }
+    .tabs-section .tab-content { min-height: 280px; padding: 18px; }
+    .tabs-section .tab-container { padding: 4px; gap: 6px; }
+    .tabs-section .tab-link { padding: 8px 14px; font-size: 0.9rem; }
+
+    /* Logos */
+    .logo-right { position: static; margin: 0 auto 16px; }
+}
+
+@media (max-width: 600px) {
+    #intro .social-icons a {
+        width: 25px;              /* even smaller for mobile */
+        height: 25px;
+    }
+}
+
+/* adjustable values */
+:root {
+  --about-logo-top: 1px;        /* distance from viewport top */
+  --about-logo-width: 180px;     /* max width of logo (px) */
+  --about-logo-gap: 12px;        /* gap between bottom of logo and content */
+}
+
+/* Force the About logo to be fixed & centered on the viewport */
+.logo-header.about-logo {
+  position: fixed !important;
+  top: var(--about-logo-top) !important;
+  left: 50% !important;
+  transform: translateX(-50%) !important;
+  z-index: 9999 !important;      /* above everything else on the page */
+  margin: 0 !important;          /* remove any inherited margins */
+  padding: 0 !important;
+  width: auto !important;
+  max-width: var(--about-logo-width) !important;
+  height: auto !important;
+  display: block !important;
+}
+
+/* Make sure the logo image itself obeys the size */
+.logo-header.about-logo img {
+  display: block;
+  max-width: var(--about-logo-width) !important;
+  width: auto !important;
+  height: auto !important;
+}
+
+
+
+
+
+/* Mobile adjustments: smaller logo + smaller top spacing */
+@media (max-width: 900px) {
+  :root {
+    --about-logo-top: 12px;
+    --about-logo-width: 90px;
+    --about-logo-gap: 10px;
+  }}

@@ -1,0 +1,702 @@
+
+/* Fullscreen hero section */
+#intro {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  height: 100vh;
+  padding: 100px 5%;
+  background: url('images/lockers.jpg') center/cover no-repeat;
+  color: white;
+}
+
+
+/* Logo header (independent from main body) */
+/* Stop the body from scrolling */
+html, body {
+  height: 100%;
+  margin: 0;
+  overflow: hidden; /* disables page scrolling */
+}
+
+/* Fixed logo header */
+.logo-header {
+  position: fixed;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1000;
+  text-align: center;
+}
+
+.logo-header img {
+  max-width: 200px;
+  height: auto;
+}
+
+/* Optional: fix it at the very top to stay visible */
+.logo-header.fixed {
+  position: fixed;
+  top: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1000;
+}
+
+/* Top-left and top-right logos */
+
+/* Logos */
+    .logo-left, .logo-right {
+      position: absolute;
+      top: 20px;
+      z-index: 1000;
+    }
+    .logo-left img, .logo-right img {
+      height: 60px;
+      width: auto;
+    }
+    .logo-left { left: 20px; }
+    .logo-right { right: 20px; }
+
+
+/* Two-column container under logos */
+#intro .columns {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Left column */
+#intro .left-column {
+  max-width: 50%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* Heading */
+#intro h1 {
+  font-size: 3rem;
+  line-height: 1.2;
+  margin: 0;
+}
+
+/* Paragraph */
+#intro p {
+  font-size: 1.25rem;
+  line-height: 1.5;
+}
+
+/* Signup form */
+
+.signup-form {
+      display: flex;
+      align-items: center;
+      border-radius: 50px;
+      overflow: hidden;
+      background: #fff;
+      width: 75%;
+      max-width: 400px;
+    }
+    .signup-form input {
+      flex: 1;
+      padding: 12px 15px;
+      border: none;
+      outline: none;
+      font-size: 14px;
+    }
+    .signup-form button {
+      border: none;
+      background: #ff4081;
+      color: #fff;
+      font-weight: bold;
+      padding: 12px 20px;
+      cursor: pointer;
+    }
+
+.signup-form button:hover {
+  background: #e73370;
+}
+
+
+#intro .signup-form {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+#intro .signup-form input[type="email"] {
+  padding: 12px 15px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 5px;
+  flex: 1;
+}
+
+#intro .signup-form button {
+  padding: 12px 20px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 5px;
+  background: #ff4081;
+  color: white;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+#intro .signup-form button:hover {
+  background: #e03570;
+}
+
+/* Locker Room button */
+#intro .button.primary {
+  display: inline-block;
+  padding: 12px 25px;
+  font-size: 1rem;
+  background: #1abc9c;
+  color: white;
+  border-radius: 5px;
+  text-decoration: none;
+  margin-top: 10px;
+  transition: background 0.3s ease;
+}
+
+#intro .button.primary:hover {
+  background: #16a085;
+}
+
+/* Right column for social icons */
+#intro .right-column {
+  max-width: 40%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.right-column {
+      width: 35%;
+      display: flex;
+      justify-content: center;
+      align-items: flex-end;
+    }
+
+#intro .social-icons {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  font-size: 3rem; /* bigger icons */
+}
+
+#intro .social-icons a {
+  color: white;
+  transition: color 0.3s ease;
+}
+
+#intro .social-icons a:hover {
+  color: #ff4081;
+}
+
+.social-icons {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+.social-icons a {
+      font-size: 2.5rem;
+      color: #fff;
+    }
+
+#about {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #fff; /* makes text readable on dark images */
+    padding: 60px 20px;
+    position: relative;
+    z-index: 1;
+  }
+
+/* Responsive for mobile */
+@media (max-width: 900px) {
+  #intro {
+    flex-direction: column;
+    padding-top: 80px;
+  }
+
+  .columns {
+    flex-direction: column;
+    width: 100%;
+    height: auto;
+  }
+
+  .left-column, .right-column {
+    max-width: 100%;
+    width: 100%;
+    align-items: flex-start;
+  }
+
+	.left-column {
+      width: 55%;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      color: #fff;
+    }
+
+  .social-icons {
+    flex-direction: row;
+    gap: 15px;
+    font-size: 2rem;
+    margin-top: 20px;
+    justify-content: flex-start;
+  }
+
+.logo-left, .logo-right {
+  position: absolute;   /* relative to parent section */
+  top: 20px;
+  z-index: 1000;
+}
+
+.logo-left {
+  left: 20px;
+}
+
+.logo-right {
+  right: 20px;
+}
+
+/* Mobile view: move right logo above social icons */
+@media (max-width: 768px) {
+  .logo-right {
+    position: static;          /* remove absolute positioning */
+    display: block;
+    margin: 0 auto 20px auto;  /* center horizontally with spacing below */
+  }
+}
+
+}
+
+
+/*--*/
+
+/* Two-column container under logos */
+#intro .columns {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Left column */
+#intro .left-column {
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* vertically center content */
+  gap: 20px;
+  max-width: 50%;
+}
+
+/* Signup pill container */
+#intro .signup-pill {
+  display: flex;
+  background: white;
+  border-radius: 50px;
+  overflow: hidden;
+  width: 100%; /* fill left-column width */
+  max-width: 500px;
+}
+
+/* Input */
+#intro .signup-pill input[type="email"] {
+  flex: 1;
+  padding: 15px 20px;
+  border: none;
+  font-size: 1rem;
+  outline: none;
+  border-radius: 0;
+}
+
+/* Signup button */
+#intro .signup-pill button {
+  padding: 15px 25px;
+  border: none;
+  background: #ff4081;
+  color: white;
+  font-size: 1rem;
+  cursor: pointer;
+  border-radius: 0;
+  transition: background 0.3s ease;
+}
+
+#intro .signup-pill button:hover {
+  background: #e03570;
+}
+
+/* Locker row */
+#intro .locker-row {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-top: 10px;
+}
+
+.locker-room {
+      background: #ff4081;
+      color: #fff;
+      padding: 10px 20px;
+      font-size: 0.9rem;
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      border-radius: 25px;
+    }
+
+.locker-room-wrapper {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-top: 10px;
+      flex-wrap: wrap;
+    }
+
+.locker-room i {                 /* Discord icon */
+  font-size: 18px;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.locker-room:hover {
+  background: #e73370;
+}
+
+/* Optional paragraph next to button */
+    .locker-room-text {
+      color: #fff;
+      font-size: 0.9rem;
+    }
+
+
+/* Locker button */
+#intro .button.locker {
+  background: #ff4081;
+  color: white;
+  padding: 10px 20px;
+  font-size: 0.9rem;
+  border-radius: 30px;
+  text-decoration: none;
+  transition: background 0.3s ease;
+}
+
+#intro .button.locker:hover {
+  background: #e03570;
+}
+
+/* Locker text */
+#intro .locker-text {
+  font-size: 1rem;
+  color: white;
+  max-width: 300px;
+}
+
+/* Right column for social icons */
+#intro .right-column {
+  max-width: 40%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#intro .social-icons {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  font-size: 3rem;
+}
+
+#intro .social-icons a {
+  color: white;
+  transition: color 0.3s ease;
+}
+
+#intro .social-icons a:hover {
+  color: #ff4081;
+}
+
+/* Responsive for mobile */
+@media (max-width: 900px) {
+  #intro {
+    flex-direction: column;
+    padding: 30px 20px;
+  }
+
+  .tab-content {
+    width: 90%;       /* almost full width */
+    height: 300px;    /* smaller height */
+  }
+  .tab-container, .pill-container {
+    transform: scale(0.65); /* shrink more on mobile */
+  }
+  .logo-header {
+    max-width: 150px;
+    margin-bottom: 30px;
+  }
+
+  .columns {
+    flex-direction: column;
+    width: 100%;
+    height: auto;
+  }
+
+  .left-column, .right-column {
+    max-width: 100%;
+    width: 100%;
+    align-items: flex-start;
+  }
+
+  .social-icons {
+    flex-direction: row;
+    gap: 15px;
+    font-size: 2rem;
+    margin-top: 20px;
+  }
+
+  .logo-left {
+    top: 20px;
+    left: 20px;
+  }
+
+  .logo-right {
+    position: relative;
+    top: auto;
+    right: auto;
+    margin-top: 20px;
+    width: 100px;
+    align-self: flex-end;
+  }
+
+  #intro .locker-row {
+    flex-direction: column;
+    gap: 10px;
+  }
+}
+
+/*--*/
+
+/* Container for the pills */
+/* Center the tab container */
+.tab-container, .pill-container {
+  display: flex;
+  justify-content: center;
+  gap: 5px;
+  margin-bottom: 20px;
+  background: #333;
+  border-radius: 50px;
+  padding: 5px;
+  width: fit-content;
+  transform: scale(0.75); /* shrink by 1/4 */
+}
+
+/* Individual tab buttons (pill) */
+.tab-link {
+  border: none;
+  outline: none;
+  background: transparent;
+  color: white;
+  font-size: 14px; /* smaller text */
+  font-weight: 500;
+  padding: 10px 20px;
+  border-radius: 999px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+/* Active tab button */
+.tab-link.active {
+  background: white;
+  color: black;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+}
+
+/* Hover effect */
+.tab-link:hover:not(.active) {
+  background: rgba(255,255,255,0.1);
+}
+
+/* About Page Spacing */
+.tabs-section {
+  margin-top: 0 !important;       /* ensure no extra margin */
+  padding-top: 0 !important;
+  max-width: 900px;               /* make it wider */
+  margin-left: auto;
+  margin-right: auto;             /* keep it centered */
+}
+
+/* Tab content card */
+/* Scope everything to .tabs-section to avoid clashes */
+.tabs-section { overflow: visible; }
+
+/* Pill container */
+.tabs-section .tab-container {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin-bottom: 18px;
+  background: rgba(255,255,255,0.06);
+  border-radius: 999px;
+  padding: 6px;
+  width: fit-content;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Pill buttons */
+.tabs-section .tab-link {
+  background: transparent;
+  color: #fff;
+  border: none;
+  padding: 10px 18px;
+  border-radius: 999px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 180ms ease;
+}
+.tabs-section .tab-link:hover { transform: translateY(-2px); }
+
+/* Active pill: white with black text */
+.tabs-section .tab-link.active {
+  background: #fff;
+  color: #000;
+  box-shadow: none;
+}
+
+/* Tab card wrapper (holds content + angled block) */
+.tabs-section .tab-card {
+  position: relative;
+  width: 82%;
+  max-width: 900px;
+  margin: 16px auto 36px;
+  overflow: visible; /* allow angled block to show outside */
+}
+
+/* White content box */
+.tabs-section .tab-content {
+  display: none !important; /* hidden by default (defensive) */
+  background: #ffffff;
+  color: #111;
+  border-radius: 8px;
+  padding: 22px;
+  height: 360px;           /* fixed height — adjust if needed */
+  overflow-y: auto;        /* internal scrolling */
+  box-sizing: border-box;
+  position: relative;
+  z-index: 2;              /* sit above the angled block */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Show only the active tab */
+.tabs-section .tab-content.active {
+  display: block !important;
+}
+
+/* Angled solid block under the content to create 3D 'block' illusion */
+.tabs-section .tab-card::after {
+  content: "";
+  position: absolute;
+  left: -6%;
+  width: 112%;
+  height: 84px;
+  top: calc(100% - 8px);
+  background: linear-gradient(180deg, #7a4de0 0%, #5b19a8 100%); /* purple block */
+  transform: rotate(-6deg);
+  transform-origin: top left;
+  border-radius: 6px;
+  z-index: 1; /* behind content (content z-index:2) */
+  box-shadow: 0 30px 70px rgba(90,20,140,0.28), 0 10px 30px rgba(80,30,160,0.18);
+  pointer-events: none;
+}
+
+/* Enhance the visual by adding a small subtle base shadow for the card itself */
+.tabs-section .tab-content {
+  box-shadow: 0 2px 6px rgba(0,0,0,0.06);
+}
+
+/* Modern, slim scrollbar (WebKit) */
+.tabs-section .tab-content::-webkit-scrollbar { width: 9px; }
+.tabs-section .tab-content::-webkit-scrollbar-track { background: #f3f3f6; border-radius: 8px; }
+.tabs-section .tab-content::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg,#b97cff,#6f2be0);
+  border-radius: 8px;
+}
+.tabs-section .tab-content::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(180deg,#cf9bff,#b97cff);
+}
+
+/* Firefox scrollbar */
+.tabs-section .tab-content { scrollbar-width: thin; scrollbar-color: #6f2be0 #f3f3f6; }
+
+/* Responsive tweaks */
+@media (max-width: 900px) {
+  .tabs-section .tab-card { width: 92%; margin-bottom: 22px; }
+  .tabs-section .tab-content { height: 320px; padding: 18px; }
+  .tabs-section .tab-card::after { height: 68px; top: calc(100% - 6px); transform: rotate(-5deg); left: -4%; width: 108%; }
+  .tabs-section .tab-container { padding: 4px; gap: 6px; }
+  .tabs-section .tab-link { padding: 8px 14px; }
+}
+
+/* Active state: visible */
+.tab-content.active {
+  display: block;
+}
+
+/* Tab controls stay visible */
+.tab-buttons {
+  margin-bottom: 15px;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+/* Logo above tabs */
+.logo-center {
+  display: block;
+  margin: 0 auto 30px auto;
+  max-width: 100px; /* adjust size as needed */
+}
+
+
+/* Override HTML5 UP default padding for this page */
+#main.wrapper {
+  padding: 50px 0; /* remove horizontal padding */
+}
+
+#main .inner {
+  max-width: none;      /* remove any max-width constraint */
+  width: 100%;          /* use full width */
+  display: flex;
+  flex-direction: column;
+  align-items: center;  /* center everything horizontally */
+}
+
+#main.wrapper, #main.wrapper .inner {
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+	padding-top: 0 !important;
+    padding-bottom: 0 !important;
+    margin: 0 !important;
+}
+
+
+
+/* End Of Custom */
