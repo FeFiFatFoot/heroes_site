@@ -128,24 +128,43 @@ body {
 
 /* Mobile background (for screens 768px and below) */
 @media (max-width: 768px) {
-    #intro {
-        background: url('../../images/mob-lockers.jpg') center/cover no-repeat;
-        flex-direction: row; /* instead of column */
-        flex-wrap: wrap;     /* allow wrapping if needed */
-        justify-content: space-between; /* optional */
+     #intro {
+        flex-direction: column;           /* stack left & right columns */
+        justify-content: flex-start;      /* top-align content */
+        align-items: center;              /* center horizontally */
+        padding: 2rem 1rem;
+        min-height: auto;                 /* allow content to dictate height */
+        background: url('../../images/mob-lockers.jpg') center/cover no-repeat !important;
+        background-size: 100% 100%;
     }
 
     .logo-left { order: 1; }
     .logo-right { order: 2; }
 
-    #intro .left-column {
-  flex: 1 1 60%; /* grow/shrink with 60% width */
-  min-width: 280px; /* prevent it from being too narrow */
+   #intro .left-column {
+        width: 100%;
+        padding-left: 1rem;
+        padding-right: 1rem;
+        align-items: center;
+        text-align: center;
+    }
+
+    #intro .left-column h1 {
+        font-size: 2rem;
+        line-height: 1.3;
+    }
+
+    #intro .left-column p {
+        font-size: 1rem;
+        max-width: 90%;   /* keeps text from stretching too wide */
     }
 
     #intro .right-column {
-  flex: 1 1 35%;
-  min-width: 100px; /* enough for logo icons */
+        width: 100%;
+        order: 2;
+        display: flex;
+        justify-content: center;          /* social icons centered horizontally */
+        margin-top: 20px;
     }
 }
 
@@ -232,10 +251,6 @@ body {
         bottom: 15px;
         right: 15px;
     }
-    #intro .social-icons a {
-        width: 30px;
-        height: 30px;
-    }
 
     #intro {
         flex-direction: column;
@@ -246,12 +261,31 @@ body {
         width: 100%;
         align-items: center;
     }
-    #intro .social-icons {
+     #intro .social-icons {
         flex-direction: row;
         gap: 15px;
-        font-size: 2rem;
-        margin-top: 20px;
-        justify-content: flex-start;
+    }
+
+    #intro .social-icons a {
+        width: 30px;
+        height: 30px;
+    }
+
+    .logo-left, .logo-right {
+        position: relative;               /* keep them in flow */
+        max-width: 100px;
+        margin: 10px auto;
+    }
+}
+
+@media (max-width: 480px) {
+    #intro .left-column h1 {
+        font-size: 1.6rem;
+    }
+
+    #intro .left-column p {
+        font-size: 0.9rem;
+        max-width: 100%;
     }
 }
 
@@ -403,6 +437,11 @@ body {
     .signup-form button, #intro .signup-pill button {
         width: 100%;
         padding: 14px;
+    }
+
+    #intro .left-column {
+        padding-left: 1rem;
+        padding-right: 1rem;
     }
 
     #intro .left-column h1 {
