@@ -3,6 +3,42 @@
    ---------------------------------------------------------
 ========================================================= */
 
+/* =========================================================
+   GLOBAL VARIABLES
+   Colors, fonts, spacing
+========================================================= */
+:root {
+  /* Colors */
+  --primary-color: #ff4081;
+  --primary-hover: #e0336b;
+  --secondary-color: #6f2be0;
+  --light-bg: #ffffff;
+  --dark-bg: #000000;
+  --text-color: #ffffff;
+  --body-font-color: #333333;
+
+  /* Shadows */
+  --shadow-purple: 8px 8px 0px #6f2be0, 16px 16px 0px #b97cff;
+
+  /* Fonts */
+  --heading-font: 'GT Ultra', 'Arial Black', sans-serif;
+  --body-font: 'Helvetica Neue', Arial, sans-serif;
+
+  /* Sizes */
+  --h1-desktop: 3rem;
+  --h1-mobile: 2rem;
+  --p-desktop: 1.125rem;
+  --p-mobile: 0.95rem;
+
+  /* Spacing */
+  --section-padding: 60px 20px;
+  --pill-padding: 12px 20px;
+  --pill-radius: 50px;
+}
+
+/* Global variables - end */
+
+
 html, body {
     margin: 0;
     padding: 0;
