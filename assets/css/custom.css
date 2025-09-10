@@ -150,13 +150,15 @@ body {
     }
 
     #intro .left-column h1 {
-        font-size: 2rem;
-        line-height: 1.3;
+        font-size: 1.6rem;      /* smaller heading */
+        line-height: 1.2;       /* tighter spacing */
     }
 
     #intro .left-column p {
-        font-size: 1rem;
-        max-width: 90%;   /* keeps text from stretching too wide */
+        font-size: 0.95rem;     /* slightly smaller paragraph */
+        line-height: 1.4;
+        max-width: 90%;         /* prevent horizontal overflow */
+        margin: 0 auto;         /* center paragraph */
     }
 
     #intro .right-column {
@@ -165,6 +167,33 @@ body {
         display: flex;
         justify-content: center;          /* social icons centered horizontally */
         margin-top: 20px;
+    }
+
+    .signup-form, #intro .signup-pill {
+        flex-direction: column;    /* stack input and button */
+        gap: 10px;                 /* spacing between input & button */
+        width: 100%;               /* full width of left column */
+        max-width: 100%;           /* ignore desktop max-width */
+        padding: 0;                /* remove pill padding to fit stacking */
+        height: auto;              /* allow height to adjust */
+        background: none;          /* remove desktop background if needed */
+    }
+
+    /* Input field */
+    .signup-form input[type="email"], #intro .signup-pill input[type="email"] {
+        width: 100%;
+        height: 50px;              /* set comfortable height */
+        padding: 0 12px;
+        border-radius: 8px;        /* optional rounded corners */
+        text-align: center;        /* optional: center text */
+    }
+
+    /* Button */
+    .signup-form button, #intro .signup-pill button {
+        width: 100%;
+        height: 50px;              /* match input height */
+        border-radius: 8px;
+        font-size: 1rem;           /* slightly smaller text */
     }
 }
 
