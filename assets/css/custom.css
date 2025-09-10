@@ -322,7 +322,7 @@ body {
   }
 
   .social-icons::before {
-    content: url('../../images/right-logo.png'); /* inject the logo */
+    content: url('../../images/logo-right.png'); /* inject the logo */
     display: block;
     margin: 0 auto 10px auto; /* center it and add spacing */
     width: 80px; /* adjust size */
@@ -392,8 +392,8 @@ body {
     .signup-form button:hover { background: #e0336b; transform: scale(1.05); }
 
     /* Intro headings & paragraph for mobile */
-    #intro .left-column h1 { font-size: 1.6rem; line-height: 1.2; }
-    #intro .left-column p { font-size: 0.95rem; line-height: 1.4; max-width: 90%; margin: 0 auto; }
+    #intro .left-column h1 { font-size: 1.2rem; line-height: 1.2; }
+    #intro .left-column p { font-size: 0.85rem; line-height: 1.1; max-width: 90%; margin: 0 auto; }
 
     #intro .left-column, #intro .right-column { width: 100%; align-items: center; text-align: center; padding: 0 1rem; }
 
