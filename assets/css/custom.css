@@ -312,6 +312,29 @@ body {
 
 @media (max-width: 768px) {
 
+    .signup-form, 
+  #intro .signup-pill {
+    flex-direction: column;   /* stack instead of row */
+    width: 100%;              /* full width */
+    border-radius: 30px;
+    padding: 10px;
+    gap: 10px;                /* space between stacked input + button */
+  }
+
+  .signup-form input[type="email"], 
+  #intro .signup-pill input[type="email"] {
+    width: 100%;
+    border-radius: 30px;
+    padding: 12px 15px;
+  }
+
+  .signup-form button, 
+  #intro .signup-pill button {
+    width: 100%;
+    border-radius: 30px;
+    padding: 12px 15px;
+  }
+
     /* Signup form: stack input and button as separate pills */
     .signup-form,
     #intro .signup-pill {
