@@ -391,6 +391,48 @@ body {
   /* =========================
      SIGNUP PILL / BUTTONS
   ========================= */
+
+  /* Disable the combined pill container styles */
+  .signup-pill,
+  .signup-form {
+    flex-direction: column !important;  /* stack input + button */
+    border-radius: 0 !important;        /* remove container pill */
+    overflow: visible !important;       /* don’t clip children */
+    background: none !important;        /* remove background */
+  }
+
+  /* Style input individually */
+  .signup-pill input[type="email"],
+  .signup-form input[type="email"] {
+    border-radius: 50px !important;     /* keep input pill-shaped */
+    width: 100% !important;
+    height: 50px !important;
+    margin-bottom: 12px;                /* spacing between input + button */
+    box-shadow: 3px 3px 0px rgba(138,43,226,0.3);
+    text-align: center;
+  }
+
+  /* Style button individually */
+  .signup-pill button,
+  .signup-form button,
+  .discord-button {
+    border-radius: 50px !important;
+    width: 100% !important;
+    height: 50px !important;
+    font-weight: 700;
+    box-shadow: 3px 3px 0px rgba(138,43,226,0.3);
+    background: #ff4081;
+    color: #fff;
+    text-align: center;
+  }
+
+  .signup-pill button:hover,
+  .signup-form button:hover,
+  .discord-button:hover {
+    background: #e0336b;
+    transform: scale(1.05);
+  }
+
   .signup-form,
   #intro .signup-pill,
   .discord-button {
