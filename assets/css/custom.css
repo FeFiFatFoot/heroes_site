@@ -267,6 +267,11 @@ body {
     outline: none;
 }
 
+.signup-form input[type="email"],
+.signup-form button {
+  margin: 0 !important;         /* prevent margin from breaking pill height */
+}
+
 .signup-form button,
 #intro .signup-pill button {
     flex: 0 0 auto;
