@@ -621,7 +621,7 @@ body {
   color: #fff;
   text-decoration: none;
   box-shadow: 3px 3px 0px rgba(138,43,226,0.3);
-  margin-top: 8px !important;
+  margin-top: 20px !important;
   gap: 8px;              /* space between icon and text */
 }
 
