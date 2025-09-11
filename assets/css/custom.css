@@ -561,7 +561,7 @@ body {
   align-items: center !important; /* ensures input fills available width/height */
   flex-direction: column !important; /* stack input + button */
   width: 100% !important;
-  max-width: 500px !important;
+  max-width: 100% !important; 
   gap: 8px !important;
   margin: 0 !important;
   margin: 1rem auto !important;
@@ -574,6 +574,7 @@ body {
 .signup-form input[type="email"] {
     box-sizing: border-box !important;        /* include padding in total height */
     width: 100% !important;        /* full width of container */
+    max-width: 100% !important; 
     height: 50px !important;       /* same as JOIN button */
     line-height: 50px !important; /* vertically center text */
     padding: 0 15px !important;    /* horizontal padding for text */
@@ -589,6 +590,7 @@ body {
   .signup-form button {
     height: 50px !important;       /* match input height */
     width: 100% !important;
+    max-width: 100% !important; 
     font-size: 1rem !important;
     font-weight: 700 !important;
     border-radius: 50px !important;
