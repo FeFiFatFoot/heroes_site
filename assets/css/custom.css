@@ -136,7 +136,7 @@ body {
     flex-wrap: wrap;
     height: 100vh;
     padding: 4.5rem 5%;
-    background: url('images/lockers.jpg') center/cover no-repeat;
+    background: url('../../images/lockers.jpg') center/cover no-repeat;
     color: white;
 }
 
@@ -448,7 +448,7 @@ body {
 
 
 /* =========================
-   MOBILE SIGNUP + DISCORD BUTTON STACK
+   UNIFIED SIGNUP + DISCORD STACK
 ========================= */
 .signup-stack {
   display: flex !important;
@@ -456,45 +456,72 @@ body {
   align-items: center !important;
   width: 90% !important;
   max-width: 400px !important;
-  gap: 8px !important;           /* spacing between elements */
+  gap: 8px !important;              /* equal spacing between all elements */
   margin: 1rem auto !important;
   padding: 0 !important;
-  position: relative !important;  /* ensures stacking order */
-  z-index: 1 !important;
 }
 
-.signup-stack input[type="email"],
-.signup-stack button,
-.signup-stack .discord-button {
+/* Input field */
+.signup-stack input[type="email"] {
+  box-sizing: border-box !important;
   width: 100% !important;
-  max-width: 100% !important;
-  height: 50px !important;
+  height: 50px !important;           /* match buttons */
+  padding: 0 15px !important;
+  font-size: 1rem !important;
   border-radius: 50px !important;
+  background: #fff !important;
+  text-align: center !important;
   box-shadow: 3px 3px 0px rgba(138,43,226,0.3) !important;
+  margin: 0 !important;
+}
+
+/* JOIN button */
+.signup-stack button {
+  width: 100% !important;
+  height: 50px !important;           /* match input height */
   font-size: 1rem !important;
   font-weight: 700 !important;
-  text-align: center !important;
-  margin: 0 !important;           /* remove previous margins */
-  padding: 0 15px !important;
-  display: block !important;       /* ensure block stacking */
+  border-radius: 50px !important;
+  background: #ff4081 !important;
+  color: #fff !important;
+  box-shadow: 3px 3px 0px rgba(138,43,226,0.3) !important;
+  transition: background 0.3s ease, transform 0.2s ease;
+  margin: 0 !important;
 }
 
-.signup-stack .discord-button {
-  display: flex !important;
-  align-items: center !important;
-  justify-content: center !important;
-  gap: 8px !important;
-  margin-top: 0 !important;       /* remove extra top margin that could cause overlap */
-  position: relative !important;   /* ensure it’s not behind */
-  z-index: 2 !important;           /* above previous elements */
-}
-
-.signup-stack button:hover,
-.signup-stack .discord-button:hover {
+.signup-stack button:hover {
   background: #e0336b !important;
   transform: scale(1.05) !important;
 }
 
+/* Discord button */
+.signup-stack .discord-button {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  width: 100% !important;
+  height: 50px !important;           /* match everything */
+  font-size: 1rem !important;
+  font-weight: 700 !important;
+  border-radius: 50px !important;
+  background: #ff4081 !important;
+  color: #fff !important;
+  text-decoration: none !important;
+  box-shadow: 3px 3px 0px rgba(138,43,226,0.3) !important;
+  gap: 8px !important;               /* space between icon + text */
+  padding: 0 15px !important;
+  margin: 0 !important;
+}
+
+.signup-stack .discord-button i {
+  font-size: 1.2rem !important;
+  display: inline-block;
+}
+
+.signup-stack .discord-button:hover {
+  background: #e0336b !important;
+  transform: scale(1.05) !important;
+}
 
 
 /* Ensure input field is full width on mobile */
