@@ -334,6 +334,19 @@ body {
     height: auto;
   }
 
+  .logo-left img {
+    max-width: 120px;  /* adjust size if needed */
+    height: auto;
+  }
+
+  header, #header {
+    margin: 0 !important;
+    padding: 0 !important;
+    height: 0 !important;
+    border: none !important;
+    box-shadow: none !important;
+  }
+
   header, 
   #header,
   .wrapper.style1.fullscreen {
