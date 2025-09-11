@@ -459,7 +459,7 @@ body {
   /* =========================
      SIGNUP FORM / JOIN BUTTON
   ========================= */
- button.join-button { 
+ .join-button { 
       margin-bottom: 20px !important; 
   }
 
