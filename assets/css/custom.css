@@ -141,7 +141,7 @@ body {
 }
 
 #intro .left-column .locker-room-sub-text {
-  margin-bottom: 4px !important; /* reduce space below paragraph */
+  margin-bottom: 1px !important; /* reduce space below paragraph */
   line-height: 1.1 !important;   /* optional: tighten line spacing */
 }
 
