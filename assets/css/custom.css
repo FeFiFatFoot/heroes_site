@@ -140,6 +140,11 @@ body {
     color: white;
 }
 
+#intro .left-column .locker-room-sub-text {
+  margin-bottom: 4px !important; /* reduce space below paragraph */
+  line-height: 1.1 !important;   /* optional: tighten line spacing */
+}
+
 .locker-section {
     margin-top: auto; /* push it to bottom of flex container */
     width: 100%;
