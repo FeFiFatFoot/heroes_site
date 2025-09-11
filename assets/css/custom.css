@@ -569,35 +569,29 @@ body {
   ========================= */
 /* Make "Enter the Locker Room" button full width like the Join button */
 .discord-button {
-    display: flex !important;            /* keep icon + text aligned */
-    align-items: center !important;      /* vertical center */
-    justify-content: center !important;  /* horizontal center */
-    width: 100% !important;              /* full width of container */
-    max-width: 800px !important;         /* optional: match JOIN button max width */
-    height: 50px !important;             /* same as JOIN button */
-    font-size: 1rem !important;
-    font-weight: 700 !important;
-    border-radius: 50px !important;
-    background: #ff4081 !important;
-    color: #fff !important;
-    text-decoration: none !important;
-    box-shadow: 3px 3px 0px rgba(138,43,226,0.3) !important;
-    margin-top: 2px !important; 
-    gap: 2px !important;                             /* spacing between icon & text */
-    padding: 0 15px !important;           /* keep icon + text comfortably spaced */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 50px;          /* match Join button */
+  width: 100%;
+  font-size: 1rem;
+  font-weight: 700;
+  border-radius: 50px;
+  background: #ff4081;
+  color: #fff;
+  text-decoration: none;
+  box-shadow: 3px 3px 0px rgba(138,43,226,0.3);
+  gap: 8px;              /* space between icon and text */
 }
 
-/* Ensure Discord icon displays properly */
 .discord-button i {
-    font-size: 1.2rem !important;
-    display: inline-block;
+  font-size: 1.2rem;
 }
-
 
 .discord-button:hover {
-  background: #e0336b !important;
-  transform: scale(1.05) !important;
-}
+  background: #e0336b;
+  transform: scale(1.05);
+}}
 
   /* =========================
      LOCKER SECTION
