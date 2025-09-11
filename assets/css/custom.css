@@ -360,9 +360,10 @@ body {
 
   .logo-right-mobile {
     display: block !important;  
-    width: 100px;
-    height: auto;
-    margin: 12px auto 20px auto;
+    margin-top: 10px !important;      /* less space above */
+    margin-bottom: 10px !important;   /* less space below */
+    width: 80px !important;           /* optional: make smaller */
+    height: auto !important;
     z-index: 10;
   }
 
@@ -483,28 +484,31 @@ body {
   /* =========================
      DISCORD BUTTON (Locker Room)
   ========================= */
+/* Make "Enter the Locker Room" button full width like the Join button */
 .discord-button {
-  display: flex !important;
-  align-items: center !important;
-  justify-content: center !important;
-  width: 100% !important;              
-  min-height: 50px !important;         
-  border-radius: 50px !important;
-  font-size: 1rem !important;
-  font-weight: 700 !important;
-  background: #ff4081 !important;
-  color: #fff !important;
-  text-decoration: none !important;
-  box-shadow: 3px 3px 0px rgba(138,43,226,0.3) !important;
-  gap: 8px;                            
-  padding: 0 15px !important;
-  margin-bottom: 12px !important;
+    display: flex !important;            /* keep icon + text aligned */
+    align-items: center !important;      /* vertical center */
+    justify-content: center !important;  /* horizontal center */
+    width: 100% !important;              /* full width of container */
+    max-width: 400px !important;         /* optional: match JOIN button max width */
+    height: 50px !important;             /* same as JOIN button */
+    font-size: 1rem !important;
+    font-weight: 700 !important;
+    border-radius: 50px !important;
+    background: #ff4081 !important;
+    color: #fff !important;
+    text-decoration: none !important;
+    box-shadow: 3px 3px 0px rgba(138,43,226,0.3) !important;
+    gap: 8px;                             /* spacing between icon & text */
+    padding: 0 15px !important;           /* keep icon + text comfortably spaced */
 }
 
+/* Ensure Discord icon displays properly */
 .discord-button i {
-  font-size: 1.2rem !important;
-  display: inline-block;
+    font-size: 1.2rem !important;
+    display: inline-block;
 }
+
 
 .discord-button:hover {
   background: #e0336b !important;
@@ -548,11 +552,19 @@ body {
     z-index: 10 !important;         /* make sure it’s above background */
 }
 
+/* Reduce spacing above social icons and logo injected above them */
+.social-icons::before {
+    margin-bottom: 10px !important;   /* less space between injected logo and icons */
+    width: 80px !important;           /* optional: smaller logo */
+    height: auto !important;
+}
+
+/* Reduce spacing between social icons themselves if needed */
 .social-icons a,
 .social-icons img {
-    width: 60px !important;
-    height: 60px !important;
-    display: block !important;
+    margin-bottom: 10px !important;   /* less gap between icons */
+    width: 50px !important;           /* optional: slightly smaller icons */
+    height: 50px !important;
 }
 
   /* =========================
