@@ -317,6 +317,25 @@ body {
     display: none !important;
   }
 
+  .logo-left {
+    display: block;
+    margin: 0 auto;         /* centers horizontally */
+    text-align: center;
+    max-width: 120px;       /* control size */
+    width: auto;
+  }
+
+  header, 
+  #header,
+  .wrapper.style1.fullscreen {
+    background: none !important;   /* remove any solid background */
+  }
+
+  body, html {
+    margin: 0;
+    padding: 0;
+  }
+
   /* Place right logo above social icons */
   .social-icons {
     position: relative;
