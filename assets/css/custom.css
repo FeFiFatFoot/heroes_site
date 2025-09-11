@@ -142,6 +142,7 @@ body {
 
 #intro .left-column .locker-room-sub-text {
   margin: 0 !important;
+  margin-bottom: 6px !important;
   padding: 0 !important;
   line-height: 1.1 !important; /* optional */
 }
