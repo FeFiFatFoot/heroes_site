@@ -440,34 +440,30 @@ body {
 }
 
 .signup-form input[type="email"] {
-  display: block !important;
-  box-sizing: content-box; 
-  width: 100% !important;
-  min-width: 0 !important;        /* override flex shrink */
-  height: 50px !important;
-  border-radius: 50px !important;
-  line-height: normal !important; /* match height for vertical centering */
-  padding: 50 20px !important;   /* horizontal padding */
-  font-size: 1.1rem !important;
-  background: #fff !important;
-  text-align: center;
-  box-shadow: 3px 3px 0px rgba(138,43,226,0.3) !important;
-  margin-bottom: 12px !important;
-}
+    box-sizing: border-box;        /* include padding in total height */
+    width: 100% !important;        /* full width of container */
+    height: 50px !important;       /* same as JOIN button */
+    padding: 0 15px !important;    /* horizontal padding for text */
+    font-size: 1rem !important;
+    border-radius: 50px !important;
+    background: #fff !important;
+    text-align: center;
+    box-shadow: 3px 3px 0px rgba(138,43,226,0.3) !important;
+    margin-bottom: 12px !important;
+    display: block;
+  }
 
-.signup-form button {
-  display: block !important;
-  width: 100% !important;
-  height: 50px !important;
-  font-size: 1rem !important;
-  font-weight: 700 !important;
-  border-radius: 50px !important;
-  background: #ff4081 !important;
-  color: #fff !important;
-  text-align: center;
-  box-shadow: 3px 3px 0px rgba(138,43,226,0.3) !important;
-  transition: background 0.3s ease, transform 0.2s ease;
-}
+  .signup-form button {
+    height: 50px !important;       /* match input height */
+    width: 100% !important;
+    font-size: 1rem !important;
+    font-weight: 700 !important;
+    border-radius: 50px !important;
+    background: #ff4081 !important;
+    color: #fff !important;
+    box-shadow: 3px 3px 0px rgba(138,43,226,0.3) !important;
+    transition: background 0.3s ease, transform 0.2s ease;
+  }
 
 .signup-form button:hover {
   background: #e0336b !important;
