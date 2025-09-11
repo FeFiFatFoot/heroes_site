@@ -205,6 +205,10 @@ body {
     display: block;
 }
 
+.logo-right-mobile {
+    display: none;
+}
+
 #intro .social-icons a:hover { transform: scale(1.1); }
 
 /* Locker section */
@@ -340,14 +344,19 @@ body {
     padding-top: 0 !important;
   }
 
+  .left-column, #intro {
+    margin-top: 0 !important;
+    padding-top: 0 !important;
+  }
+
   /* Remove any header bar / background color */
   header, #header, .wrapper.style1.fullscreen {
     margin: 0 !important;
     padding: 0 !important;
-    height: 0 !important;
+    height: auto !important;
+    background: transparent !important;
     border: none !important;
     box-shadow: none !important;
-    background: transparent !important;
   }
 
   body, html {
@@ -358,12 +367,22 @@ body {
   /* =========================
      RIGHT LOGO ABOVE SOCIAL ICONS
   ========================= */
+  .logo-right, .right-logo {
+    display: none !important; /* hide original right logo */
+  }
+
+  /* Place a dedicated container for right logo above socials */
   .social-icons {
-    position: relative;
     display: flex;
-    flex-direction: column; /* stack logo above icons */
+    flex-direction: column; /* stack logo + icons */
     align-items: center;
-    gap: 10px;
+    gap: 20px;
+  }
+
+  .social-icons .logo-right-mobile {
+    display: block;
+    width: 120px; /* adjust size */
+    height: auto;
   }
 
   .social-icons::before {
@@ -374,16 +393,34 @@ body {
   }
 
   /* =========================
+     SOCIAL ICONS SIZE
+  ========================= */
+  .social-icons a {
+    transform: scale(3); /* 3x larger */
+  }
+
+  /* =========================
      SIGNUP PILL / BUTTONS
   ========================= */
-  .signup-form, #intro .signup-pill {
-    flex-direction: column;   /* stack input + button + Discord button */
+ .signup-form, #intro .signup-pill {
+    flex-direction: column;   /* stack inputs + buttons */
     width: 100%;
     max-width: 100%;
     gap: 12px;
     background: none;
     padding: 0;
     height: auto;
+  }
+
+  .signup-form input[type="email"], #intro .signup-pill input[type="email"],
+  .signup-form button, #intro .signup-pill button,
+  .discord-button {
+    width: 100%;
+    height: 50px;
+    border-radius: 50px;
+    font-size: 1rem;
+    text-align: center;
+    box-shadow: 3px 3px 0px rgba(138,43,226,0.3);
   }
 
   .signup-form input[type="email"], #intro .signup-pill input[type="email"] {
@@ -395,6 +432,7 @@ body {
     background: #fff;
     text-align: center;
     box-shadow: 3px 3px 0px rgba(138,43,226,0.3);
+    transition: background 0.3s ease, transform 0.2s ease;
   }
 
   .signup-form button, #intro .signup-pill button, .discord-button {
@@ -454,7 +492,7 @@ body {
   ========================= */
   #intro {
     background: url('../../images/mob-lockers.jpg') center center no-repeat !important;
-    background-size: 100% 100%;
+    background-size: cover !important; 
   }
 }
 
