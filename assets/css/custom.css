@@ -312,13 +312,22 @@ body {
 
 @media (max-width: 768px) {
 
-    .logo-right {
-    display: none;
+  .logo-right, .right-logo {
+    /* the JS will move the element; hiding here prevents "duplicate" visual flicker */
+    display: none !important;
   }
 
   /* Place right logo above social icons */
   .social-icons {
-    position: relative; /* make it a positioning anchor */
+    position: relative;
+    display: flex;
+    flex-direction: column; /* stacked: logo above icons */
+    align-items: center;
+    gap: 10px;
+  }
+
+  .social-icons .moved-to-socials {
+    display: block !important;
   }
 
   .social-icons::before {
