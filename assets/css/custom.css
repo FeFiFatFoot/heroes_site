@@ -352,7 +352,7 @@ body {
   ========================= */
   .logo-left-mobile {
     display: block !important;  
-    width: 100px;
+    width: 200px;
     height: auto;
     margin: 15px auto 20px auto;
     z-index: 10;
