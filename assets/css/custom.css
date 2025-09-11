@@ -350,6 +350,9 @@ body {
 
 @media (max-width: 768px) {
 
+  /* =========================
+     BODY & WRAPPER RESET
+  ========================= */
   html, body, #wrapper, .inner, #intro {
     margin: 0 !important;
     padding: 0 !important;
@@ -361,7 +364,7 @@ body {
   }
 
   /* =========================
-     LEFT LOGO TOP
+     LEFT & RIGHT MOBILE LOGOS
   ========================= */
   .logo-left-mobile {
     display: block !important;  
@@ -472,6 +475,9 @@ body {
 
   .discord-button {
     gap: 8px !important;
+    margin-top: 6px !important; /* shrink space from JOIN button */
+    background: #ff4081;
+    color: #fff;
   }
 
   .discord-button i {
@@ -486,7 +492,7 @@ body {
     flex-direction: column !important;  
     align-items: center !important;
     width: 100%;
-    gap: 8px !important;
+    gap: 6px !important;
     margin-top: 6px; /* small spacing between stack and locker text */
   }
 
@@ -500,7 +506,7 @@ body {
     max-width: 100px !important;
     width: 80% !important;
     height: auto !important;
-    margin: 12px auto 0 auto;
+    margin: 6px auto 0 auto;
   }
 
   .locker-room-text {
