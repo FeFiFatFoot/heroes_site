@@ -446,7 +446,7 @@ body {
   height: 50px !important;
   border-radius: 50px !important;
   line-height: normal !important; /* match height for vertical centering */
-  padding: 10 20px !important;   /* horizontal padding */
+  padding: 50 20px !important;   /* horizontal padding */
   font-size: 1.1rem !important;
   background: #fff !important;
   text-align: center;
