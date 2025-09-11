@@ -580,7 +580,7 @@ body {
     padding: 0 15px !important;    /* horizontal padding for text */
     font-size: 1rem !important;
     border-radius: 50px !important;
-    background: #fff !important;
+    background: #fff;
     text-align: center;
     box-shadow: 3px 3px 0px rgba(138,43,226,0.3) !important;
     margin-bottom: 0 !important;
@@ -595,10 +595,8 @@ body {
     font-size: 1rem !important;
     font-weight: 700 !important;
     border-radius: 50px !important;
-    background: #ff4081 !important;
     color: #fff !important;
     box-shadow: 3px 3px 0px rgba(138,43,226,0.3) !important;
-    transition: background 0.3s ease, transform 0.2s ease;
     background: url('../../images/tab-pill-bg.jpg') center/cover no-repeat !important;
   }
 
