@@ -452,10 +452,11 @@ body {
 .signup-form input[type="email"] {
   display: block !important;
   width: 100% !important;
-  min-height: 50px !important;
+  min-height: 80px !important;
+  height: 70px !important;
   border-radius: 50px !important;
   padding: 0 15px !important;
-  font-size: 1rem !important;
+  font-size: 1.1rem !important;
   background: #fff !important;
   text-align: center;
   box-shadow: 3px 3px 0px rgba(138,43,226,0.3) !important;
@@ -490,7 +491,7 @@ body {
     align-items: center !important;      /* vertical center */
     justify-content: center !important;  /* horizontal center */
     width: 100% !important;              /* full width of container */
-    max-width: 400px !important;         /* optional: match JOIN button max width */
+    max-width: 700px !important;         /* optional: match JOIN button max width */
     height: 50px !important;             /* same as JOIN button */
     font-size: 1rem !important;
     font-weight: 700 !important;
