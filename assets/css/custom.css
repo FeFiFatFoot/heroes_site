@@ -504,7 +504,7 @@ body {
     text-decoration: none !important;
     box-shadow: 3px 3px 0px rgba(138,43,226,0.3) !important;
     margin-top: 2px !important; 
-    gap: 8px !important;                             /* spacing between icon & text */
+    gap: 2px !important;                             /* spacing between icon & text */
     padding: 0 15px !important;           /* keep icon + text comfortably spaced */
 }
 
