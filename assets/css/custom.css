@@ -413,7 +413,7 @@ body {
 
   .locker-section .logo-right-mobile,
   .locker-section .social-icons {
-    margin-bottom: 5px !important;  /* hugs bottom */
+    margin-bottom: 1px !important;  /* hugs bottom */
   }
 
   #intro .left-column {
