@@ -83,6 +83,10 @@ body {
     z-index: 1200;
 }
 
+.logo-left, .logo-right, .logo-left-mobile, .logo-right-mobile {
+    z-index: 9999 !important;
+}
+
 .logo-left-mobile{
     display: none;
 }
@@ -231,11 +235,6 @@ body {
 
 .logo-right-mobile {
     display: none;
-}
-
-.logo-left.hide-on-mob,
-.logo-right.hide-on-mob {
-   display: none !important;
 }
 
 #intro .social-icons a:hover { transform: scale(1.1); }
