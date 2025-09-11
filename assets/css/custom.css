@@ -737,19 +737,19 @@ body {
   ========================= */
 
   .tab-container {
-    display: flex !important;
-    justify-content: space-between; /* spread them evenly */
-    gap: 5px;                       /* small space between pills */
-    padding: 0 10px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 8px;
   }
 
   .tab-link {
-    flex: 1 1 auto !important;        /* let them shrink/grow equally */
-    min-width: 0;          /* allow full shrinking */
-    font-size: 12px;       /* smaller font for mobile */
-    padding: 8px 10px !important;     /* less padding so they fit */
-    white-space: nowrap;   /* keep text in one line */
-    text-align: center;
+    max-width: 100% !important;   /* never overflow screen */
+    flex: 1 1 auto !important;    /* shrink & expand evenly */
+    font-size: 14px !important;   /* smaller text for mobile */
+    padding: 10px 14px !important; /* slimmer pills */
+    white-space: normal !important; /* allow wrapping text */
+    box-sizing: border-box !important;
   }
 
 }
