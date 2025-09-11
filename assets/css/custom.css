@@ -472,7 +472,7 @@ body {
   align-items: center !important;
   width: 90% !important;
   max-width: 400px !important;
-  gap: 20px !important;              /* equal spacing between all elements */
+  gap: 8px !important;              /* equal spacing between all elements */
   margin-top: 0.5rem !important;
   padding: 0 !important;
 }
