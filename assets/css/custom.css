@@ -916,4 +916,21 @@ body {
     white-space: normal !important;
     line-height: 1.2 !important;
   }
+
+  nav.tab-container button.tab-link {
+    font-size: 12px !important;
+    padding: 6px 10px !important;
+    max-width: 100% !important;
+    width: auto !important;
+    white-space: normal !important;
+    line-height: 1.2 !important;
+    box-sizing: border-box !important;
+  }
+
+  nav.tab-container {
+    display: flex !important;
+    flex-wrap: wrap !important;
+    justify-content: center !important;
+    gap: 6px !important;
+  }
 }
