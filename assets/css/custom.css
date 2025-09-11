@@ -597,7 +597,7 @@ body {
     border-radius: 50px !important;
     color: #fff !important;
     box-shadow: 3px 3px 0px rgba(138,43,226,0.3) !important;
-    background: url('../../images/tab-pill-bg.jpg') center/cover no-repeat !important;
+    background: url('../../images/button-bg.jpg') center/cover no-repeat !important;
   }
 
 .signup-form button:hover {
