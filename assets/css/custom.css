@@ -369,7 +369,7 @@ body {
     display: block !important;  
     width: 200px;
     height: auto;
-    margin: 15px auto 20px auto;
+    margin: 5px auto 5px auto !important;
     z-index: 10;
   }
 
