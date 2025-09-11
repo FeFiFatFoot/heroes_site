@@ -408,16 +408,41 @@ body {
 
   .signup-form {
     display: flex !important;
-    flex-direction: column !important;
-    gap: 12px !important;
+    flex-direction: column !important; /* stack input + button */
     width: 100% !important;
-    max-width: 400px !important;
-    background: none !important;
-    padding: 0 !important;
-    border-radius: 0 !important;        /* Remove big pill */
-    overflow: visible !important;       /* Stop clipping */
+    max-width: 400px !important;       /* limit overall width */
+    gap: 12px !important;
     margin: 1rem auto !important;
+    padding: 0 !important;
   }
+
+  .signup-form input[type="email"] {
+    width: 100% !important;
+    min-height: 50px !important;
+    padding: 0 15px !important;
+    font-size: 1rem !important;
+    border-radius: 50px !important;
+    box-shadow: 3px 3px 0px rgba(138,43,226,0.3) !important;
+    background: #fff !important;
+    text-align: center;
+  }
+
+  .signup-form button {
+    width: 100% !important;
+    min-height: 50px !important;
+    font-size: 1rem !important;
+    font-weight: 700 !important;
+    border-radius: 50px !important;
+    background: #ff4081 !important;
+    color: #fff !important;
+    text-align: center;
+    box-shadow: 3px 3px 0px rgba(138,43,226,0.3) !important;
+    transition: background 0.3s ease, transform 0.2s ease;
+  }
+
+  .signup-form button:hover {
+    background: #e0336b !important;
+    transform: scale(1.05) !important;
 
   .signup-form input[type="email"],
   .signup-form button,
@@ -430,12 +455,7 @@ body {
     box-shadow: 3px 3px 0px rgba(138,43,226,0.3) !important;
     margin-bottom: 12px !important;
   }
-
-  .signup-form input[type="email"] {
-    background: #fff !important;
-    padding: 0 15px !important;
-  }
-
+}
   .signup-form button,
   .discord-button {
     background: #ff4081 !important;
@@ -460,6 +480,10 @@ body {
     box-shadow: 3px 3px 0px rgba(138,43,226,0.3);
     text-align: center;
   }
+  
+/* =========================
+     DISCORD BUTTON (Locker Room)
+  ========================= */ 
 
   /* Style button individually */
   .signup-pill button,
@@ -526,6 +550,35 @@ body {
   .discord-button:hover {
     background: #e0336b;
     transform: scale(1.05);
+  }
+
+
+  .discord-button {
+    display: flex !important;
+    align-items: center !important;      /* vertical center icon + text */
+    justify-content: center !important;  /* center horizontally */
+    width: 100% !important;              /* match JOIN button width */
+    min-height: 50px !important;         /* match JOIN button height */
+    border-radius: 50px !important;
+    font-size: 1rem !important;
+    font-weight: 700 !important;
+    background: #ff4081 !important;
+    color: #fff !important;
+    text-decoration: none !important;
+    box-shadow: 3px 3px 0px rgba(138,43,226,0.3) !important;
+    gap: 8px;                             /* space between icon & text */
+    padding: 0 15px !important;
+  }
+
+  /* Fix Discord icon inside button */
+  .discord-button i {
+    font-size: 1.2rem !important;
+    display: inline-block;
+  }
+
+  .discord-button:hover {
+    background: #e0336b !important;
+    transform: scale(1.05) !important;
   }
 
   /* =========================
