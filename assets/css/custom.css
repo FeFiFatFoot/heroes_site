@@ -213,6 +213,11 @@ body {
     display: none;
 }
 
+.logo-left.hide-on-mob,
+.logo-right.hide-on-mob {
+   display: none !important;
+}
+
 #intro .social-icons a:hover { transform: scale(1.1); }
 
 /* Locker section */
@@ -401,6 +406,50 @@ body {
     background: none !important;        /* remove background */
   }
 
+  .signup-form {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 12px !important;
+    width: 100% !important;
+    max-width: 400px !important;
+    background: none !important;
+    padding: 0 !important;
+    border-radius: 0 !important;        /* Remove big pill */
+    overflow: visible !important;       /* Stop clipping */
+    margin: 1rem auto !important;
+  }
+
+  .signup-form input[type="email"],
+  .signup-form button,
+  .discord-button {
+    width: 100% !important;
+    height: 50px !important;
+    border-radius: 50px !important;
+    font-size: 1rem !important;
+    text-align: center !important;
+    box-shadow: 3px 3px 0px rgba(138,43,226,0.3) !important;
+    margin-bottom: 12px !important;
+  }
+
+  .signup-form input[type="email"] {
+    background: #fff !important;
+    padding: 0 15px !important;
+  }
+
+  .signup-form button,
+  .discord-button {
+    background: #ff4081 !important;
+    color: #fff !important;
+    font-weight: 700 !important;
+    transition: background 0.3s ease, transform 0.2s ease;
+  }
+
+  .signup-form button:hover,
+  .discord-button:hover {
+    background: #e0336b !important;
+    transform: scale(1.05) !important;
+  }
+
   /* Style input individually */
   .signup-pill input[type="email"],
   .signup-form input[type="email"] {
@@ -482,14 +531,12 @@ body {
   /* =========================
      SOCIAL ICONS + RIGHT LOGO
   ========================= */
-  .social-icons {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 25px;
-    margin-bottom: 15px;
-    flex: 0 0 auto;
-    z-index: 10;
+ .social-icons {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    gap: 20px !important;
+    margin: 20px 0 !important;
   }
 
   /* Inject right logo above social icons */
