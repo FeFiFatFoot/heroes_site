@@ -732,6 +732,26 @@ body {
     margin: 0 !important;     /* remove extra top/bottom margin */
 }
 
+  /* =========================
+     About Page
+  ========================= */
+
+ .tab-container {
+    display: flex;
+    flex-wrap: nowrap;     /* keep one row */
+    overflow-x: auto;      /* enable horizontal scroll */
+    gap: 10px;
+    -webkit-overflow-scrolling: touch; /* smooth iOS scroll */
+    padding: 0 10px;
+  }
+
+  .tab-link {
+    flex: 0 0 auto;        /* don’t shrink */
+    white-space: nowrap;
+    font-size: 14px;
+    padding: 10px 15px;
+  }
+
 }
 
 
