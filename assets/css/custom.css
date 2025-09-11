@@ -451,7 +451,10 @@ body {
     .locker-section { flex-direction: column; align-items: flex-start; }
     .locker-right { min-width: auto; }
 
-    #intro { background: url('../../images/mob-lockers.jpg') center/cover no-repeat !important; background-size: 100% 100%; }
+    #intro { 
+        background: url('../../images/mob-lockers.jpg') center center no-repeat !important; 
+        background-size: 100% 100%; 
+    }
 }
 
 @media (max-width: 600px) {
