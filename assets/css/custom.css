@@ -471,7 +471,7 @@ body {
   }
 
   .discord-button {
-    gap: 8px;
+    gap: 8px !important;
   }
 
   .discord-button i {
