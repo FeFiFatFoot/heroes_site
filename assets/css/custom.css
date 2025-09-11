@@ -412,10 +412,10 @@ body {
 
   #intro .locker-room-text { display: block; line-height: 0.6; font-size: 0.6rem; }
   .locker-room-sub-text {
-    display: block; 
-    line-height: 0.6; 
-    font-size: 0.6rem;
-    text-align: center;
+    display: block !important; 
+    line-height: 0.6 !important; 
+    font-size: 0.6rem !important;
+    text-align: center !important;
     margin: 0 !important;
   }
 
@@ -457,7 +457,8 @@ body {
 .signup-form input[type="email"] {
     box-sizing: border-box !important;        /* include padding in total height */
     width: 100% !important;        /* full width of container */
-    height: 30px !important;       /* same as JOIN button */
+    height: 50px !important;       /* same as JOIN button */
+    line-height: 50px !important; /* vertically center text */
     padding: 0 15px !important;    /* horizontal padding for text */
     font-size: 1rem !important;
     border-radius: 50px !important;
