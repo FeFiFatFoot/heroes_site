@@ -312,45 +312,42 @@ body {
 
 @media (max-width: 768px) {
 
+  /* =========================
+     LOGOS
+  ========================= */
   .logo-right, .right-logo {
-    /* the JS will move the element; hiding here prevents "duplicate" visual flicker */
-    display: none !important;
+    display: none !important; /* hide original right logo */
   }
 
- /* Remove stray margins/padding at top */
+  /* Center left logo at top */
+  .logo-left {
+    display: block;
+    margin: 10px auto 20px auto;
+    text-align: center;
+    max-width: 120px;
+    height: auto;
+  }
+
+  .logo-left img {
+    max-width: 120px;
+    height: auto;
+  }
+
+  /* Remove stray margins/padding at top */
   .left-column,
-  .logo-left,
   #intro {
     margin-top: 0 !important;
     padding-top: 0 !important;
   }
 
-  /* Force logo to the very top and centered */
-  .logo-left {
-    display: block;
-    margin: 10px auto 20px auto; /* small gap from top, centered */
-    text-align: center;
-    max-width: 120px; /* scale down for mobile */
-    height: auto;
-  }
-
-  .logo-left img {
-    max-width: 120px;  /* adjust size if needed */
-    height: auto;
-  }
-
-  header, #header {
+  /* Remove any header bar / background color */
+  header, #header, .wrapper.style1.fullscreen {
     margin: 0 !important;
     padding: 0 !important;
     height: 0 !important;
     border: none !important;
     box-shadow: none !important;
-  }
-
-  header, 
-  #header,
-  .wrapper.style1.fullscreen {
-    background: transparent !important;   /* remove any solid background */
+    background: transparent !important;
   }
 
   body, html {
@@ -358,104 +355,109 @@ body {
     padding: 0;
   }
 
-  /* Place right logo above social icons */
+  /* =========================
+     RIGHT LOGO ABOVE SOCIAL ICONS
+  ========================= */
   .social-icons {
     position: relative;
     display: flex;
-    flex-direction: column; /* stacked: logo above icons */
+    flex-direction: column; /* stack logo above icons */
     align-items: center;
     gap: 10px;
   }
 
-  .social-icons .moved-to-socials {
-    display: block !important;
-  }
-
   .social-icons::before {
-    content: url('../../images/logo-right.png'); /* inject the logo */
+    content: url('../../images/logo-right.png'); /* right logo image */
     display: block;
-    margin: 0 auto 10px auto; /* center it and add spacing */
-    width: 80px; /* adjust size */
+    margin: 0 auto 10px auto;
+    width: 80px; /* adjust as needed */
   }
 
-    .signup-form, 
-  #intro .signup-pill {
-    flex-direction: column;   /* stack instead of row */
-    width: 100%;              /* full width */
-    border-radius: 30px;
-    padding: 10px;
-    gap: 10px;                /* space between stacked input + button */
-  }
-
-  .signup-form input[type="email"], 
-  #intro .signup-pill input[type="email"] {
+  /* =========================
+     SIGNUP PILL / BUTTONS
+  ========================= */
+  .signup-form, #intro .signup-pill {
+    flex-direction: column;   /* stack input + button + Discord button */
     width: 100%;
-    border-radius: 30px;
-    padding: 12px 15px;
+    max-width: 100%;
+    gap: 12px;
+    background: none;
+    padding: 0;
+    height: auto;
   }
 
-  .signup-form button, 
-  #intro .signup-pill button {
+  .signup-form input[type="email"], #intro .signup-pill input[type="email"] {
     width: 100%;
-    border-radius: 30px;
-    padding: 12px 15px;
+    height: 50px;
+    border-radius: 50px;
+    padding: 0 15px;
+    font-size: 1rem;
+    background: #fff;
+    text-align: center;
+    box-shadow: 3px 3px 0px rgba(138,43,226,0.3);
   }
 
-    /* Signup form: stack input and button as separate pills */
-    .signup-form,
-    #intro .signup-pill {
-        flex-direction: column;
-        gap: 12px;
-        width: 100%;
-        max-width: 100%;
-        background: none;
-        padding: 0;
-        height: auto;
-    }
+  .signup-form button, #intro .signup-pill button, .discord-button {
+    width: 100%;
+    height: 50px;
+    border-radius: 50px;
+    font-size: 1rem;
+    font-weight: 700;
+    background: #ff4081;
+    color: #fff;
+    text-align: center;
+    box-shadow: 3px 3px 0px rgba(138,43,226,0.3);
+    transition: background 0.3s ease, transform 0.2s ease;
+  }
 
-    .signup-form input[type="email"],
-    #intro .signup-pill input[type="email"] {
-        width: 100%;
-        height: 50px;
-        border-radius: 50px;
-        padding: 0 15px;
-        font-size: 1rem;
-        background: #fff;
-        text-align: center;
-        box-shadow: 3px 3px 0px rgba(138,43,226,0.3);
-    }
+  .signup-form button:hover, #intro .signup-pill button:hover, .discord-button:hover {
+    background: #e0336b;
+    transform: scale(1.05);
+  }
 
-    .signup-form button,
-    #intro .signup-pill button {
-        width: 100%;
-        height: 50px;
-        border-radius: 50px;
-        font-size: 1rem;
-        font-weight: 700;
-        background: #ff4081;
-        color: #fff;
-        text-align: center;
-        box-shadow: 3px 3px 0px rgba(138,43,226,0.3);
-        transition: background 0.3s ease, transform 0.2s ease;
-    }
+  /* =========================
+     INTRO TEXT & COLUMNS
+  ========================= */
+  #intro .left-column h1 {
+    font-size: 1.2rem;
+    line-height: 1.2;
+  }
 
-    .signup-form button:hover { background: #e0336b; transform: scale(1.05); }
+  #intro .left-column p {
+    font-size: 0.85rem;
+    line-height: 1.1;
+    max-width: 90%;
+    margin: 0 auto;
+  }
 
-    /* Intro headings & paragraph for mobile */
-    #intro .left-column h1 { font-size: 1.2rem; line-height: 1.2; }
-    #intro .left-column p { font-size: 0.85rem; line-height: 1.1; max-width: 90%; margin: 0 auto; }
+  #intro .left-column, #intro .right-column {
+    width: 100%;
+    align-items: center;
+    text-align: center;
+    padding: 0 1rem;
+  }
 
-    #intro .left-column, #intro .right-column { width: 100%; align-items: center; text-align: center; padding: 0 1rem; }
+  /* =========================
+     LOCKER SECTION
+  ========================= */
+  .locker-section {
+    flex-direction: column;
+    align-items: flex-start;
+  }
 
-    /* Locker section stacking */
-    .locker-section { flex-direction: column; align-items: flex-start; }
-    .locker-right { min-width: auto; }
+  .locker-right {
+    min-width: auto;
+  }
 
-    #intro { 
-        background: url('../../images/mob-lockers.jpg') center center no-repeat !important; 
-        background-size: 100% 100%; 
-    }
+  /* =========================
+     BACKGROUND IMAGE
+  ========================= */
+  #intro {
+    background: url('../../images/mob-lockers.jpg') center center no-repeat !important;
+    background-size: 100% 100%;
+  }
 }
+
 
 @media (max-width: 600px) {
     #intro .social-icons a { width: 25px; height: 25px; }
