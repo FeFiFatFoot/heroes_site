@@ -333,8 +333,8 @@ body {
     padding: 0 !important;
     width: 100%;
     min-height: 100vh;
-    height: 100vh;           /* force full viewport height */
-    overflow: hidden;        /* remove scroll */
+    height: 100vh;           
+    overflow: hidden;        
     background: none !important;
   }
 
@@ -358,8 +358,7 @@ body {
     display: block !important;  
     width: 100px;
     height: auto;
-    margin-left: auto;
-    margin-right: auto;
+    margin: 12px auto 20px auto;
     z-index: 10;
   }
 
@@ -369,11 +368,11 @@ body {
   #intro {
     display: flex;
     flex-direction: column;
-    justify-content: space-between; /* distribute content top to bottom */
+    justify-content: flex-start;
     align-items: center;
     width: 100%;
     min-height: 100vh;
-    padding: 0 1rem 1rem 1rem;
+    padding: 1rem 1rem 2rem 1rem;
     background: url('../../images/mob-lockers.jpg') center center no-repeat !important;
     background-size: cover !important;
   }
@@ -386,7 +385,6 @@ body {
     align-items: center;
     margin-top: 0;
     padding: 0 1rem;
-    flex: 0 0 auto;
   }
 
   #intro .left-column h1 {
@@ -403,23 +401,13 @@ body {
   }
 
   /* =========================
-     SIGNUP PILL / BUTTONS
+     SIGNUP FORM / JOIN BUTTON
   ========================= */
-
-  /* Disable the combined pill container styles */
-  .signup-pill,
-  .signup-form {
-    flex-direction: column !important;  /* stack input + button */
-    border-radius: 0 !important;        /* remove container pill */
-    overflow: visible !important;       /* don’t clip children */
-    background: none !important;        /* remove background */
-  }
-
   .signup-form {
     display: flex !important;
-    flex-direction: column !important; /* stack input + button */
-    width: 100% !important;
-    max-width: 400px !important;       /* limit overall width */
+    flex-direction: column !important;
+    width: 90% !important;
+    max-width: 400px !important;
     gap: 12px !important;
     margin: 1rem auto !important;
     padding: 0 !important;
@@ -427,18 +415,18 @@ body {
 
   .signup-form input[type="email"] {
     width: 100% !important;
-    min-height: 50px !important;
+    height: 50px !important;
+    border-radius: 50px !important;
     padding: 0 15px !important;
     font-size: 1rem !important;
-    border-radius: 50px !important;
-    box-shadow: 3px 3px 0px rgba(138,43,226,0.3) !important;
     background: #fff !important;
     text-align: center;
+    box-shadow: 3px 3px 0px rgba(138,43,226,0.3) !important;
   }
 
   .signup-form button {
     width: 100% !important;
-    min-height: 50px !important;
+    height: 50px !important;
     font-size: 1rem !important;
     font-weight: 700 !important;
     border-radius: 50px !important;
@@ -452,122 +440,17 @@ body {
   .signup-form button:hover {
     background: #e0336b !important;
     transform: scale(1.05) !important;
-
-  .signup-form input[type="email"],
-  .signup-form button,
-  .discord-button {
-    width: 100% !important;
-    height: 50px !important;
-    border-radius: 50px !important;
-    font-size: 1rem !important;
-    text-align: center !important;
-    box-shadow: 3px 3px 0px rgba(138,43,226,0.3) !important;
-    margin-bottom: 12px !important;
-  }
-}
-  .signup-form button,
-  .discord-button {
-    background: #ff4081 !important;
-    color: #fff !important;
-    font-weight: 700 !important;
-    transition: background 0.3s ease, transform 0.2s ease;
   }
 
-  .signup-form button:hover,
-  .discord-button:hover {
-    background: #e0336b !important;
-    transform: scale(1.05) !important;
-  }
-
-  /* Style input individually */
-  .signup-pill input[type="email"],
-  .signup-form input[type="email"] {
-    border-radius: 50px !important;     /* keep input pill-shaped */
-    width: 100% !important;
-    height: 50px !important;
-    margin-bottom: 12px;                /* spacing between input + button */
-    box-shadow: 3px 3px 0px rgba(138,43,226,0.3);
-    text-align: center;
-  }
-  
-/* =========================
+  /* =========================
      DISCORD BUTTON (Locker Room)
-  ========================= */ 
-
-  /* Style button individually */
-  .signup-pill button,
-  .signup-form button,
-  .discord-button {
-    border-radius: 50px !important;
-    width: 100% !important;
-    height: 50px !important;
-    font-weight: 700;
-    box-shadow: 3px 3px 0px rgba(138,43,226,0.3);
-    background: #ff4081;
-    color: #fff;
-    text-align: center;
-  }
-
-  .signup-pill button:hover,
-  .signup-form button:hover,
-  .discord-button:hover {
-    background: #e0336b;
-    transform: scale(1.05);
-  }
-
-  .signup-form,
-  #intro .signup-pill,
-  .discord-button {
-    display: flex;
-    flex-direction: column;
-    width: 90%;
-    max-width: 350px;
-    gap: 12px;
-    margin: 0 auto;
-  }
-
-  .signup-form input[type="email"],
-  #intro .signup-pill input[type="email"],
-  .signup-form button,
-  #intro .signup-pill button,
-  .discord-button {
-    width: 100%;
-    height: 50px;
-    border-radius: 50px;
-    font-size: 1rem;
-    text-align: center;
-    box-shadow: 3px 3px 0px rgba(138,43,226,0.3);
-  }
-
-  .signup-form input[type="email"],
-  #intro .signup-pill input[type="email"] {
-    background: #fff;
-    padding: 0 15px;
-  }
-
-  .signup-form button,
-  #intro .signup-pill button,
-  .discord-button {
-    background: #ff4081;
-    color: #fff;
-    font-weight: 700;
-    transition: background 0.3s ease, transform 0.2s ease;
-  }
-
-  .signup-form button:hover,
-  #intro .signup-pill button:hover,
-  .discord-button:hover {
-    background: #e0336b;
-    transform: scale(1.05);
-  }
-
-
+  ========================= */
   .discord-button {
     display: flex !important;
-    align-items: center !important;      /* vertical center icon + text */
-    justify-content: center !important;  /* center horizontally */
-    width: 100% !important;              /* match JOIN button width */
-    min-height: 50px !important;         /* match JOIN button height */
+    align-items: center !important;      
+    justify-content: center !important;  
+    width: 100% !important;              
+    min-height: 50px !important;         
     border-radius: 50px !important;
     font-size: 1rem !important;
     font-weight: 700 !important;
@@ -575,11 +458,11 @@ body {
     color: #fff !important;
     text-decoration: none !important;
     box-shadow: 3px 3px 0px rgba(138,43,226,0.3) !important;
-    gap: 8px;                             /* space between icon & text */
+    gap: 8px;                             
     padding: 0 15px !important;
+    margin-bottom: 12px !important;
   }
 
-  /* Fix Discord icon inside button */
   .discord-button i {
     font-size: 1.2rem !important;
     display: inline-block;
@@ -591,9 +474,34 @@ body {
   }
 
   /* =========================
-     SOCIAL ICONS + RIGHT LOGO
+     LOCKER SECTION
   ========================= */
- .social-icons {
+  .locker-room-wrapper {
+    display: flex !important;
+    flex-direction: column !important;  
+    align-items: center !important;
+    width: 100%;
+    gap: 12px;
+  }
+
+  .locker-right {
+    width: 100% !important;
+    text-align: center !important;
+  }
+
+  /* Right logo under locker text */
+  .locker-section .logo-right-mobile {
+    display: block !important;
+    max-width: 100px !important;
+    width: 80% !important;
+    height: auto !important;
+    margin: 12px auto 0 auto;
+  }
+
+  /* =========================
+     SOCIAL ICONS
+  ========================= */
+  .social-icons {
     display: flex !important;
     flex-direction: column !important;
     align-items: center !important;
@@ -601,7 +509,6 @@ body {
     margin: 20px 0 !important;
   }
 
-  /* Inject right logo above social icons */
   .social-icons::before {
     content: url('../../images/logo-right.png');
     display: block;
@@ -610,7 +517,6 @@ body {
     margin-bottom: 15px;
   }
 
-  /* Make social icons bigger */
   .social-icons a,
   .social-icons img {
     width: 60px;
@@ -619,23 +525,7 @@ body {
   }
 
   /* =========================
-     LOCKER SECTION
-  ========================= */
-  .locker-section {
-    flex-direction: column;
-    align-items: flex-start;
-    width: 100%;
-    padding: 0 1rem;
-    gap: 10px;
-  }
-
-  .locker-right {
-    min-width: auto;
-    width: 100%;
-  }
-
-  /* =========================
-     HEADER BAR & DESKTOP LOGO RESET
+     HEADER BAR RESET
   ========================= */
   header, #header, .wrapper.style1.fullscreen {
     margin: 0 !important;
@@ -654,7 +544,9 @@ body {
   .hide-on-mob {
     display: none;
   }
+
 }
+
 
 
 
