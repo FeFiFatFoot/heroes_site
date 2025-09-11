@@ -443,7 +443,6 @@ body {
   display: block !important;
   width: 100% !important;
   min-width: 0 !important;        /* override flex shrink */
-  box-sizing: border-box !important; /* include padding in width */
   height: 50px !important;
   border-radius: 50px !important;
   line-height: normal !important; /* match height for vertical centering */
