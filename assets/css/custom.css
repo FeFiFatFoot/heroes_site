@@ -595,6 +595,22 @@ body {
 
 }
 
+.hide-on-desktop .social-icons {
+    display: flex !important;
+    flex-direction: row !important;  /* horizontal instead of vertical */
+    justify-content: center !important; /* center them horizontally */
+    align-items: center !important;    /* vertically center icons in row */
+    gap: 15px !important;              /* spacing between icons */
+    margin: 1px 0 !important;         /* optional vertical spacing */
+}
+
+.hide-on-desktop .social-icons a,
+.hide-on-desktop .social-icons img {
+    width: 50px !important;   /* match your mobile sizing */
+    height: 50px !important;
+    margin: 0 !important;     /* remove extra top/bottom margin */
+}
+
 }
 
 
