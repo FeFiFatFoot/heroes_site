@@ -403,75 +403,81 @@ body {
   /* =========================
      SIGNUP FORM / JOIN BUTTON
   ========================= */
-  .signup-form {
-    display: flex !important;
-    flex-direction: column !important;
-    width: 90% !important;
-    max-width: 400px !important;
-    gap: 12px !important;
-    margin: 1rem auto !important;
-    padding: 0 !important;
-  }
+.signup-form {
+  display: flex !important;
+  flex-direction: column !important; /* stack input + button */
+  width: 90% !important;
+  max-width: 400px !important;
+  gap: 12px !important;
+  margin: 1rem auto !important;
+  padding: 0 !important;
+  background: none !important;        /* remove pill background */
+  border-radius: 0 !important;       /* remove pill container radius */
+  overflow: visible !important;      /* do not clip children */
+}
 
-  .signup-form input[type="email"] {
-    width: 100% !important;
-    height: 50px !important;
-    border-radius: 50px !important;
-    padding: 0 15px !important;
-    font-size: 1rem !important;
-    background: #fff !important;
-    text-align: center;
-    box-shadow: 3px 3px 0px rgba(138,43,226,0.3) !important;
-  }
+.signup-form input[type="email"] {
+  display: block !important;
+  width: 100% !important;
+  height: 50px !important;
+  border-radius: 50px !important;
+  padding: 0 15px !important;
+  font-size: 1rem !important;
+  background: #fff !important;
+  text-align: center;
+  box-shadow: 3px 3px 0px rgba(138,43,226,0.3) !important;
+  margin-bottom: 12px !important;
+}
 
-  .signup-form button {
-    width: 100% !important;
-    height: 50px !important;
-    font-size: 1rem !important;
-    font-weight: 700 !important;
-    border-radius: 50px !important;
-    background: #ff4081 !important;
-    color: #fff !important;
-    text-align: center;
-    box-shadow: 3px 3px 0px rgba(138,43,226,0.3) !important;
-    transition: background 0.3s ease, transform 0.2s ease;
-  }
+.signup-form button {
+  display: block !important;
+  width: 100% !important;
+  height: 50px !important;
+  font-size: 1rem !important;
+  font-weight: 700 !important;
+  border-radius: 50px !important;
+  background: #ff4081 !important;
+  color: #fff !important;
+  text-align: center;
+  box-shadow: 3px 3px 0px rgba(138,43,226,0.3) !important;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
 
-  .signup-form button:hover {
-    background: #e0336b !important;
-    transform: scale(1.05) !important;
-  }
+.signup-form button:hover {
+  background: #e0336b !important;
+  transform: scale(1.05) !important;
+}
 
   /* =========================
      DISCORD BUTTON (Locker Room)
   ========================= */
-  .discord-button {
-    display: flex !important;
-    align-items: center !important;      
-    justify-content: center !important;  
-    width: 100% !important;              
-    min-height: 50px !important;         
-    border-radius: 50px !important;
-    font-size: 1rem !important;
-    font-weight: 700 !important;
-    background: #ff4081 !important;
-    color: #fff !important;
-    text-decoration: none !important;
-    box-shadow: 3px 3px 0px rgba(138,43,226,0.3) !important;
-    gap: 8px;                             
-    padding: 0 15px !important;
-    margin-bottom: 12px !important;
-  }
+.discord-button {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  width: 100% !important;              
+  min-height: 50px !important;         
+  border-radius: 50px !important;
+  font-size: 1rem !important;
+  font-weight: 700 !important;
+  background: #ff4081 !important;
+  color: #fff !important;
+  text-decoration: none !important;
+  box-shadow: 3px 3px 0px rgba(138,43,226,0.3) !important;
+  gap: 8px;                            
+  padding: 0 15px !important;
+  margin-bottom: 12px !important;
+}
 
-  .discord-button i {
-    font-size: 1.2rem !important;
-    display: inline-block;
-  }
+.discord-button i {
+  font-size: 1.2rem !important;
+  display: inline-block;
+}
 
-  .discord-button:hover {
-    background: #e0336b !important;
-    transform: scale(1.05) !important;
-  }
+.discord-button:hover {
+  background: #e0336b !important;
+  transform: scale(1.05) !important;
+}
 
   /* =========================
      LOCKER SECTION
