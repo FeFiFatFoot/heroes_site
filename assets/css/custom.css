@@ -446,7 +446,7 @@ body {
   box-sizing: border-box !important; /* include padding in width */
   height: 50px !important;
   border-radius: 50px !important;
-  line-height: 50px !important; /* match height for vertical centering */
+  line-height: normal !important; /* match height for vertical centering */
   padding: 0 20px !important;   /* horizontal padding */
   font-size: 1.1rem !important;
   background: #fff !important;
