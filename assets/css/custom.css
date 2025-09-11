@@ -140,6 +140,22 @@ body {
     color: white;
 }
 
+.locker-section {
+    margin-top: auto; /* push it to bottom of flex container */
+    width: 100%;
+    text-align: center;
+  }
+
+  .locker-section .social-icons {
+    justify-content: center; /* center icons horizontally */
+    gap: 15px;
+    margin-bottom: 20px; /* small spacing from bottom of page */
+  }
+
+  .locker-section .logo-right-mobile {
+    margin-bottom: 10px; /* space between logo and icons */
+  }
+
 .hide-on-desktop {
     display: none !important;
 }
@@ -591,7 +607,7 @@ body {
 .discord-button:hover {
   background: #e0336b;
   transform: scale(1.05);
-}}
+}
 
   /* =========================
      LOCKER SECTION
