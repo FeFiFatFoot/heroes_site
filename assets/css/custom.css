@@ -140,6 +140,10 @@ body {
     color: white;
 }
 
+.hide-on-desktop {
+    display: none !important;
+}
+
 /* Columns */
 #intro .columns {
     display: flex;
@@ -572,9 +576,13 @@ body {
     display: none;
   }
 
+  .hide-on-desktop {
+    display: block !important;
+
+
 }
 
-
+}
 
 
 @media (max-width: 600px) {
