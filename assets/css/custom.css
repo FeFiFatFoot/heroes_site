@@ -441,6 +441,7 @@ body {
 
 .signup-form input[type="email"] {
   display: block !important;
+  box-sizing: content-box; 
   width: 100% !important;
   min-width: 0 !important;        /* override flex shrink */
   height: 50px !important;
