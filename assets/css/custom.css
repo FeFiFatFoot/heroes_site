@@ -140,13 +140,6 @@ body {
     color: white;
 }
 
-#intro .left-column .locker-room-sub-text {
-  margin: 0 !important;
-  margin-bottom: 6px !important;
-  padding: 0 !important;
-  line-height: 1.1 !important; /* optional */
-}
-
 .locker-section {
     margin-top: auto; /* push it to bottom of flex container */
     width: 100%;
@@ -416,7 +409,7 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-top: 0 !important;
+    margin-top: 0;
     padding: 0 1rem;
   }
 
