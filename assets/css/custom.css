@@ -584,6 +584,7 @@ body {
     text-align: center;
     box-shadow: 3px 3px 0px rgba(138,43,226,0.3) !important;
     margin-bottom: 0 !important;
+    background: url('../../images/pill-bg.jpg') center/cover no-repeat !important;
     display: block;
   }
 
@@ -598,6 +599,7 @@ body {
     color: #fff !important;
     box-shadow: 3px 3px 0px rgba(138,43,226,0.3) !important;
     transition: background 0.3s ease, transform 0.2s ease;
+    background: url('../../images/tab-pill-bg.jpg') center/cover no-repeat !important;
   }
 
 .signup-form button:hover {
