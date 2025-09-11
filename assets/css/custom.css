@@ -737,17 +737,17 @@ body {
   ========================= */
 
   .tab-container {
-    display: flex;
+    display: flex !important;
     justify-content: space-between; /* spread them evenly */
     gap: 5px;                       /* small space between pills */
     padding: 0 10px;
   }
 
   .tab-link {
-    flex: 1 1 auto;        /* let them shrink/grow equally */
+    flex: 1 1 auto !important;        /* let them shrink/grow equally */
     min-width: 0;          /* allow full shrinking */
     font-size: 12px;       /* smaller font for mobile */
-    padding: 8px 10px;     /* less padding so they fit */
+    padding: 8px 10px !important;     /* less padding so they fit */
     white-space: nowrap;   /* keep text in one line */
     text-align: center;
   }
