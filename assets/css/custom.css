@@ -554,7 +554,7 @@ body {
 
 /* Reduce spacing above social icons and logo injected above them */
 .social-icons::before {
-    margin-bottom: 10px !important;   /* less space between injected logo and icons */
+    margin-bottom: 5px !important;   /* less space between injected logo and icons */
     width: 80px !important;           /* optional: smaller logo */
     height: auto !important;
 }
@@ -563,6 +563,7 @@ body {
 .social-icons a,
 .social-icons img {
     margin-bottom: 10px !important;   /* less gap between icons */
+    margin-top: 1px !important;
     width: 50px !important;           /* optional: slightly smaller icons */
     height: 50px !important;
 }
