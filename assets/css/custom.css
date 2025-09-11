@@ -354,6 +354,14 @@ body {
     display: none !important;
   }
 
+  .logo-right-mobile {
+    display: block !important;  
+    width: 100px;
+    height: auto;
+    margin: 15px auto 20px auto;
+    z-index: 10;
+  }
+
   /* =========================
      INTRO SECTION
   ========================= */
