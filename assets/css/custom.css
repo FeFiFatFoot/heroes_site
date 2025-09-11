@@ -435,6 +435,10 @@ body {
     margin: 0 !important;
   }
 
+  .locker-room-text {
+    margin-top: 1px !important;
+  }
+
   /* =========================
      SIGNUP FORM / JOIN BUTTON
   ========================= */
