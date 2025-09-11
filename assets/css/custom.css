@@ -411,7 +411,7 @@ body {
     line-height: 0.6; 
     font-size: 0.6rem;
     text-align: center;
-    margin-top: 8px !important; 
+    margin: 0 !important;
   }
 
   /* =========================
@@ -441,6 +441,7 @@ body {
   width: 90% !important;
   max-width: 400px !important;
   gap: 8px !important;
+  margin: 0 !important;
   margin: 1rem auto !important;
   padding: 0 !important;
   background: none !important;        /* remove pill background */
