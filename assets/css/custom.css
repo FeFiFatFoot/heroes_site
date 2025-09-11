@@ -442,7 +442,7 @@ body {
 .signup-form input[type="email"] {
     box-sizing: border-box;        /* include padding in total height */
     width: 100% !important;        /* full width of container */
-    height: 50px !important;       /* same as JOIN button */
+    height: 90px !important;       /* same as JOIN button */
     padding: 0 15px !important;    /* horizontal padding for text */
     font-size: 1rem !important;
     border-radius: 50px !important;
