@@ -460,7 +460,7 @@ body {
      SIGNUP FORM / JOIN BUTTON
   ========================= */
  .join-button { 
-      margin-bottom: 10px !important; 
+      margin-bottom: 12px !important; 
   }
 
 /* =========================
@@ -560,8 +560,8 @@ body {
   display: flex !important;
   align-items: center !important; /* ensures input fills available width/height */
   flex-direction: column !important; /* stack input + button */
-  width: 90% !important;
-  max-width: 400px !important;
+  width: 100% !important;
+  max-width: 500px !important;
   gap: 8px !important;
   margin: 0 !important;
   margin: 1rem auto !important;
