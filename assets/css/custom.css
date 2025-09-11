@@ -391,15 +391,29 @@ body {
      INTRO SECTION
   ========================= */
   #intro {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: space-between !important;
     align-items: center;
     width: 100%;
-    min-height: 100vh;
-    padding: 1rem 1rem 2rem 1rem;
+    min-height: 100vh !important;
+    padding: 1rem !important;
     background: url('../../images/mob-lockers.jpg') center center no-repeat !important;
     background-size: cover !important;
+  }
+
+  /* Locker section (bottom logo + social icons) */
+  .locker-section {
+    margin-top: auto !important;  /* push to bottom */
+    padding-bottom: 10px !important; /* optional small bottom spacing */
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+  }
+
+  .locker-section .logo-right-mobile,
+  .locker-section .social-icons {
+    margin-bottom: 5px !important;  /* hugs bottom */
   }
 
   #intro .left-column {
