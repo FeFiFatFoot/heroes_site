@@ -410,18 +410,7 @@ body {
   ========================= */
 
 /* Ensure input field is full width on mobile */
-.signup-form input[type="email"],
-#intro .signup-pill input[type="email"] {
-    width: 100% !important;         /* fill container */
-    min-width: 0 !important;        /* override flex shrink */
-    box-sizing: border-box !important; /* include padding in width */
-    height: 50px !important;
-    padding: 0 15px !important;
-    font-size: 1rem !important;
-    border-radius: 50px !important;
-    text-align: center;
-    box-shadow: 3px 3px 0px rgba(138,43,226,0.3) !important;
-}
+
 
 .signup-form,
 #intro .signup-pill {
@@ -438,6 +427,7 @@ body {
 
 .signup-form {
   display: flex !important;
+  align-items: stretch !important; /* ensures input fills available width/height */
   flex-direction: column !important; /* stack input + button */
   width: 90% !important;
   max-width: 400px !important;
@@ -453,9 +443,13 @@ body {
   display: block !important;
   width: 100% !important;
   min-height: 80px !important;
+      min-width: 0 !important;        /* override flex shrink */
+    box-sizing: border-box !important; /* include padding in width */
+    box-sizing: border-box !important; /* include padding in width */
   height: 70px !important;
   border-radius: 50px !important;
-  padding: 0 15px !important;
+  line-height: 70px !important; /* match height for vertical centering */
+  padding: 0 20px !important;   /* horizontal padding */
   font-size: 1.1rem !important;
   background: #fff !important;
   text-align: center;
