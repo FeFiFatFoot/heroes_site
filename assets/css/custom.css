@@ -403,6 +403,34 @@ body {
   /* =========================
      SIGNUP FORM / JOIN BUTTON
   ========================= */
+
+/* Ensure input field is full width on mobile */
+.signup-form input[type="email"],
+#intro .signup-pill input[type="email"] {
+    width: 100% !important;         /* fill container */
+    min-width: 0 !important;        /* override flex shrink */
+    box-sizing: border-box !important; /* include padding in width */
+    height: 50px !important;
+    padding: 0 15px !important;
+    font-size: 1rem !important;
+    border-radius: 50px !important;
+    text-align: center;
+    box-shadow: 3px 3px 0px rgba(138,43,226,0.3) !important;
+}
+
+.signup-form,
+#intro .signup-pill {
+    display: flex !important;
+    flex-direction: column !important;
+    width: 100% !important;
+    max-width: 100% !important; /* override any desktop max-width */
+    gap: 12px !important;
+    margin: 1rem auto !important;
+    padding: 0 !important;
+}
+
+
+
 .signup-form {
   display: flex !important;
   flex-direction: column !important; /* stack input + button */
