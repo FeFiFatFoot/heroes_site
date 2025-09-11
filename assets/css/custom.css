@@ -611,7 +611,7 @@ body {
   justify-content: center;
   height: 50px !important;          /* match Join button */
   width: 100% !important;
-  max-width: 400px !important;
+  max-width: 500px !important;
   font-size: 1rem;
   font-weight: 700;
   border-radius: 50px;
@@ -619,8 +619,8 @@ body {
   color: #fff;
   text-decoration: none;
   box-shadow: 3px 3px 0px rgba(138,43,226,0.3);
-  margin-top: 8px !important;
-  gap: 8px;              /* space between icon and text */
+  margin-top: 12px !important;
+  gap: 12px;              /* space between icon and text */
 }
 
 .discord-button i {
