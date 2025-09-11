@@ -487,7 +487,7 @@ body {
     align-items: center !important;      /* vertical center */
     justify-content: center !important;  /* horizontal center */
     width: 100% !important;              /* full width of container */
-    max-width: 700px !important;         /* optional: match JOIN button max width */
+    max-width: 800px !important;         /* optional: match JOIN button max width */
     height: 50px !important;             /* same as JOIN button */
     font-size: 1rem !important;
     font-weight: 700 !important;
@@ -496,7 +496,7 @@ body {
     color: #fff !important;
     text-decoration: none !important;
     box-shadow: 3px 3px 0px rgba(138,43,226,0.3) !important;
-    gap: 8px;                             /* spacing between icon & text */
+    gap: 8px !important;                             /* spacing between icon & text */
     padding: 0 15px !important;           /* keep icon + text comfortably spaced */
 }
 
