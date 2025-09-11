@@ -736,20 +736,20 @@ body {
      About Page
   ========================= */
 
- .tab-container {
+  .tab-container {
     display: flex;
-    flex-wrap: nowrap;     /* keep one row */
-    overflow-x: auto;      /* enable horizontal scroll */
-    gap: 10px;
-    -webkit-overflow-scrolling: touch; /* smooth iOS scroll */
+    justify-content: space-between; /* spread them evenly */
+    gap: 5px;                       /* small space between pills */
     padding: 0 10px;
   }
 
   .tab-link {
-    flex: 0 0 auto;        /* don’t shrink */
-    white-space: nowrap;
-    font-size: 14px;
-    padding: 10px 15px;
+    flex: 1 1 auto;        /* let them shrink/grow equally */
+    min-width: 0;          /* allow full shrinking */
+    font-size: 12px;       /* smaller font for mobile */
+    padding: 8px 10px;     /* less padding so they fit */
+    white-space: nowrap;   /* keep text in one line */
+    text-align: center;
   }
 
 }
