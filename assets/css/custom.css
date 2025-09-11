@@ -411,13 +411,13 @@ body {
   }
 
   #intro .left-column {
-    width: 100% !important;
-    text-align: center !important;
-    display: flex !important;
-    flex-direction: column !important;
-    align-items: center !important;
+    width: 100%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     margin-top: 0 !important;
-    gap: 4px !important;
+    padding: 0 1rem;
   }
 
   #intro .left-column h1 {
