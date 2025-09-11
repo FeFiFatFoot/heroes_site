@@ -427,7 +427,7 @@ body {
 
 .signup-form {
   display: flex !important;
-  align-items: stretch !important; /* ensures input fills available width/height */
+  align-items: center !important; /* ensures input fills available width/height */
   flex-direction: column !important; /* stack input + button */
   width: 90% !important;
   max-width: 400px !important;
