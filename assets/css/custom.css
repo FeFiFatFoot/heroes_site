@@ -350,34 +350,42 @@ body {
 
 @media (max-width: 768px) {
 
-  /* General page setup */
-  html, body, #intro {
+  /* =========================
+     BODY & WRAPPER RESET
+  ========================= */
+  html, body, #wrapper, .inner, #intro {
     margin: 0 !important;
     padding: 0 !important;
     width: 100%;
     min-height: 100vh;
-    height: auto;           
-    overflow-x: hidden;        
+    height: 100vh;           
+    overflow: hidden;        
     background: none !important;
-    font-size: 16px;
-    line-height: 1.4;
   }
 
   /* =========================
-     MOBILE LOGOS
+     LEFT LOGO TOP
   ========================= */
-  .logo-left-mobile,
-  .logo-right-mobile {
-    display: block !important;
-    margin: 10px auto;
-    width: 150px;
+  .logo-left-mobile {
+    display: block !important;  
+    width: 200px;
     height: auto;
+    margin: 15px auto 20px auto;
     z-index: 10;
   }
 
   /* Hide desktop logos */
-  .logo-left, .logo-right, .right-column {
+  .logo-left, .logo-right, .right-logo {
     display: none !important;
+  }
+
+  .logo-right-mobile {
+    display: block !important;  
+    margin-top: 10px !important;      /* less space above */
+    margin-bottom: 1px !important;   /* less space below */
+    width: 80px !important;           /* optional: make smaller */
+    height: auto !important;
+    z-index: 10;
   }
 
   /* =========================
@@ -390,11 +398,12 @@ body {
     align-items: center;
     width: 100%;
     min-height: 100vh;
-    padding: 1rem;
-    background: url('images/mob-lockers.jpg') center center / cover no-repeat !important;
+    padding: 1rem 1rem 2rem 1rem;
+    background: url('../../images/mob-lockers.jpg') center center no-repeat !important;
+    background-size: cover !important;
   }
 
-  .left-column {
+  #intro .left-column {
     width: 100%;
     text-align: center;
     display: flex;
@@ -404,120 +413,281 @@ body {
     padding: 0 1rem;
   }
 
-  /* Headline */
-  .left-column h1 {
-    font-size: 1.6rem !important;
+  #intro .left-column h1 {
+    font-size: 1.5rem;
     line-height: 1.2;
-    margin: 0.5rem 0 1rem 0;
+    margin-bottom: 0.5rem;
   }
 
-  /* Subtext */
+  #intro .left-column p {
+    font-size: 0.9rem;
+    line-height: 1.3;
+    max-width: 90%;
+    margin: 0 auto 1rem auto;
+  }
+
+  #intro .locker-room-text { 
+    display: block; line-height: 0.6; font-size: 0.6rem; 
+}
+
   .locker-room-sub-text {
-    font-size: 0.95rem !important;
-    line-height: 1.3 !important;
+    display: block !important; 
+    line-height: 0.9 !important; 
+    font-size: 0.9rem !important;
     text-align: center !important;
-    margin: 0 0 0.8rem 0;
+    margin-bottom: 0.2rem !important;
+  }
+
+  .locker-room-text {
+    margin-top: 1px !important;
   }
 
   /* =========================
-     SIGNUP FORM + DISCORD
+     SIGNUP FORM / JOIN BUTTON
   ========================= */
-  .signup-container {
-    display: flex;
-    flex-direction: column;
-    gap: 0.8rem;
-    width: 90%;
-    max-width: 400px;
-    margin: 0 auto 1.2rem auto;
-  }
 
-  .signup-stack {
-    display: flex;
-    flex-direction: column;
-    gap: 0.6rem;
-    width: 100%;
-  }
 
-  .signup-stack input[type="email"],
-  .signup-stack button,
-  .signup-stack .discord-button {
+/* =========================
+   MOBILE SIGNUP + DISCORD BUTTON STACK
+========================= */
+.signup-stack {
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  width: 90% !important;
+  max-width: 400px !important;
+  gap: 8px !important;           /* spacing between elements */
+  margin: 1rem auto !important;
+  padding: 0 !important;
+  position: relative !important;  /* ensures stacking order */
+  z-index: 1 !important;
+}
+
+.signup-stack input[type="email"],
+.signup-stack button,
+.signup-stack .discord-button {
+  width: 100% !important;
+  max-width: 100% !important;
+  height: 50px !important;
+  border-radius: 50px !important;
+  box-shadow: 3px 3px 0px rgba(138,43,226,0.3) !important;
+  font-size: 1rem !important;
+  font-weight: 700 !important;
+  text-align: center !important;
+  margin: 0 !important;           /* remove previous margins */
+  padding: 0 15px !important;
+  display: block !important;       /* ensure block stacking */
+}
+
+.signup-stack .discord-button {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 8px !important;
+  margin-top: 0 !important;       /* remove extra top margin that could cause overlap */
+  position: relative !important;   /* ensure it’s not behind */
+  z-index: 2 !important;           /* above previous elements */
+}
+
+.signup-stack button:hover,
+.signup-stack .discord-button:hover {
+  background: #e0336b !important;
+  transform: scale(1.05) !important;
+}
+
+
+
+/* Ensure input field is full width on mobile */
+
+
+.signup-form,
+#intro .signup-pill {
+    display: flex !important;
+    flex-direction: column !important;
     width: 100% !important;
-    height: 50px !important;
+    max-width: 100% !important; /* override any desktop max-width */
+    gap: 12px !important;
+    margin: 1rem auto !important;
+    padding: 0 !important;
+}
+
+
+
+.signup-form {
+  display: flex !important;
+  align-items: center !important; /* ensures input fills available width/height */
+  flex-direction: column !important; /* stack input + button */
+  width: 90% !important;
+  max-width: 400px !important;
+  gap: 8px !important;
+  margin: 0 !important;
+  margin: 1rem auto !important;
+  padding: 0 !important;
+  background: none !important;        /* remove pill background */
+  border-radius: 0 !important;       /* remove pill container radius */
+  overflow: visible !important;      /* do not clip children */
+}
+
+.signup-form input[type="email"] {
+    box-sizing: border-box !important;        /* include padding in total height */
+    width: 100% !important;        /* full width of container */
+    height: 50px !important;       /* same as JOIN button */
+    line-height: 50px !important; /* vertically center text */
+    padding: 0 15px !important;    /* horizontal padding for text */
+    font-size: 1rem !important;
     border-radius: 50px !important;
-    box-shadow: 3px 3px 6px rgba(0,0,0,0.15) !important;
+    background: #fff !important;
+    text-align: center;
+    box-shadow: 3px 3px 0px rgba(138,43,226,0.3) !important;
+    margin-bottom: 0 !important;
+    display: block;
+  }
+
+  .signup-form button {
+    height: 50px !important;       /* match input height */
+    width: 100% !important;
     font-size: 1rem !important;
     font-weight: 700 !important;
-    text-align: center !important;
-    padding: 0 15px !important;
-    display: flex !important;
-    align-items: center !important;
-    justify-content: center !important;
+    border-radius: 50px !important;
+    background: #ff4081 !important;
+    color: #fff !important;
+    box-shadow: 3px 3px 0px rgba(138,43,226,0.3) !important;
+    transition: background 0.3s ease, transform 0.2s ease;
   }
 
-  .signup-stack button,
-  .signup-stack .discord-button {
-    cursor: pointer;
-  }
+.signup-form button:hover {
+  background: #e0336b !important;
+  transform: scale(1.05) !important;
+}
 
-  .signup-stack button:hover,
-  .signup-stack .discord-button:hover {
-    background: #e0336b !important;
-    transform: scale(1.03);
-    transition: transform 0.2s ease-in-out;
-  }
+  /* =========================
+     DISCORD BUTTON (Locker Room)
+  ========================= */
+/* Make "Enter the Locker Room" button full width like the Join button */
+.discord-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 50px !important;          /* match Join button */
+  width: 100% !important;
+  max-width: 400px !important;
+  font-size: 1rem;
+  font-weight: 700;
+  border-radius: 50px;
+  background: #ff4081;
+  color: #fff;
+  text-decoration: none;
+  box-shadow: 3px 3px 0px rgba(138,43,226,0.3);
+  margin-top: 8px !important;
+  gap: 8px;              /* space between icon and text */
+}
 
-  .discord-button {
-    gap: 8px !important;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
+.discord-button i {
+  font-size: 1.2rem;
+}
 
-  .discord-button i {
-    font-size: 1.2rem;
-  }
+.discord-button:hover {
+  background: #e0336b;
+  transform: scale(1.05);
+}
 
   /* =========================
      LOCKER SECTION
   ========================= */
   .locker-room-wrapper {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    display: flex !important;
+    flex-direction: column !important;  
+    align-items: center !important;
     width: 100%;
-    gap: 8px;
-    margin-top: 0.5rem;
+    gap: 8px !important;
   }
 
   .locker-right {
-    width: 100%;
-    text-align: center;
+    width: 100% !important;
+    text-align: center !important;
   }
 
-  .locker-room-text {
-    font-size: 0.85rem;
-    line-height: 1.2rem;
+  /* Right logo under locker text */
+  .locker-section .logo-right-mobile {
+    display: block !important;
+    max-width: 100px !important;
+    width: 80% !important;
+    height: auto !important;
+    margin: 12px auto 0 auto;
   }
 
   /* =========================
-     MOBILE SOCIAL ICONS
+     SOCIAL ICONS
   ========================= */
-  .hide-on-desktop .social-icons {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    gap: 12px;
-    margin: 0.5rem 0 0 0;
-  }
-
-  .hide-on-desktop .social-icons a img {
-    width: 45px !important;
-    height: 45px !important;
-  }
+.social-icons {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    gap: 20px !important;
+    margin: 20px 0 !important;
+    z-index: 10 !important;         /* make sure it’s above background */
 }
 
+/* Reduce spacing above social icons and logo injected above them */
+.social-icons::before {
+    margin-bottom: 5px !important;   /* less space between injected logo and icons */
+    width: 80px !important;           /* optional: smaller logo */
+    height: auto !important;
+}
 
+/* Reduce spacing between social icons themselves if needed */
+.social-icons a,
+.social-icons img {
+    margin-bottom: 10px !important;   /* less gap between icons */
+    margin-top: 1px !important;
+    width: 50px !important;           /* optional: slightly smaller icons */
+    height: 50px !important;
+}
+
+  /* =========================
+     HEADER BAR RESET
+  ========================= */
+  header, #header, .wrapper.style1.fullscreen {
+    margin: 0 !important;
+    padding: 0 !important;
+    height: auto !important;
+    background: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
+  }
+
+  body, html {
+    margin: 0;
+    padding: 0;
+  }
+
+  .hide-on-mob {
+    display: none;
+  }
+
+  .hide-on-desktop {
+    display: block !important;
+    margin-top: 1px !important;
+
+}
+
+.hide-on-desktop .social-icons {
+    display: flex !important;
+    flex-direction: row !important;  /* horizontal instead of vertical */
+    justify-content: center !important; /* center them horizontally */
+    align-items: center !important;    /* vertically center icons in row */
+    gap: 15px !important;              /* spacing between icons */
+    margin: 1px 0 !important;         /* optional vertical spacing */
+}
+
+.hide-on-desktop .social-icons a,
+.hide-on-desktop .social-icons img {
+    width: 50px !important;   /* match your mobile sizing */
+    height: 50px !important;
+    margin: 0 !important;     /* remove extra top/bottom margin */
+}
+
+}
 
 
 @media (max-width: 600px) {
