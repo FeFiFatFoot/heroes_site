@@ -1082,7 +1082,7 @@ body {
        -1px -1px 0 #01042c,
         1px -1px 0 #01042c,
        -1px 1px 0 #01042c;                   /* fill color */
-       font-size: medium;
+       font-size: 0.5rem !important;
 }
 
   #about .logo-header {
