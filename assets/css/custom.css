@@ -955,4 +955,8 @@ body {
       background: #fff !important;     /* optional: box background */
       box-shadow: 0 1px 3px rgba(0,0,0,0.1) !important;  /* optional subtle shadow */
   }
+
+  .tab-card .tab-content h1{
+    color: black !important;
+}
 }
