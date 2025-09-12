@@ -433,6 +433,14 @@ body {
     padding: 0 1rem !important;
   }
 
+  .left-column {
+    flex: 1; /* take all available height */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* pushes logo up, socials down */
+    align-items: center;
+  }
+
   #intro .left-column h1 {
     font-size: 1.5rem;
     line-height: 1.2;
@@ -677,8 +685,8 @@ body {
     display: flex !important;
     flex-direction: column !important;
     align-items: center !important;
-    gap: 20px !important;
-    margin: 20px 0 !important;
+    gap: 12px !important;
+    margin: 12px 0 !important;
     z-index: 10 !important;         /* make sure it’s above background */
 }
 
@@ -720,7 +728,11 @@ body {
   }
 
   .hide-on-desktop {
-    display: block !important;
+    margin-top: auto; /* pushes socials down */
+    width: 100%;
+    display: flex !important;
+    justify-content: center;
+    padding-bottom: 10px; /* small breathing room */
     margin-top: 1px !important;
 
 }
