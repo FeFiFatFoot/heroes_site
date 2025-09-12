@@ -1068,6 +1068,14 @@ body {
     font-size: 1rem !important;
 }
 
+  .tab-card .tab-content h3{
+    font-size: 0.9rem !important;
+}
+
+  .tab-card .tab-content p{
+    font-size: 0.5rem !important;
+}
+
   .tab-content {
     color: black;
   }
