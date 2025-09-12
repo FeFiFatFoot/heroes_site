@@ -383,7 +383,7 @@ body {
   .logo-right-mobile {
     display: block !important;  
     margin-top: 10px !important;      /* less space above */
-    margin-bottom: 12px !important;   /* less space below */
+    margin-bottom: 15px !important;   /* less space below */
     width: 90px !important;           /* optional: make smaller */
     height: auto !important;
     z-index: 10;
@@ -1082,6 +1082,7 @@ body {
        -1px -1px 0 #01042c,
         1px -1px 0 #01042c,
        -1px 1px 0 #01042c;                   /* fill color */
+       font-size: medium;
 }
 
   #about .logo-header {
