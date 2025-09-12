@@ -929,47 +929,40 @@ body {
     line-height: 1.2 !important;
   }
 
-  .tab-container button.tab-link {
-    flex: 1;                       /* buttons evenly spaced */
-    border-radius: 10px;           /* match new pill shape */
-    background: transparent;
-    color: #333;
-  }
-
 
 
   nav.tab-container {
     display: flex !important;
-    flex-wrap: wrap !important;
-    justify-content: center !important;
-    gap: 6px !important;
+    flex-direction: row !important;
+    flex-wrap: nowrap !important;       /* prevent wrapping */
+    justify-content: space-between !important; /* evenly spaced across full width */
+    align-items: center !important;
+    background: #f5f5f5 !important;     /* pill background */
+    border-radius: 16px !important;
+    padding: 4px !important;
+    margin: 0 auto !important;
+    width: 100% !important;             /* fill mobile width */
+    box-sizing: border-box !important;
+    gap: 4px !important;
   }
 
-
-
   nav.tab-container button.tab-link {
-    font-size: 12px !important;        /* smaller text */
-    padding: 4px 8px !important;       /* less padding */
-    border-radius: 20px !important;    /* smaller pill curve */
-    background: #f5f5f5 !important;    /* softer background */
-    color: #333 !important;            /* darker text */
-    flex: 1 1 auto !important;         /* let them shrink */
-    width: auto !important;
-    max-width: 80% !important;       /* keeps from being huge */
+    flex: 1 1 0 !important;             /* shrink/grow equally */
+    min-width: 0 !important;            /* allow shrinking below content width */
+    font-size: 12px !important;         /* smaller text */
+    line-height: 1.2 !important;
+    padding: 4px 6px !important;        /* reduce height */
+    border-radius: 12px !important;     /* pill shape */
+    background: #f5f5f5 !important;
+    color: #333 !important;
     text-align: center !important;
     white-space: normal !important;
     box-sizing: border-box !important;
-    line-height: 1.2 !important;
   }
 
-  /* Active tab still highlighted, but subtler */
   nav.tab-container button.tab-link.active {
-    background: #ff4081 !important;
+    background: #ff4081 !important;     /* active tab */
     color: #fff !important;
   }
 
-  nav.tab-container {
-    gap: 4px !important;  /* tighten spacing */
-    padding: 0 5px !important;
-  }
 }
