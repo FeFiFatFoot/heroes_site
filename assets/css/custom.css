@@ -901,6 +901,13 @@ body {
 }
 
 @media (max-width: 768px) {
+
+#about .tabs-section .tab-link {
+    white-space: normal !important;   /* allow text to wrap */
+    word-break: break-word !important; /* break long words if needed */
+    text-align: center !important;    /* center the text */
+}
+
   nav.tab-container {
     display: flex !important;
     flex-direction: row !important;
