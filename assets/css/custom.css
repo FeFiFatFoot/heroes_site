@@ -728,19 +728,14 @@ body {
   }
 
   .hide-on-desktop {
-    position: absolute !important;
-    left: 50% !important;
-    transform: translateX(-50%) !important;
-    bottom: 0 !important;
-
-    padding-bottom: calc(env(safe-area-inset-bottom, 0px) + 10%) !important;
-
-    width: auto !important;
+    margin-top: auto; /* pushes socials down */
+    width: 100%;
     display: flex !important;
-    justify-content: center !important;
-    gap: 12px !important;
-    z-index: 9999 !important;
-  }
+    justify-content: center;
+    padding-bottom: 10px; /* small breathing room */
+    margin-top: 1px !important;
+
+}
 
 .hide-on-desktop .social-icons {
     display: flex !important;
@@ -759,6 +754,37 @@ body {
     margin: 0 !important;     /* remove extra top/bottom margin */
 }
 
+.footer-mobile {
+    position: fixed;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 0;
+
+    padding-bottom: calc(env(safe-area-inset-bottom, 0px) + 10px);
+
+    display: flex;
+    flex-direction: column; /* stack logo above socials */
+    align-items: center;
+    gap: 8px; /* space between logo and icons */
+
+    z-index: 9999;
+    background: transparent;
+  }
+
+  .footer-mobile img.logo-right-mobile {
+    max-height: 40px;
+    width: auto;
+  }
+
+  .footer-mobile .social-icons {
+    display: flex;
+    gap: 12px;
+  }
+
+  .footer-mobile .social-icons img {
+    max-height: 28px;
+    width: auto;
+  }
 
 }
 
@@ -1076,5 +1102,21 @@ body {
   /* Optional: tighten the tabs section right below */
   #about .tabs-section {
       margin-top: 4px !important;     /* minimal gap below logo */
+  }
+
+  #intro .hide-on-desktop {
+    position: absolute !important;
+    left: 50% !important;
+    transform: translateX(-50%) !important;
+    bottom: 0 !important;
+
+    /* Add safe area awareness */
+    padding-bottom: calc(env(safe-area-inset-bottom, 0px) + 10px) !important;
+
+    display: flex !important;
+    justify-content: center !important;
+    gap: 12px !important;
+    width: auto !important;
+    z-index: 9999 !important;
   }
 }
