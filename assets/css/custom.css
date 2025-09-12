@@ -1036,9 +1036,9 @@ body {
   .logo-left-mobile {
       width: 150px !important;        /* smaller logo */
       height: auto !important;
-      margin: 0 0 4px 0 !important;   /* smaller bottom gap */
       display: block !important;
       z-index: 10 !important;
+      margin: -10px auto -5px auto !important;
   }
 
   /* Optional: tighten the tabs section right below */
