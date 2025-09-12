@@ -724,7 +724,7 @@ body {
   }
 
   .hide-on-mob {
-    display: none;
+    display: none !important;
   }
 
   .hide-on-desktop {
