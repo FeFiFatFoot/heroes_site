@@ -406,11 +406,15 @@ body {
 
   /* Locker section (bottom logo + social icons) */
   .locker-section {
-    margin-top: auto !important;  /* push to bottom */
-    padding-bottom: 10px !important; /* optional small bottom spacing */
+
     display: flex !important;
     flex-direction: column !important;
     align-items: center !important;
+    justify-content: flex-end !important; /* hug bottom of parent */
+    width: 100%;
+    flex-grow: 1; /* take remaining vertical space */
+    margin: 0 !important;
+    padding-bottom: 10px !important;
   }
 
   .locker-section .logo-right-mobile,
