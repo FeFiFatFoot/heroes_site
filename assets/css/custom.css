@@ -433,23 +433,12 @@ body {
   }
 
   .left-column {
-    width: 100vw !important;
-    max-width: none !important;
-    box-sizing: border-box;
     flex: 1; /* take all available height */
     display: flex;
     flex-direction: column;
     justify-content: space-between; /* pushes logo up, socials down */
     align-items: center;
   }
-
-  .left-column input,
-.left-column button,
-.left-column .discord-btn {
-  width: 100%;
-  max-width: 100%;
-  box-sizing: border-box; /* includes padding in width */
-}
 
   #intro .left-column h1 {
     font-size: 1.5rem;
