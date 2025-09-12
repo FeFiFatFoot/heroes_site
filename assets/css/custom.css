@@ -790,11 +790,12 @@ body {
 #about .tabs-section .tab-container {
     display: flex;
     justify-content: center;
-    gap: 8px;
+    gap: 6px;
     margin-bottom: 20px;
-    padding: 3px 4px;
+    padding: 2px 3px;
     width: fit-content;
-    border-radius: 999px;
+    border-radius: 50px !important;
+    border: 1px solid orange !important;
     background: url('../../images/tab-pill-bg.jpg') center/cover no-repeat;
     position: relative;
 }
@@ -804,15 +805,15 @@ body {
     background: rgba(255, 255, 255, 0.2);
     color: #fff;
     border: none;
-    padding: 10px 20px;
+    padding: 5px 10px;
     border-radius: 999px;
     font-weight: 600;
-    font-size: 1rem;
+    font-size: 0.8rem;
     cursor: pointer;
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 80px;
+    height: 60px;
     line-height: normal;
 }
 
