@@ -365,13 +365,22 @@ body {
   /* =========================
      LEFT LOGO TOP
   ========================= */
-  .logo-left-mobile {
-    display: block !important;  
-    width: 200px;
-    height: auto;
-    margin: 2px auto 2px auto !important;
-    z-index: 10;
-  }
+#about .logo-header {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;  /* center horizontally */
+    justify-content: flex-start !important; /* push to top of container */
+    margin: 0 !important;           /* remove default margins */
+    padding-top: 10px !important;   /* small space from top */
+}
+
+.logo-left-mobile {
+    width: 200px !important;
+    height: auto !important;
+    margin: 0 0 8px 0 !important;   /* only a small bottom gap */
+    display: block !important;
+    z-index: 10 !important;
+}
 
   /* Hide desktop logos */
   .logo-left, .logo-right, .right-logo {
@@ -1014,14 +1023,7 @@ body {
     color: black;
   }
 
-#about .logo-header {
-    display: flex !important;
-    flex-direction: column !important;
-    align-items: center !important;  /* center horizontally */
-    justify-content: flex-start !important; /* push to top of container */
-    margin: 0 !important;           /* remove default margins */
-    padding-top: 10px !important;   /* small space from top */
-}
+
 
   .outlined-text {
         color: white;
