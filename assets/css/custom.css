@@ -870,6 +870,12 @@ body {
     --about-logo-gap: 12px;
 }
 
+.about-logo {
+    margin-bottom: 20px !important;  /* space below logo */
+    display: block !important;       /* ensure it’s block so margin applies */
+    text-align: center !important;   /* optional: center logo */
+}
+
 .logo-header.about-logo {
     position: fixed !important;
     top: var(--about-logo-top) !important;
