@@ -1072,4 +1072,20 @@ body {
   #about .tabs-section {
       margin-top: 4px !important;     /* minimal gap below logo */
   }
+
+  #intro .hide-on-desktop {
+    position: absolute !important;
+    left: 50% !important;
+    transform: translateX(-50%) !important;
+    bottom: 0 !important;
+
+    /* Add safe area awareness */
+    padding-bottom: calc(env(safe-area-inset-bottom, 0px) + 10px) !important;
+
+    display: flex !important;
+    justify-content: center !important;
+    gap: 12px !important;
+    width: auto !important;
+    z-index: 9999 !important;
+  }
 }
