@@ -650,6 +650,7 @@ body {
     display: flex !important;
     flex-direction: column !important;  
     align-items: center !important;
+    justify-content: flex-end !important; /* bottom alignment */
     width: 100%;
     gap: 8px !important;
   }
@@ -662,6 +663,7 @@ body {
   /* Right logo under locker text */
   .locker-section .logo-right-mobile {
     display: block !important;
+    margin: 0 auto 5px auto !important;
     max-width: 100px !important;
     width: 80% !important;
     height: auto !important;
@@ -729,7 +731,8 @@ body {
     justify-content: center !important; /* center them horizontally */
     align-items: center !important;    /* vertically center icons in row */
     gap: 15px !important;              /* spacing between icons */
-    margin: 1px 0 !important;         /* optional vertical spacing */
+    margin: 0 !important;
+    padding-bottom: 0 !important;
 }
 
 .hide-on-desktop .social-icons a,
