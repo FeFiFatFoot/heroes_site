@@ -728,14 +728,19 @@ body {
   }
 
   .hide-on-desktop {
-    margin-top: auto; /* pushes socials down */
-    width: 100%;
-    display: flex !important;
-    justify-content: center;
-    padding-bottom: 10px; /* small breathing room */
-    margin-top: 1px !important;
+    position: absolute !important;
+    left: 50% !important;
+    transform: translateX(-50%) !important;
+    bottom: 0 !important;
 
-}
+    padding-bottom: calc(env(safe-area-inset-bottom, 0px) + 10px) !important;
+
+    width: auto !important;
+    display: flex !important;
+    justify-content: center !important;
+    gap: 12px !important;
+    z-index: 9999 !important;
+  }
 
 .hide-on-desktop .social-icons {
     display: flex !important;
@@ -1071,21 +1076,5 @@ body {
   /* Optional: tighten the tabs section right below */
   #about .tabs-section {
       margin-top: 4px !important;     /* minimal gap below logo */
-  }
-
-  #intro .hide-on-desktop {
-    position: absolute !important;
-    left: 50% !important;
-    transform: translateX(-50%) !important;
-    bottom: 0 !important;
-
-    /* Add safe area awareness */
-    padding-bottom: calc(env(safe-area-inset-bottom, 0px) + 10px) !important;
-
-    display: flex !important;
-    justify-content: center !important;
-    gap: 12px !important;
-    width: auto !important;
-    z-index: 9999 !important;
   }
 }
