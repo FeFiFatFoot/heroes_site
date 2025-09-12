@@ -877,17 +877,15 @@ body {
 }
 
 .logo-header.about-logo {
-    position: fixed !important;
-    top: var(--about-logo-top) !important;
-    left: 50% !important;
-    transform: translateX(-50%) !important;
-    z-index: 9999 !important;
-    margin: 0 !important;
-    padding: 0 !important;
-    width: auto !important;
+    position: relative !important;   /* normal flow */
+    top: auto !important;
+    left: auto !important;
+    transform: none !important;
+    margin: 0px auto 0px auto !important; /* space above and below */
+    text-align: center !important;
     max-width: var(--about-logo-width) !important;
-    height: auto !important;
     display: block !important;
+    z-index: 999 !important;
 }
 
 .logo-header.about-logo img {
