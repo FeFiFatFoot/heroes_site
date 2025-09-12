@@ -945,6 +945,7 @@ body {
 
   nav.tab-container {
       margin-bottom: 10px !important;  /* small gap below buttons */
+      background: url('../../images/tab-pill-bg.jpg') center/cover no-repeat !important;
   }
 
   /* Content boxes squared */
