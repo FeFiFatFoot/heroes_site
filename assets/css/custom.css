@@ -830,13 +830,20 @@ body {
   }
 
 .tab-content h2, h3, h4, strong {
-    color: black !important;
+    color: #01042c !important;
   }
 
 .outlined-text {
-    color: white;                    /* fill color */
-    -webkit-text-stroke: 4px #01042c;  /* stroke thickness and color */
-    font-weight: bold; 
+        color: white;
+    text-shadow:
+        4px 0 0 #01042c,
+       -4px 0 0 #01042c,
+        0 4px 0 #01042c,
+        0 -4px 0 #01042c,
+        3px 3px 0 #01042c,
+       -3px -3px 0 #01042c,
+        3px -3px 0 #01042c,
+       -3px 3px 0 #01042c;                   /* fill color */
 }
 
 
@@ -973,7 +980,7 @@ body {
     line-height: 1.2 !important;
     padding: 6px 8px !important;
     border-radius: 60px !important;
-    background: #f5f5f5 !important;
+    background: transparent !important;
     color: #333 !important;
     text-align: center !important;
     white-space: nowrap !important;
