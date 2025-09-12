@@ -224,6 +224,14 @@ body {
     width: 120px;
     height: 120px;
     display: inline-block;
+    outline: none !important;       /* remove focus outline */
+    text-decoration: none !important; /* remove underline */
+    border: none !important;         /* remove any border */
+    box-shadow: none !important;    /* remove any shadow that looks like a line */
+}
+
+.social-icons a:focus {
+    outline: none !important;       /* remove outline when focused */
 }
 
 #intro .social-icons a img {
