@@ -383,7 +383,7 @@ body {
   .logo-right-mobile {
     display: block !important;  
     margin-top: 10px !important;      /* less space above */
-    margin-bottom: 1px !important;   /* less space below */
+    margin-bottom: 8px !important;   /* less space below */
     width: 80px !important;           /* optional: make smaller */
     height: auto !important;
     z-index: 10;
@@ -784,7 +784,7 @@ body {
   }
 
   .footer-mobile .social-icons img {
-    max-height: 40px;
+    max-height: 43px;
     width: auto;
   }
 
