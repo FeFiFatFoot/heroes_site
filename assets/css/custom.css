@@ -935,6 +935,15 @@ body {
     line-height: 1.2 !important;
   }
 
+  nav.tab-container button.tab-link {
+    font-size: 12px !important;
+    padding: 6px 10px !important;
+    max-width: 100% !important;
+    width: auto !important;
+    white-space: normal !important;
+    line-height: 1.2 !important;
+    box-sizing: border-box !important;
+  }
 
   nav.tab-container {
     display: flex !important;
@@ -943,21 +952,17 @@ body {
     gap: 6px !important;
   }
 
-nav.tab-container button.tab-link {
-  font-size: 8px !important;
-  line-height: 1.2 !important;
-  padding: 4px 8px !important;
-  border-radius: 16px !important;       /* gentler pill curve */
-  background: #f5f5f5 !important;
-  color: #333 !important;
-  flex: 1 1 auto !important;
-  width: auto !important;
-  min-width: 80px !important;
-  max-width: 120px !important;
-  box-sizing: border-box !important;
-  white-space: normal !important;
-  text-align: center !important;
-}
+  nav.tab-container button.tab-link {
+    font-size: 12px !important;        /* smaller text */
+    padding: 4px 8px !important;       /* less padding */
+    border-radius: 20px !important;    /* smaller pill curve */
+    background: #f5f5f5 !important;    /* softer background */
+    color: #333 !important;            /* darker text */
+    flex: 1 1 auto !important;         /* let them shrink */
+    min-width: 80px !important;        /* prevents squishing too much */
+    max-width: 100px !important;       /* keeps from being huge */
+    text-align: center !important;
+  }
 
   /* Active tab still highlighted, but subtler */
   nav.tab-container button.tab-link.active {
