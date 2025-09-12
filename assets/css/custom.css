@@ -383,8 +383,8 @@ body {
   .logo-right-mobile {
     display: block !important;  
     margin-top: 10px !important;      /* less space above */
-    margin-bottom: 8px !important;   /* less space below */
-    width: 80px !important;           /* optional: make smaller */
+    margin-bottom: 12px !important;   /* less space below */
+    width: 90px !important;           /* optional: make smaller */
     height: auto !important;
     z-index: 10;
   }
