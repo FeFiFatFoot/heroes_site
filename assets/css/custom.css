@@ -1014,6 +1014,15 @@ body {
     color: black;
   }
 
+#about .logo-header {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;  /* center horizontally */
+    justify-content: flex-start !important; /* push to top of container */
+    margin: 0 !important;           /* remove default margins */
+    padding-top: 10px !important;   /* small space from top */
+}
+
   .outlined-text {
         color: white;
     text-shadow:
