@@ -762,9 +762,9 @@ body {
 
     padding-bottom: calc(env(safe-area-inset-bottom, 0px) + 10px);
 
-    display: flex;
-    flex-direction: column; /* stack logo above socials */
-    align-items: center;
+    display: flex !important;
+    flex-direction: column !important; /* stack vertically */
+    align-items: center !important;
     gap: 8px; /* space between logo and icons */
 
     z-index: 9999;
@@ -772,12 +772,14 @@ body {
   }
 
   .footer-mobile img.logo-right-mobile {
+    display: block;
     max-height: 40px;
     width: auto;
   }
 
   .footer-mobile .social-icons {
     display: flex;
+    flex-direction: row;
     gap: 12px;
   }
 
