@@ -1061,6 +1061,10 @@ body {
   }
 
   .tab-card .tab-content h1{
+    font-size: 1.4rem !important;
+}
+
+  .tab-card .tab-content h2{
     font-size: 1rem !important;
 }
 
