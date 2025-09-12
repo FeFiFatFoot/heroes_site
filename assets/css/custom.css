@@ -1061,14 +1061,12 @@ body {
   }
 
   .tab-card .tab-content h1{
-    color: black !important;
-    font-size: 2rem;
+    font-size: 1rem !important;
 }
 
   .tab-content {
     color: black;
   }
-
 
 
   .outlined-text {
@@ -1082,7 +1080,6 @@ body {
        -1px -1px 0 #01042c,
         1px -1px 0 #01042c,
        -1px 1px 0 #01042c;                   /* fill color */
-       font-size: 0.5rem !important;
 }
 
   #about .logo-header {
