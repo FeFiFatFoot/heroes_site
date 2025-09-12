@@ -920,7 +920,7 @@ body {
     margin: 0 auto !important;
     width: 100% !important;
     box-sizing: border-box !important;
-    gap: 4px !important;
+    gap: 8px !important;
     overflow-x: auto !important;
   }
 
