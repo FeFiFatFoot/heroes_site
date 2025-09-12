@@ -1057,7 +1057,7 @@ body {
       align-items: center !important;
       justify-content: flex-start !important;
       padding: 5px 0 !important;     /* very small padding above */
-      margin: 0 !important;           /* remove extra space */
+      margin: 5px !important;           /* remove extra space */
   }
 
   .logo-left-mobile {
