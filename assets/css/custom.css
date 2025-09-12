@@ -1072,8 +1072,8 @@ body {
     font-size: 0.9rem !important;
 }
 
-  .tab-card .tab-content p{
-    font-size: 0.5rem !important;
+  .tab-card .tab-content p li{
+    font-size: 0.7rem !important;
 }
 
   .tab-content {
