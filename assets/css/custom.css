@@ -1007,9 +1007,23 @@ body {
 
   .tab-card .tab-content h1{
     color: black !important;
+    font-size: 2rem;
 }
 
   .tab-content {
     color: black;
   }
+
+  .outlined-text {
+        color: white;
+    text-shadow:
+        2px 0 0 #01042c,
+       -2px 0 0 #01042c,
+        0 2px 0 #01042c,
+        0 -2px 0 #01042c,
+        1px 1px 0 #01042c,
+       -1px -1px 0 #01042c,
+        1px -1px 0 #01042c,
+       -1px 1px 0 #01042c;                   /* fill color */
+}
 }
