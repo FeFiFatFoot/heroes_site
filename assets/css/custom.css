@@ -679,7 +679,8 @@ footer {
     align-items: center;
   }
   #intro .right-column {
-    margin-top: 20px;
+    margin-top: 0 !important;
+    padding-top: 0 !important;
     justify-content: center;
   }
   #intro .social-icons {
@@ -825,6 +826,7 @@ footer {
 
     #intro .right-column .frame-block {
         width: 90vw;        /* responsive width */
+        padding-top: 20px !important;
         max-width: 250px;   /* same as original max size */
         height: auto;       /* let it expand if content grows */
         padding: 10px;      /* optional: inner spacing */
