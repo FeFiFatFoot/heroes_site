@@ -677,7 +677,7 @@ footer {
     align-items: center;
     width: 100%;
     min-height: 100vh !important;
-    background: url('../../images/mob-lockers.jpg') center center no-repeat !important;
+    background: url('../../images/mob-backgrnd.jpg') center center no-repeat !important;
     background-size: cover !important;
   }
 
