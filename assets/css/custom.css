@@ -247,20 +247,22 @@ body {
 /* Columns */
 
 /* Make the container a flex row */
+/* Desktop only */
+
 #intro .container {
     display: flex;
-    flex-direction: row;
-    justify-content: space-between; /* Left stays left, right stays right */
-    align-items: center; /* Vertically centers both columns */
-    max-width: 1200px; /* Optional, keeps content contained */
-    margin: 0 auto;
+    justify-content: flex-start; /* align all columns to start */
+    align-items: center; /* vertical center */
+    width: 100%;
+    max-width: 100%; /* let it span full width */
+    padding: 0 50px; /* optional padding from screen edges */
 }
 
-/* Left and right column sizing */
 #intro .left-column {
-    flex: 1;
-    padding-right: 20px;
+    text-align: left; /* left-align text */
+    margin-right: auto; /* pushes right column away */
 }
+
 
 #intro .right-column {
     flex: 1;
@@ -783,28 +785,29 @@ footer {
     align-self: flex-end;
   }
 
-    #intro .container {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between; /* left column stays left, right column stays right */
-        align-items: center; /* vertically center both columns */
-        max-width: 1200px;
-        margin: 0 auto;
-        width: 100%;
+#intro .container {
+        flex-direction: column; /* stack columns */
+        align-items: center; /* center horizontally */
+        padding: 20px; /* optional padding */
     }
 
     #intro .left-column {
-        flex: 1;
-        text-align: left; /* ensures content is left-aligned */
-        padding-right: 20px;
+        width: 100%; /* take full width */
+        text-align: center; /* optional, can keep left if desired */
+        margin-bottom: 20px; /* space between columns */
     }
 
     #intro .right-column {
-        flex: 1;
+        width: 100%; /* take full width */
         display: flex;
-        justify-content: flex-end; /* keeps it on the right */
-        align-items: center;
-        padding-left: 20px;
+        justify-content: center; /* center the frame block */
+    }
+
+    #intro .right-column .frame-block {
+        width: 250px; /* set square width */
+        height: 250px; /* same as width for square */
+        max-width: 90vw; /* responsive on very small screens */
+        max-height: 90vw;
     }
 
 
