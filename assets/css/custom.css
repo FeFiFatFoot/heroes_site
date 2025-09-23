@@ -653,9 +653,9 @@ footer {
      BODY & WRAPPER RESET
   ========================= */
   html, body, #wrapper, .inner, #intro {
-    height: auto !important;      /* allow natural content height */
-    min-height: auto !important;  /* don’t lock to full viewport */
-    overflow: visible !important; /* scrolling enabled */
+    height: auto !important;      /* let content set the height */
+    min-height: auto !important;
+    overflow: visible !important; /* enable scrolling */
   }
 
   /* =========================
@@ -764,6 +764,7 @@ footer {
   .logo-right,
   footer {
     display: flex !important;
+    position: relative !important;  /* footer sits below content */
   }
 
   .logo-right-mobile,
