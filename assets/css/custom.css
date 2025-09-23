@@ -436,56 +436,107 @@ body {
    04.1 FOOTER
 ========================================================= */
 
-    footer {
-        position: fixed;
-        bottom: 0;
-        left: 0;
-        width: 100%;
-        background: rgba(0,0,0,0); /* fully transparent */
-        color: #fff;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        padding: 15px 30px;
-        z-index: 1000;
-    }
+ /* =========================================================
+   04.1 FOOTER (Always Same on All Devices)
+========================================================= */
 
-    .footer-icons {
-        display: flex;               /* horizontal layout */
-        justify-content: flex-start; /* align left */
-        align-items: flex-start;     /* align items at top */
-        gap: 18px;                   /* space between each icon+text pair */
-    }
+footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: rgba(0,0,0,0); /* fully transparent */
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 30px;
+  z-index: 1000;
+}
 
-    .footer-icons div {
-        text-align: center;          /* centers text under each icon */
-    }
+.footer-icons {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 18px;
+}
 
-    .footer-icons img {
-        height: auto;
-        display: block;              /* ensures text goes underneath */
-        margin-bottom: 5px;          /* spacing between icon and text */
-    }
+.footer-icons div {
+  text-align: center;
+}
 
-    /* Footer left and right sections */
-    .footer-right {
-        position: absolute; /* or relative depending on your footer layout */
-        right: 20px;        /* distance from the right edge */
-        bottom: 20px;       /* distance from the bottom edge */
-        display: flex;
-        gap: 15px;          /* space between icons */
-        align-items: center;
-    }
+.footer-icons img {
+  height: auto;
+  display: block;
+  margin-bottom: 5px;
+}
 
-    .footer-right a {
-        text-decoration: none !important; /* remove underlines */
-        border: none !important;           /* remove any borders */
-        outline: none !important;          /* remove outlines */
-        color: white;       /* icon color */
-        font-size: 24px;    /* icon size */
-        transition: transform 0.3s ease;
-        text-decoration: none; /* remove underline */
-    }
+.footer-right {
+  position: absolute;
+  right: 20px;
+  bottom: 20px;
+  display: flex;
+  gap: 15px;
+  align-items: center;
+}
+
+.footer-right a {
+  text-decoration: none !important;
+  border: none !important;
+  outline: none !important;
+  color: white;
+  font-size: 24px;
+  transition: transform 0.3s ease;
+}
+
+.footer-right a:hover {
+  transform: scale(1.1);
+}
+
+.footer-right i {
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.footer-left img {
+  width: 14px;
+  height: auto;
+  margin-top: -3px;
+}
+
+.footer-left {
+  position: absolute;
+  bottom: 40px;
+  left: 60px;
+}
+
+.footer-desktop {
+  height: 80px;
+  background: transparent;
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+}
+
+.footer-desktop .left {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.footer-desktop .right {
+  display: flex;
+  gap: 15px;
+}
+
+.footer-desktop img {
+  max-height: 40px;
+  width: auto;
+}
+
+
 
     .footer-right a:hover {
         transform: scale(1.1); /* subtle hover effect */
@@ -550,21 +601,45 @@ body {
 ========================================================= */
 
 @media (max-width: 900px) {
-
-    #intro { flex-direction: column; padding: 3.5rem 2rem; text-align: center; }
-    #intro .left-column, #intro .right-column { width: 100%; align-items: center; }
-
-    #intro .right-column { width: 100%; margin-top: 20px; justify-content: center; }
-    #intro .social-icons { gap: 15px; justify-content: center; }
-    #intro .social-icons a { width: 30px; height: 30px; }
-
-    .logo-left, .logo-right { position: relative; max-width: 100px; margin: 10px auto; }
-
-    .tabs-section .tab-card { width: 95%; }
-    .tabs-section .tab-content { min-height: 280px; padding: 18px; }
-    .tabs-section .tab-container { padding: 4px; gap: 6px; }
-    .tabs-section .tab-link { padding: 8px 14px; font-size: 0.9rem; }
+  #intro {
+    flex-direction: column;
+    padding: 3.5rem 2rem;
+    text-align: center;
+  }
+  #intro .left-column,
+  #intro .right-column {
+    width: 100%;
+    align-items: center;
+  }
+  #intro .right-column {
+    margin-top: 20px;
+    justify-content: center;
+  }
+  #intro .social-icons {
+    gap: 15px;
+    justify-content: center;
+  }
+  #intro .social-icons a {
+    width: 30px;
+    height: 30px;
+  }
+  .tabs-section .tab-card {
+    width: 95%;
+  }
+  .tabs-section .tab-content {
+    min-height: 280px;
+    padding: 18px;
+  }
+  .tabs-section .tab-container {
+    padding: 4px;
+    gap: 6px;
+  }
+  .tabs-section .tab-link {
+    padding: 8px 14px;
+    font-size: 0.9rem;
+  }
 }
+
 
 @media (max-width: 768px) {
 
@@ -681,6 +756,18 @@ body {
 
   .locker-room-text {
     margin-top: 1px !important;
+  }
+
+    .logo-left,
+  .logo-right,
+  footer {
+    display: flex !important;
+  }
+
+  .logo-right-mobile,
+  .footer-mobile,
+  .hide-on-desktop {
+    display: none !important;
   }
 
   /* =========================
