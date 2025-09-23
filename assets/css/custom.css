@@ -234,11 +234,11 @@ body {
 
 #top-image {
     position: absolute; /* relative to .right-column */
-    top: -185px; /* move up so the top aligns with viewport; adjust height of image accordingly */
+    top: -43vh; /* move up so the top aligns with viewport; adjust height of image accordingly */
     left: 50%; /* center over the right column */
     transform: translateX(-50%);
     z-index: 10;
-    width: 150px; /* adjust size */
+    width: 195px; /* adjust size */
 }
 
 
@@ -281,10 +281,15 @@ body {
 #intro .right-column {
     flex: 1;
     display: flex;
-    justify-content: flex-end; /* aligns content to the right */
-    align-items: center; /* vertical centering inside the column */
-    padding-left: 20px;
+    flex-direction: column;   /* stack children vertically */
+    justify-content: center;  /* vertical centering of content */
+    align-items: center;      /* horizontal centering of content */
+    padding-right: 60px;       /* optional, you can remove if centering */
+    position: relative;       /* needed for absolute-positioned top-image */
+    top: 20vh;
+    width: 50%;               /* adjust width as needed */
 }
+
 
 /* Optional: make the frame block a fixed width */
 #intro .right-column .frame-block {
@@ -327,14 +332,7 @@ body {
     align-items: flex-start;
 }
 
-.right-column {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    justify-content: center; /* vertical centering */
-    align-items: flex-end;   /* align content to the right edge */
-    width: 50%;              /* adjust as needed */
-}
+
 
 .right-column > * {
     margin: 0; /* remove extra spacing from children */
@@ -1180,7 +1178,24 @@ footer {
     width: auto;
   }
 
+      .footer-desktop .footer-left {
+        flex-direction: column;
+        align-items: flex-start; /* align to left */
+        font-size: 12px;         /* shrink text */
+    }
+
+    .footer-desktop .footer-left .footer-icons img {
+        width: 15px !important;  /* shrink icons */
+        margin-right: 5px;       /* spacing between icons */
+    }
+
+    .footer-desktop .footer-left-text {
+        margin-top: 5px;         /* spacing under icons */
+    }
+
 }
+
+
 
 
 @media (max-width: 600px) {
