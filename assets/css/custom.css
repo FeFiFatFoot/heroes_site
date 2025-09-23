@@ -161,6 +161,7 @@ body {
     display: flex;
     flex-direction: column; 
     align-items: center; /* centers content inside frame-block */
+    margin-left: -50px;
 }
 
 
@@ -1371,6 +1372,65 @@ footer {
 ========================================================= */
 
 .tab-buttons { display:flex; justify-content:center; gap:10px; margin-bottom:15px; }
+
+
+
+/* Make header and footer fixed and transparent */
+.site-header, .footer-desktop {
+    position: fixed;
+    left: 0;
+    right: 0;
+    z-index: 100;
+    background: transparent !important; /* force transparency */
+}
+
+.site-header {
+    top: 0;
+}
+
+.footer-desktop {
+    bottom: 0;
+}
+
+/* Scrollable content area */
+.terms-content {
+    position: absolute;
+    top: 80px; /* adjust to match header height */
+    bottom: 100px; /* adjust to match footer height */
+    left: 0;
+    right: 0;
+    overflow-y: auto;
+    padding: 40px 20px;
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+    line-height: 1.6;
+    background: url('../../images/lockers_new.png') center/cover no-repeat fixed; /* static background */
+}
+
+/* Optional: overlay for readability */
+.terms-content::before {
+    content: "";
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: rgba(0,0,0,0.5);
+    z-index: -1;
+}
+
+/* Headings and lists styling */
+.terms-content h2 {
+    margin-top: 40px;
+}
+
+.terms-content p, 
+.terms-content li {
+    margin-bottom: 15px;
+}
+
+.terms-content ol {
+    padding-left: 20px;
+}
+
 
 /* =========================================================
    08. ROOT VARIABLES
