@@ -302,8 +302,11 @@ body {
 }
 
 .frame-bottom-image {
-      display: block; /* ensure it's treated like a block element */
+    display: block; /* ensure it's treated like a block element */
+    width: 90%;
+    max-width: 350px;
     margin: 0 auto; /* center horizontally if needed */
+    height: auto;
     transform: translateY(-10px); /* moves image up by 10px */
 }
 
@@ -814,10 +817,11 @@ footer {
     }
 
     #intro .right-column .frame-block {
-        width: 250px; /* set square width */
-        height: 250px; /* same as width for square */
-        max-width: 90vw; /* responsive on very small screens */
-        max-height: 90vw;
+        width: 90vw;        /* responsive width */
+        max-width: 250px;   /* same as original max size */
+        height: auto;       /* let it expand if content grows */
+        padding: 10px;      /* optional: inner spacing */
+        margin: 0 auto;     /* center horizontally */
     }
 
 
