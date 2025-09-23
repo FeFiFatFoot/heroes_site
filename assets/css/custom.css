@@ -145,7 +145,8 @@ body {
 
 .frame-block {
     position: relative;   
-    background: url('../../images/frame_block.png') center/cover no-repeat;
+    background: url('../../images/frame_block1.png') top/cover no-repeat;
+    background-color: transparent;
     border-radius: 20px;
     padding: 30px;
     max-width: 350px;
@@ -161,6 +162,8 @@ body {
     display: flex;
     flex-direction: column; 
     align-items: center; /* centers content inside frame-block */
+    justify-content: flex-start; /* top-aligned by default */
+    padding-top: 60px; /* extra push from top */
     margin-left: -50px;
 }
 
@@ -298,7 +301,11 @@ body {
     text-align: right;
 }
 
-
+.frame-bottom-image {
+      display: block; /* ensure it's treated like a block element */
+    margin: 0 auto; /* center horizontally if needed */
+    transform: translateY(-10px); /* moves image up by 10px */
+}
 
 
 /* Optional: adjust spacing in left column */
@@ -312,12 +319,7 @@ body {
 }
 
 /* Right column frame block styling */
-.frame-block {
-    background-color: rgba(255, 255, 255, 0.9); /* light background */
-    padding: 20px;
-    border-radius: 10px;
-    text-align: center;
-}
+
 
 #intro .columns {
     display: flex;
@@ -1397,6 +1399,9 @@ footer {
     position: absolute;
     top: 80px; /* adjust to match header height */
     bottom: 100px; /* adjust to match footer height */
+    margin: 0 auto;
+    max-width: none;
+    width: 90%;
     left: 0;
     right: 0;
     overflow-y: auto;
@@ -1404,7 +1409,13 @@ footer {
     color: white;
     font-family: 'Montserrat', sans-serif;
     line-height: 1.6;
-    background: url('../../images/lockers_new.png') center/cover no-repeat fixed; /* static background */
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;     /* Firefox */
+}
+
+.terms-content::-webkit-scrollbar {
+    width: 0px;             /* remove scrollbar for Webkit browsers */
+    background: transparent;
 }
 
 /* Optional: overlay for readability */
@@ -1431,6 +1442,15 @@ footer {
     padding-left: 20px;
 }
 
+.terms-content h1,
+.terms-content h2,
+.terms-content h3,
+.terms-content li,
+.terms-content strong {
+    color: #ffffff !important;
+    margin-top: 30px;
+    margin-bottom: 15px;
+}
 
 /* =========================================================
    08. ROOT VARIABLES
