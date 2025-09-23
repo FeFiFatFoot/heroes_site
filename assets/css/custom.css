@@ -151,7 +151,9 @@ body {
     width: 90%;
     text-align: center;
     box-shadow: 0 4px 10px rgba(0,0,0,0.2);
-    margin: 20px auto;
+
+    /* Desktop alignment */
+    margin: 20px 0 20px auto; /* push it to the right */
     font-family: 'Montserrat', sans-serif;
 }
 
@@ -216,8 +218,8 @@ body {
 /* Desktop background (default) */
   #intro {
     height: auto !important;
-    min-height: auto !important;
-    padding-top: 40px !important;  /* less top gap */
+    min-height: calc(100vh - 80px); /* 80px = header height */
+    padding-top: 40px; /* extra spacing */
     padding-bottom: 80px !important; /* make space before footer */
     display: block !important;  /* stack naturally */
   }
@@ -243,17 +245,61 @@ body {
 }
 
 /* Columns */
+
+#intro .container {
+    display: flex;
+    flex-direction: row;        /* side by side */
+    justify-content: space-between;
+    align-items: flex-start;    /* top-aligned */
+    gap: 40px;                  /* spacing between columns */
+    max-width: 1200px;          /* optional, controls content width */
+    margin: 0 auto;             /* center container */
+}
+
+/* Left and right columns */
+.left-column, .right-column {
+    flex: 1;                   /* both columns take equal space */
+    box-sizing: border-box;
+}
+
+/* Optional: adjust spacing in left column */
+.left-column h1 {
+    margin-bottom: 20px;
+    font-size: 2.5rem;
+}
+
+.left-column p {
+    margin-bottom: 30px;
+}
+
+/* Right column frame block styling */
+.frame-block {
+    background-color: rgba(255, 255, 255, 0.9); /* light background */
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.frame-button {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 10px 20px;
+    background-color: #5865F2;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
 #intro .columns {
     display: flex;
-    width: 100%;
-    height: 100%;
     justify-content: space-between;
     align-items: center;
 }
 
-#intro .left-column {
+.left-column {
     width: 55%;
     display: flex;
+    flex: 1;
     flex-direction: column;
     gap: 0.5rem;
     align-items: flex-start;
@@ -261,6 +307,14 @@ body {
     padding-right: 9rem;
     box-sizing: border-box;
 }
+
+.right-column {
+  width: 300px; /* fixed width for your content box */
+  padding: 20px;
+  border-radius: 10px;
+}
+
+
 
 #intro h1 {
     font-family: 'Montserrat', sans-serif;
@@ -282,13 +336,7 @@ body {
 }
 
 /* Right column: social icons */
-#intro .right-column {
-    margin-left: auto;
-    align-self: flex-end;
-    display: flex;
-    flex-direction: row;
-    gap: 15px;
-}
+
 
 #intro .social-icons {
     display: flex;
@@ -677,7 +725,7 @@ footer {
     align-items: center;
     width: 100%;
     min-height: 100vh !important;
-    background: url('../../images/mob-backgrnd.jpg') center center no-repeat !important;
+    background: url('../../images/mob-backgrnd.png') center center no-repeat !important;
     background-size: cover !important;
   }
 
