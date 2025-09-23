@@ -634,15 +634,6 @@ footer {
         left: 60px;         /* distance from left side of the screen */
     }
 
-.footer-desktop {
-    height: 80px; /* or whatever fits your design */
-    background: transparent;
-    color: #fff;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0 20px;
-}
 
 .footer-desktop .left {
     display: flex;
@@ -655,10 +646,6 @@ footer {
     gap: 15px;
 }
 
-.footer-desktop img {
-    max-height: 40px;
-    width: auto;
-}
 
 
 
@@ -1204,8 +1191,8 @@ footer {
     }
 
     .footer-desktop .footer-left .footer-icons img {
-        width: 15px !important;  /* shrink icons */
-        margin-right: 5px;       /* spacing between icons */
+        width: 10px !important;  /* shrink icons */
+        margin-right: 3px;       /* spacing between icons */
     }
 
     .footer-desktop .footer-left-text {
