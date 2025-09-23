@@ -246,21 +246,38 @@ body {
 
 /* Columns */
 
+/* Make the container a flex row */
 #intro .container {
     display: flex;
-    flex-direction: row;        /* side by side */
-    justify-content: space-between;
-    align-items: flex-start;    /* top-aligned */
-    gap: 40px;                  /* spacing between columns */
-    max-width: 1200px;          /* optional, controls content width */
-    margin: 0 auto;             /* center container */
+    flex-direction: row;
+    justify-content: space-between; /* Left stays left, right stays right */
+    align-items: center; /* Vertically centers both columns */
+    max-width: 1200px; /* Optional, keeps content contained */
+    margin: 0 auto;
 }
 
-/* Left and right columns */
-.left-column, .right-column {
-    flex: 1;                   /* both columns take equal space */
-    box-sizing: border-box;
+/* Left and right column sizing */
+#intro .left-column {
+    flex: 1;
+    padding-right: 20px;
 }
+
+#intro .right-column {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end; /* aligns content to the right */
+    align-items: center; /* vertical centering inside the column */
+    padding-left: 20px;
+}
+
+/* Optional: make the frame block a fixed width */
+#intro .right-column .frame-block {
+    max-width: 350px; /* adjust as needed */
+    text-align: right;
+}
+
+
+
 
 /* Optional: adjust spacing in left column */
 .left-column h1 {
@@ -297,21 +314,23 @@ body {
 }
 
 .left-column {
-    width: 55%;
-    display: flex;
     flex: 1;
+    display: flex;
     flex-direction: column;
-    gap: 0.5rem;
+    justify-content: center; /* optional, ensures left content is centered vertically */
     align-items: flex-start;
-    padding-left: 3rem;
-    padding-right: 9rem;
-    box-sizing: border-box;
 }
 
 .right-column {
-  width: 300px; /* fixed width for your content box */
-  padding: 20px;
-  border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* vertical centering */
+    align-items: flex-end;   /* align content to the right edge */
+    width: 50%;              /* adjust as needed */
+}
+
+.right-column > * {
+    margin: 0; /* remove extra spacing from children */
 }
 
 
@@ -720,7 +739,7 @@ footer {
     padding-bottom: 80px; /* same as footer height */
     box-sizing: border-box;
     display: flex !important;
-    flex-direction: column !important;
+    flex-direction: row !important;
     justify-content: space-between !important;
     align-items: center;
     width: 100%;
