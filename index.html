@@ -1,114 +1,94 @@
 <!DOCTYPE HTML>
 <html>
-	<head>
-		<title>Heroes Fifa Game</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="assets/css/main.css" />
+<head>
+    <title>Heroes Fifa Game</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="assets/css/main.css" />
     <link rel="stylesheet" href="assets/css/custom.css" />
-		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
-		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;900&display=swap" rel="stylesheet">
-	</head>
+</head>
 <body class="is-preload">
 
-  <!-- Logos -->
-  <div class="hide-on-mob">
-    <div class="logo-left hide-on-mob">
-      <img src="images/logo-left.png" alt="Logo Left">
-    </div>
-    <div class="logo-right hide-on-mob">
-      <img src="images/logo-right.png" alt="Logo Right">
-    </div>
-  </div> 
-
-  <!-- Main intro section -->
-  <section id="intro" class="wrapper style1 fullscreen fade-up" style="background: url('images/lockers.jpg') center/cover no-repeat; display: flex; justify-content: center; align-items: center; flex-direction: row; padding-top:100px;">
-
-    <!-- Left column -->
-    <div class="left-column">
-      <img src="images/logo-left.png" alt="Left Logo" class="logo-left-mobile" />
-      <h1>THE BEAUTIFUL GAME, REMIXED FOR A NEW GENERATION.</h1>
-      <p class="locker-room-sub-text">Join the squad — lace up your boots and be the first to know what’s coming. Sign up below to unlock early access and join the insiders’ locker room.</p>
-
-      <!-- Signup pill -->
-      <div class="join-button">
-      <form action="MAILCHIMP_URL" method="post" target="_blank" class="signup-form">
-        <input type="email" name="EMAIL" placeholder="Email..." required>        
-        <button type="submit" >JOIN THE GAME</button>
-      </form>
-      </div>
-      <div class="locker-left">
-        <a href="https://discord.gg/YOURSERVER" class="locker-room discord-button">
-          <i class="fab fa-discord"></i> Enter the Locker Room
-        </a>
+    <!-- Header -->
+    <header class="site-header">
+        <div class="logo-left">
+            <img src="images/FIFA-Heroes_Logo.png" alt="Logo">
         </div>
-      <div class="locker-right">
-        <span class="locker-room-text">Join our discord community to get all the latest action</span>
-        </div>
-      <img src="images/logo-right.png" alt="Right Logo" class="logo-right-mobile" />
-      <!-- Locker room button + text -->
-    <div class="locker-section">
-      <div class="locker-room-wrapper">
-        
-        <div class="footer-mobile">
-        
-        <div class="hide-on-desktop">         
-              <div class="social-icons">
-                <a href="#" target="_blank">
-                  <img src="images/tiktok.png" alt="TikTok">
-                </a>
-                <a href="#" target="_blank">
-                  <img src="images/YT.png" alt="YouTube">
-                </a>
-                <a href="#" target="_blank">
-                  <img src="images/instagram.png" alt="Instagram">
-                </a>
-                <a href="#" target="_blank">
-                  <img src="images/twitch.png" alt="Twitch">
-                </a>
-              </div>
-        </div>
-        </div>
-      </div>
-      </div>
-    </div>
+    </header>
 
-    <!-- Right column -->
-            <div class="right-column hide-on-mob">
-              <div class="social-icons">
-                <a href="#" target="_blank">
-                  <img src="images/tiktok.png" alt="TikTok">
-                </a>
-                <a href="#" target="_blank">
-                  <img src="images/YT.png" alt="YouTube">
-                </a>
-                <a href="#" target="_blank">
-                  <img src="images/instagram.png" alt="Instagram">
-                </a>
-                <a href="#" target="_blank">
-                  <img src="images/twitch.png" alt="Twitch">
-                </a>
-              </div>
+    <!-- Main intro section -->
+    <section id="intro" class="main-content wrapper style1 fullscreen fade-up" style="background: url('images/lockers.jpg') center/cover no-repeat; display: flex; justify-content: center; align-items: center; flex-direction: row; padding-top:100px;">
+
+        <!-- Left column -->
+        <div class="left-column">
+            <img src="images/logo-left.png" alt="Left Logo" class="logo-left-mobile" />
+            <h1>THE BEAUTIFUL GAME, REMIXED FOR A NEW GENERATION.</h1>
+            <p class="locker-room-sub-text">Join the squad — lace up your boots and be the first to know what’s coming. Sign up below to unlock early access and join the insiders’ locker room.</p>
+
+            <!-- Signup form -->
+            <div class="join-button">
+                <form action="MAILCHIMP_URL" method="post" target="_blank" class="signup-form">
+                    <input type="email" name="EMAIL" placeholder="Email..." required>        
+                    <button type="submit">JOIN THE GAME</button>
+                </form>
             </div>
-    </div>
-    </div>
-  </section>
+        </div>
+
+        <!-- Right column -->
+          <div class="frame-block">
+
+              <!-- Heading -->
+              <h2 class="frame-heading">Join the Squad</h2>
+
+              <!-- Paragraph -->
+              <p class="frame-paragraph">
+                  Be part of the action and stay updated with the latest game events.
+              </p>
+
+              <!-- Button -->
+              <a href="https://discord.gg/YOURSERVER" class="frame-button">
+                  <i class="fab fa-discord"></i> Join Discord Now
+              </a>
+
+          </div>
+
+    </section>
+
+    <!-- Footer -->
+          <footer class="footer-desktop">
+              <div class=" footer-left">
+                  <div class="footer-icons">
+                      <img src="images/fifa.png" alt="" style="width: 20px !important;">
+                      <img src="images/fifa2.png" alt="" style="width: 20px !important;">
+                      <img src="images/enver.png" alt="" style="width: 75px !important;">
+                  </div>
+                  <div class="footer-left-text">© 2025 Enver Studio. FIFA Heroes. All rights reserved.</div>
+              </div>
+              <div class="footer-right">
+                <a href="https://www.instagram.com" target="_blank" aria-label="Instagram">
+                      <i class="fab fa-instagram"></i>
+                  </a>
+                  <a href="https://www.youtube.com" target="_blank" aria-label="YouTube">
+                      <i class="fab fa-youtube"></i>
+                  </a>
+                  <a href="https://www.tiktok.com" target="_blank" aria-label="TikTok">
+                      <i class="fab fa-tiktok"></i>
+                  </a>
+              </div>
+          </footer>
 
 
-				
+    <!-- Scripts -->
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/jquery.scrollex.min.js"></script>
+    <script src="assets/js/jquery.scrolly.min.js"></script>
+    <script src="assets/js/browser.min.js"></script>
+    <script src="assets/js/breakpoints.min.js"></script>
+    <script src="assets/js/util.js"></script>
+    <script src="assets/js/main.js"></script>
 
-</div>
-
-		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/jquery.scrollex.min.js"></script>
-			<script src="assets/js/jquery.scrolly.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
-      
-
-	</body>
+</body>
 </html>
