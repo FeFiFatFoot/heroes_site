@@ -150,13 +150,19 @@ body {
     padding: 30px;
     max-width: 350px;
     width: 90%;
-    text-align: center;
+    text-align: center; /* keeps text/button centered */
     box-shadow: 0 4px 10px rgba(0,0,0,0.2);
 
     /* Desktop alignment */
-    margin: 20px 0 20px auto; /* push it to the right */
+    margin: 20px 0 20px 0; /* remove auto to not interfere with centering inside */
     font-family: 'Montserrat', sans-serif;
+
+    /* push the block itself to the right */
+    display: flex;
+    flex-direction: column; 
+    align-items: center; /* centers content inside frame-block */
 }
+
 
 /* Heading */
 .frame-heading {
@@ -228,11 +234,11 @@ body {
 
 #top-image {
     position: absolute; /* relative to .right-column */
-    top: -170px; /* move up so the top aligns with viewport; adjust height of image accordingly */
+    top: -185px; /* move up so the top aligns with viewport; adjust height of image accordingly */
     left: 50%; /* center over the right column */
     transform: translateX(-50%);
     z-index: 10;
-    width: 140px; /* adjust size */
+    width: 150px; /* adjust size */
 }
 
 
@@ -263,7 +269,7 @@ body {
     align-items: center; /* vertical center */
     width: 100%;
     max-width: 100%; /* let it span full width */
-    padding: 0 50px; /* optional padding from screen edges */
+    padding: 50px 50px; /* optional padding from screen edges */
 }
 
 #intro .left-column {
@@ -305,16 +311,6 @@ body {
     padding: 20px;
     border-radius: 10px;
     text-align: center;
-}
-
-.frame-button {
-    display: inline-block;
-    margin-top: 15px;
-    padding: 10px 20px;
-    background-color: #5865F2;
-    color: #fff;
-    text-decoration: none;
-    border-radius: 5px;
 }
 
 #intro .columns {
@@ -746,7 +742,7 @@ footer {
      INTRO SECTION
   ========================= */
   #top-image {
-          display: none;
+          display: none !important;
       }
 
   #intro {
