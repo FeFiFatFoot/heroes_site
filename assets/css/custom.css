@@ -653,13 +653,9 @@ footer {
      BODY & WRAPPER RESET
   ========================= */
   html, body, #wrapper, .inner, #intro {
-    margin: 0 !important;
-    padding: 0 !important;
-    width: 100%;
-    min-height: 100vh;
-    height: 100vh;           
-    overflow: hidden;        
-    background: none !important;
+    height: auto !important;      /* allow natural content height */
+    min-height: auto !important;  /* don’t lock to full viewport */
+    overflow: visible !important; /* scrolling enabled */
   }
 
   /* =========================
