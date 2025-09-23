@@ -750,6 +750,7 @@ footer {
     display: block; /* ensure it's treated like a block element */
     width: 90%;
     max-width: 250px;
+    transform: translateY(-20px) !important;
   }
 
   .frame-block {
@@ -797,7 +798,7 @@ footer {
     width: 100%;
     flex-grow: 1; /* take remaining vertical space */
     margin: 0 !important;
-    padding-bottom: 10px !important;
+    padding-bottom: 20px !important;
   }
 
   .locker-section .logo-right-mobile,
@@ -831,6 +832,7 @@ footer {
         height: auto;       /* let it expand if content grows */
         padding: 10px;      /* optional: inner spacing */
         margin: 0 auto;     /* center horizontally */
+        margin-bottom: 10px !important;
     }
 
 
@@ -869,6 +871,7 @@ footer {
   footer {
     display: flex !important;
     position: relative !important;  /* footer sits below content */
+    padding: 10px 20px !important;
   }
 
   .logo-right-mobile,
