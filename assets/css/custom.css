@@ -144,6 +144,7 @@ body {
 ========================================================= */
 
 .frame-block {
+    position: relative;   
     background: url('../../images/frame_block.png') center/cover no-repeat;
     border-radius: 20px;
     padding: 30px;
@@ -217,12 +218,24 @@ body {
 
 /* Desktop background (default) */
   #intro {
+    position: relative;
     height: auto !important;
     min-height: calc(100vh - 80px); /* 80px = header height */
     padding-top: 40px; /* extra spacing */
     padding-bottom: 80px !important; /* make space before footer */
     display: block !important;  /* stack naturally */
   }
+
+#top-image {
+    position: absolute; /* relative to .right-column */
+    top: -170px; /* move up so the top aligns with viewport; adjust height of image accordingly */
+    left: 50%; /* center over the right column */
+    transform: translateX(-50%);
+    z-index: 10;
+    width: 140px; /* adjust size */
+}
+
+
 
 .locker-section {
     margin-top: auto; /* push it to bottom of flex container */
@@ -243,11 +256,6 @@ body {
 .hide-on-desktop {
     display: none !important;
 }
-
-/* Columns */
-
-/* Make the container a flex row */
-/* Desktop only */
 
 #intro .container {
     display: flex;
@@ -324,6 +332,7 @@ body {
 }
 
 .right-column {
+    position: relative;
     display: flex;
     flex-direction: column;
     justify-content: center; /* vertical centering */
@@ -736,6 +745,10 @@ footer {
   /* =========================
      INTRO SECTION
   ========================= */
+  #top-image {
+          display: none;
+      }
+
   #intro {
     height: 100vh; /* keep full screen */
     padding-bottom: 80px; /* same as footer height */
