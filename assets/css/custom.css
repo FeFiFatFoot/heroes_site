@@ -214,26 +214,13 @@ body {
 ========================================================= */
 
 /* Desktop background (default) */
-#intro {
-    min-height: 100vh;        /* full viewport height */
-    padding-bottom: 100px;    /* leave room for footer */
-    background: url('../../images/lockers.jpg') no-repeat center center;
-    background-size: cover;
-    box-sizing: border-box;
-}
-
-/* #intro {
-    position: relative;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 2rem;
-    flex-wrap: wrap;
-    height: 100vh;
-    padding: 4.5rem 5%;
-    background: url('../../images/lockers.jpg') center/cover no-repeat;
-    color: white;
-} */
+  #intro {
+    height: auto !important;
+    min-height: auto !important;
+    padding-top: 40px !important;  /* less top gap */
+    padding-bottom: 80px !important; /* make space before footer */
+    display: block !important;  /* stack naturally */
+  }
 
 .locker-section {
     margin-top: auto; /* push it to bottom of flex container */
@@ -692,6 +679,22 @@ footer {
     min-height: 100vh !important;
     background: url('../../images/mob-lockers.jpg') center center no-repeat !important;
     background-size: cover !important;
+  }
+
+  #intro .left-column {
+    margin: 0 auto;            /* center horizontally */
+    padding: 0 20px;           /* add side breathing room */
+    text-align: center;        /* optional, cleaner on mobile */
+  }
+
+  #intro h1 {
+    font-size: 1.6rem;         /* scale down heading */
+    margin-bottom: 15px;       /* tighter spacing under heading */
+  }
+
+  #intro p {
+    font-size: 1rem;
+    margin-bottom: 20px;
   }
 
   /* Locker section (bottom logo + social icons) */
