@@ -18,7 +18,7 @@ html, body {
     flex-direction: column;
     background: transparent !important;
     font-family: 'Montserrat', sans-serif;
-    overflow: hidden !important; /* Prevent scrolling */
+    overflow: hidden !important; /* Prevent scrolling on desktop */
 }
 
 body {
@@ -33,7 +33,7 @@ body {
 
 .main-content {
     flex: 1;
-    overflow: hidden !important; /* Reinforce non-scrollable */
+    overflow: hidden !important;
 }
 
 *, *::before, *::after {
@@ -137,15 +137,9 @@ footer {
     right: 20px;
     bottom: 20px;
     display: flex;
-    flex-direction: column; /* Stack footer-links above social-icons */
-    align-items: flex-end; /* Align content to the right */
+    flex-direction: column;
+    align-items: flex-end;
     gap: 10px;
-}
-
-.footer-right .social-icons {
-    display: flex;
-    gap: 15px;
-    justify-content: flex-end; /* Align social icons to the right */
 }
 
 .footer-right a {
@@ -166,7 +160,7 @@ footer {
 .footer-links {
     display: flex;
     gap: 15px;
-    justify-content: center; /* Center links horizontally */
+    justify-content: center;
     align-items: center;
     margin-bottom: 10px;
     font-family: 'Montserrat', sans-serif;
@@ -184,6 +178,12 @@ footer {
     color: var(--primary-hover);
 }
 
+.footer-right .social-icons {
+    display: flex;
+    gap: 15px;
+    justify-content: flex-end;
+}
+
 /* =========================================================
    04. INTRO / HERO SECTION
    ========================================================= */
@@ -195,11 +195,10 @@ footer {
     padding: 80px 50px;
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
     background: url('images/lockers_new.png') center/cover no-repeat;
     box-sizing: border-box;
-    overflow: hidden !important; /* Prevent scrolling */
+    overflow: hidden !important; /* Prevent scrolling on desktop */
 }
 
 #intro .container {
@@ -225,7 +224,7 @@ footer {
     align-items: center;
     padding-right: 60px;
     position: relative;
-    top: -40px; /* Move group higher */
+    top: -40px;
     width: 50%;
 }
 
@@ -270,7 +269,7 @@ footer {
 
 .tag-image {
     position: absolute;
-    top: calc(0px - 140px);
+    top: -100px;
     width: 350px !important;
     max-width: 350px !important;
     margin: 0 auto 0px auto;
@@ -290,7 +289,7 @@ footer {
     max-width: 350px !important;
     text-align: center;
     box-shadow: 0 4px 10px rgba(0,0,0,0.2);
-    margin: -20px auto 0 auto; /* Negative margin-top for closer overlap */
+    margin: -20px auto 0 auto;
     font-family: 'Montserrat', sans-serif;
     display: flex;
     flex-direction: column;
@@ -304,7 +303,7 @@ footer {
     position: relative;
     width: 350px !important;
     max-width: 350px !important;
-    margin: -10px auto 0 auto; /* Negative margin for overlap */
+    margin: -10px auto 0 auto;
     height: auto;
     z-index: 999 !important;
 }
@@ -317,7 +316,7 @@ footer {
 
 .frame-paragraph {
     color: var(--text-color);
-    font-size: 1rem;
+    font-size: 0.9rem !important;
     margin-bottom: 25px;
     line-height: 1.5;
 }
@@ -349,21 +348,23 @@ footer {
     align-items: center;
     background: white;
     border-radius: var(--pill-radius);
+    overflow: hidden;
     width: 100%;
     max-width: 480px;
     height: 70px;
-    padding: 0 10px;
+    padding: 0;
     box-sizing: border-box;
 }
 
 .signup-form input[type="email"] {
     flex: 1;
     height: 100%;
-    padding: 0 12px;
+    padding: 0 20px;
     font-size: 1rem;
     color: black;
     border: none;
     outline: none;
+    background: transparent;
 }
 
 .signup-form input::placeholder {
@@ -374,29 +375,27 @@ footer {
 .signup-form button {
     flex: 0 0 auto;
     border: none;
-    padding: 0 12px;
+    padding: 0 30px;
     font-weight: 700;
     cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     border-radius: var(--pill-radius);
     height: 80%;
     background: url('../../images/button-bg.jpg') center/cover no-repeat;
     color: var(--text-color);
     transition: transform 0.2s ease;
+    z-index: 1;
 }
 
 .signup-form button:hover {
     transform: scale(1.05);
 }
 
-.signup-form {
-    flex-direction: column; /* Stack elements vertically */
-    height: auto; /* Allow height to expand for checkbox */
-    padding: 10px; /* Adjust padding */
-    max-width: 480px;
-    background: white;
-    border-radius: var(--pill-radius);
-    align-items: center;
-    gap: 10px; /* Space between input, button, and checkbox */
+.signup-form button:disabled {
+    background: #cccccc;
+    cursor: not-allowed;
 }
 
 .signup-checkbox {
@@ -407,7 +406,7 @@ footer {
     font-size: 12px;
     color: var(--text-color);
     text-align: center;
-    margin-top: 10px; /* Space below pill */
+    margin-top: 10px;
 }
 
 .signup-checkbox input[type="checkbox"] {
@@ -419,7 +418,7 @@ footer {
 }
 
 .signup-checkbox label {
-    color: var(--text-color); /* White for background */
+    color: var(--text-color);
 }
 
 .signup-checkbox a {
@@ -429,17 +428,6 @@ footer {
 
 .signup-checkbox a:hover {
     color: var(--primary-hover);
-}
-
-/* Update in "09. RESPONSIVE / MOBILE ADJUSTMENTS" @media (max-width: 768px), after .signup-form button:hover */
-.signup-checkbox {
-    font-size: 10px; /* Smaller text for mobile */
-    gap: 6px;
-}
-
-.signup-checkbox input[type="checkbox"] {
-    width: 14px;
-    height: 14px;
 }
 
 /* =========================================================
@@ -574,34 +562,21 @@ footer {
 }
 
 @media (max-width: 768px) {
-    /* Header */
-    .site-header {
-        position: fixed !important;
-        top: 0;
-        left: 0;
-        right: 0;
-        padding: 10px 20px !important;
-        width: 100%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        background: transparent !important;
-        z-index: 1000 !important;
+    /* Enable scrolling on mobile */
+    html, body {
+        overflow: auto !important;
     }
 
-    /* Intro section */
+    body {
+        overflow: auto !important;
+    }
+
     #intro {
-        height: 100vh !important;
-        min-height: 100vh !important;
-        padding: 60px 20px 80px 20px !important;
-        box-sizing: border-box;
-        display: flex !important;
-        flex-direction: column !important;
-        justify-content: center !important;
-        align-items: center;
-        width: 100%;
+        height: auto !important;
+        min-height: 100vh;
+        padding: 60px 20px calc(env(safe-area-inset-bottom, 0px) + 80px) !important;
         background: url('../../images/mob-backgrnd.png') center/cover no-repeat !important;
-        overflow: hidden !important;
+        overflow: visible !important;
     }
 
     #intro .container {
@@ -655,7 +630,7 @@ footer {
 
     /* Frame block */
     .tag-image {
-        display: none !important; /* Hide tag image in mobile */
+        display: none !important;
     }
 
     #intro .right-column .frame-block {
@@ -672,11 +647,10 @@ footer {
     }
 
     .frame-bottom-image {
-        position: relative;
         width: 250px !important;
         max-width: 250px !important;
         margin: -10px auto 0 auto !important;
-        z-index: 1 !important;
+        z-index: 999 !important;
     }
 
     /* Signup form */
@@ -723,17 +697,7 @@ footer {
         border: none;
         cursor: pointer;
         transition: transform 0.2s ease;
-    }
-
-    .signup-checkbox {
-        font-size: 10px;
-        gap: 6px;
-        margin-top: 8px; /* Smaller space for mobile */
-    }
-
-    .signup-checkbox input[type="checkbox"] {
-        width: 14px;
-        height: 14px;
+        z-index: 1;
     }
 
     .signup-form button:hover {
@@ -741,12 +705,27 @@ footer {
         transform: scale(1.05) !important;
     }
 
+    .signup-form button:disabled {
+        background: #cccccc !important;
+        cursor: not-allowed;
+    }
+
+    .signup-checkbox {
+        font-size: 10px;
+        gap: 6px;
+        margin-top: 8px;
+    }
+
+    .signup-checkbox input[type="checkbox"] {
+        width: 14px;
+        height: 14px;
+    }
+
     /* Footer */
     .footer-mobile {
         position: fixed !important;
         bottom: 0;
-        left: 50%;
-        transform: translateX(-50%);
+        left: 0;
         width: 100%;
         padding: 10px 20px calc(env(safe-area-inset-bottom, 0px) + 10px) !important;
         display: flex !important;
@@ -759,26 +738,25 @@ footer {
 
     .footer-mobile img.logo-right-mobile {
         display: block;
-        max-height: 40px;
+        max-height: 30px;
         width: auto;
     }
 
     .footer-mobile .social-icons {
         display: flex;
         flex-direction: row;
-        gap: 12px;
+        gap: 10px;
     }
 
     .footer-mobile .social-icons img {
-        max-height: 43px;
+        max-height: 40px;
         width: auto;
     }
 
-    .footer-links {
-    font-size: 10px; /* Smaller text for mobile */
-    gap: 10px;
-    justify-content: center; /* Already centered in mobile */
-    margin-bottom: 8px;
+    .footer-mobile .footer-links {
+        font-size: 10px;
+        gap: 10px;
+        margin-bottom: 8px;
     }
 
     /* Hide desktop logos */
@@ -789,53 +767,28 @@ footer {
     .logo-right-mobile {
         display: block !important;
         margin-top: 10px !important;
-        margin-bottom: 15px !important;
-        width: 90px !important;
+        margin-bottom: 10px !important;
+        width: 80px !important;
         height: auto !important;
         z-index: 10;
     }
 
     .social-icons {
         display: flex !important;
-        flex-direction: column !important;
+        flex-direction: row !important;
         align-items: center !important;
-        gap: 12px !important;
-        margin: 12px 0 !important;
-        z-index: 10 !important;
+        gap: 10px !important;
+        margin: 0 !important;
     }
 
     .social-icons a,
     .social-icons img {
-        margin-bottom: 10px !important;
-        margin-top: 1px !important;
-        width: 50px !important;
-        height: 50px !important;
+        width: 40px !important;
+        height: 40px !important;
     }
 
     .hide-on-desktop {
-        margin-top: auto;
-        width: 100%;
-        display: flex !important;
-        justify-content: center;
-        padding-bottom: 10px;
-        margin-top: 1px !important;
-    }
-
-    .hide-on-desktop .social-icons {
-        display: flex !important;
-        flex-direction: row !important;
-        justify-content: center !important;
-        align-items: center !important;
-        gap: 15px !important;
-        margin: 0 !important;
-        padding-bottom: 0 !important;
-    }
-
-    .hide-on-desktop .social-icons a,
-    .hide-on-desktop .social-icons img {
-        width: 50px !important;
-        height: 50px !important;
-        margin: 0 !important;
+        display: none !important;
     }
 }
 
