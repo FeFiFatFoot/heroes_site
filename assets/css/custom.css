@@ -671,6 +671,10 @@ footer {
         font-size: 1.4rem !important;
     }
 
+    #top-image {
+      display: none !important;
+    }
+
     .frame-paragraph {
         font-size: 0.7rem !important;
     }
@@ -784,9 +788,6 @@ footer {
     }
 
     /* Hide desktop logos */
-    .logo-left, .logo-right, .right-logo {
-        display: none !important;
-    }
 
     .logo-right-mobile {
         display: block !important;
