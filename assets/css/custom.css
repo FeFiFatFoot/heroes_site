@@ -697,17 +697,27 @@ footer {
 
 
 @media (max-width: 768px) {
+  /* Header */
+  .site-header {
+    position: relative !important; /* Normal flow */
+    padding: 10px 20px !important;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
   /* Ensure intro section is a clean flex column */
   #intro {
-    height: 100vh;
-    padding: 20px !important; /* Reduced padding for tighter layout */
+    height: auto !important; /* Let content set height */
+    min-height: 100vh;
+    padding: 20px !important;
     box-sizing: border-box;
     display: flex !important;
     flex-direction: column !important;
-    justify-content: center !important;
+    justify-content: flex-start !important; /* Start from top */
     align-items: center;
     width: 100%;
-    min-height: 100vh !important;
     background: url('../../images/mob-backgrnd.png') center/cover no-repeat !important;
   }
 
@@ -836,7 +846,7 @@ footer {
     transform: scale(1.05) !important;
   }
 
-  /* Locker section pushed to bottom */
+  /* Locker section adjustments */
   .locker-section {
     display: flex !important;
     flex-direction: column !important;
@@ -847,23 +857,38 @@ footer {
     padding-bottom: 20px !important;
   }
 
-  /* Remove residual top image */
-  #top-image {
-    display: none !important;
-  }
-
   /* Footer adjustments */
   .footer-mobile {
-    position: fixed;
-    bottom: 0;
-    left: 50%;
-    transform: translateX(-50%);
+    position: relative !important; /* Normal flow */
     width: 100%;
-    padding-bottom: calc(env(safe-area-inset-bottom, 0px) + 10px);
+    padding: 10px 20px !important;
     display: flex !important;
     flex-direction: column !important;
     align-items: center !important;
     gap: 8px;
+    background: transparent;
+  }
+
+  .footer-mobile img.logo-right-mobile {
+    display: block;
+    max-height: 40px;
+    width: auto;
+  }
+
+  .footer-mobile .social-icons {
+    display: flex;
+    flex-direction: row;
+    gap: 12px;
+  }
+
+  .footer-mobile .social-icons img {
+    max-height: 43px;
+    width: auto;
+  }
+
+  /* Remove residual top image */
+  #top-image {
+    display: none !important;
   }
 
   /* Ensure desktop logos are hidden */
