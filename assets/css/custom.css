@@ -562,11 +562,12 @@ footer {
 
     body {
         overflow: auto !important;
+        position: relative;
     }
 
     /* Header */
     .site-header {
-        position: relative !important; /* Changed to scroll with content */
+        position: absolute !important; /* Changed to absolute to overlay background */
         top: 0;
         left: 0;
         right: 0;
@@ -575,7 +576,7 @@ footer {
         display: flex;
         justify-content: center;
         align-items: center;
-        background: transparent !important;
+        background: transparent !important; /* Ensure transparent to show #intro background */
         z-index: 1000 !important;
     }
 
@@ -586,16 +587,17 @@ footer {
     /* Intro section */
     #intro {
         height: auto !important;
-        min-height: 100vh;
-        padding: 60px 20px calc(env(safe-area-inset-bottom, 0px) + 150px) !important; /* Increased for footer space */
+        min-height: calc(100vh + 200px) !important; /* Ensure enough height to push footer down */
+        padding: 60px 20px calc(env(safe-area-inset-bottom, 0px) + 200px) !important; /* Increased for footer */
         background: url('../../images/mob-backgrnd.png') center/cover no-repeat !important;
         overflow: visible !important;
+        position: relative;
     }
 
     #intro .container {
         flex-direction: column !important;
         align-items: center !important;
-        padding: 0 20px !important;
+        padding: 20px !important; /* Adjusted for content spacing */
         width: 100%;
         max-width: 100%;
     }
@@ -739,7 +741,7 @@ footer {
     .signup-checkbox {
         font-size: 10px;
         gap: 6px;
-        margin-top: 24px !important; /* Increased to move further below button */
+        margin-top: 32px !important; /* Increased to move further below button */
         position: relative;
         z-index: 3 !important;
     }
@@ -751,7 +753,7 @@ footer {
 
     /* Footer */
     .footer-mobile {
-        position: relative !important; /* Scrollable, not sticky */
+        position: relative !important; /* Non-sticky, scrolls with content */
         bottom: auto;
         left: auto;
         transform: none;
