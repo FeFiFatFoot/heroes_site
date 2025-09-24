@@ -248,8 +248,7 @@ footer {
 .locker-room-sub-text {
     display: block;
     line-height: 1.4;
-    font-size: 1rem !important;
-    padding-top: 3%;
+    font-size: 0.9rem !important;
 }
 
 .locker-section {
@@ -271,11 +270,11 @@ footer {
 .tag-image {
     position: absolute;
     top: -100px;
-    width: 350px ;
-    max-width: 350px ;
+    width: 350px !important;
+    max-width: 350px !important;
     margin: 0 auto 0px auto;
     height: auto;
-    z-index: 0 ;
+    z-index: 0 !important;
     left: 50%;
     transform: translateX(-50%);
 }
@@ -311,7 +310,7 @@ footer {
 
 .frame-heading {
     color: var(--text-color);
-    font-size: 1.8rem;
+    font-size: 1.7rem;
     margin-bottom: 15px;
 }
 
@@ -353,19 +352,18 @@ footer {
     width: 100%;
     max-width: 480px;
     height: 70px;
-    padding: 0;
+    padding: 0 10px;
     box-sizing: border-box;
 }
 
 .signup-form input[type="email"] {
     flex: 1;
     height: 100%;
-    padding: 0 20px;
+    padding: 0 12px;
     font-size: 1rem;
     color: black;
     border: none;
     outline: none;
-    background: transparent;
 }
 
 .signup-form input::placeholder {
@@ -376,29 +374,21 @@ footer {
 .signup-form button {
     flex: 0 0 auto;
     border: none;
-    padding: 0 30px;
+    padding: 0 12px;
     font-weight: 700;
     cursor: pointer;
     display: flex;
     align-items: center;
     justify-content: center;
     border-radius: var(--pill-radius);
-    height: 56px; /* 80% of 70px with equal 7px spacing */
-    margin: 7px 7px 7px 0;
+    height: 80%;
     background: url('../../images/button-bg.jpg') center/cover no-repeat;
     color: var(--text-color);
     transition: transform 0.2s ease;
-    z-index: 1;
 }
 
 .signup-form button:hover {
     transform: scale(1.05);
-}
-
-.signup-form button:disabled {
-    background: url('../../images/button-bg.jpg') center/cover no-repeat;
-    opacity: 0.6;
-    cursor: not-allowed;
 }
 
 .signup-checkbox {
@@ -635,14 +625,10 @@ footer {
     .locker-room-sub-text {
         display: block !important;
         line-height: 0.9 !important;
-        font-size: 0.8rem !important;
         font-size: var(--p-mobile) !important;
         text-align: center !important;
         margin-bottom: 0.2rem !important;
-    }
-
-    .locker-heading {
-      font-size: 1.4rem !important;
+        font-size: 0.7rem !important;
     }
 
     #intro .right-column {
@@ -658,7 +644,7 @@ footer {
 
     /* Frame block */
     .tag-image {
-        display: none !important;
+        display: none !important; /* Hide on mobile */
     }
 
     #intro .right-column .frame-block {
@@ -679,6 +665,14 @@ footer {
         max-width: 250px !important;
         margin: -10px auto 0 auto !important;
         z-index: 999 !important;
+    }
+
+    .frame-heading {
+        font-size: 1.4rem !important;
+    }
+
+    .frame-paragraph {
+        font-size: 0.7rem !important;
     }
 
     /* Signup form */
@@ -754,7 +748,8 @@ footer {
     .footer-mobile {
         position: fixed !important;
         bottom: 0;
-        left: 0;
+        left: 50%;
+        transform: translateX(-50%);
         width: 100%;
         padding: 10px 20px calc(env(safe-area-inset-bottom, 0px) + 10px) !important;
         display: flex !important;
