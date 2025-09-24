@@ -566,7 +566,7 @@ footer {
 
     /* Header */
     .site-header {
-        position: fixed !important;
+        position: relative !important; /* Changed to scroll with content */
         top: 0;
         left: 0;
         right: 0;
@@ -587,7 +587,7 @@ footer {
     #intro {
         height: auto !important;
         min-height: 100vh;
-        padding: 60px 20px calc(env(safe-area-inset-bottom, 0px) + 120px) !important; /* Increased padding for footer */
+        padding: 60px 20px calc(env(safe-area-inset-bottom, 0px) + 150px) !important; /* Increased for footer space */
         background: url('../../images/mob-backgrnd.png') center/cover no-repeat !important;
         overflow: visible !important;
     }
@@ -739,8 +739,9 @@ footer {
     .signup-checkbox {
         font-size: 10px;
         gap: 6px;
-        margin-top: 16px !important; /* Increased to move below button */
-        z-index: 2;
+        margin-top: 24px !important; /* Increased to move further below button */
+        position: relative;
+        z-index: 3 !important;
     }
 
     .signup-checkbox input[type="checkbox"] {
@@ -750,7 +751,7 @@ footer {
 
     /* Footer */
     .footer-mobile {
-        position: relative !important; /* Changed from fixed to avoid overlap */
+        position: relative !important; /* Scrollable, not sticky */
         bottom: auto;
         left: auto;
         transform: none;
@@ -758,7 +759,7 @@ footer {
         padding: 10px 20px calc(env(safe-area-inset-bottom, 0px) + 10px) !important;
         display: flex !important;
         flex-direction: column !important;
-        align-items: center !important;
+        align-items: flex-start !important; /* Left-align content */
         gap: 8px;
         background: transparent !important;
         z-index: 1000 !important;
@@ -782,7 +783,7 @@ footer {
     }
 
     .footer-mobile .footer-links {
-        font-size: 10px;
+        font-size: 5px !important; /* 50% of 10px */
         gap: 10px;
         margin-bottom: 8px;
     }
@@ -791,7 +792,33 @@ footer {
         font-size: 6px !important; /* 50% of 12px */
     }
 
+    .footer-left {
+        position: relative;
+        bottom: auto;
+        left: 20px; /* Align left with padding */
+    }
+
+    .footer-icons {
+        display: flex;
+        gap: 18px;
+        justify-content: flex-start; /* Align left */
+    }
+
+    .footer-right {
+        position: absolute;
+        right: 20px;
+        bottom: 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end; /* Keep right-aligned */
+        gap: 10px;
+    }
+
     /* Hide desktop logos */
+    .logo-right, .right-logo {
+        display: none !important;
+    }
+
     .logo-right-mobile {
         display: block !important;
         margin-top: 10px !important;
