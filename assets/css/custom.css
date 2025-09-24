@@ -16,12 +16,13 @@ html, body {
     width: 100%;
     display: flex;
     flex-direction: column;
-    background: transparent !important; /* Prevent default background color */
+    background: transparent !important;
     font-family: 'Montserrat', sans-serif;
+    overflow: hidden !important; /* Prevent scrolling */
 }
 
 body {
-    overflow: hidden; /* Prevent scrolling */
+    overflow: hidden !important;
 }
 
 #wrapper {
@@ -32,7 +33,7 @@ body {
 
 .main-content {
     flex: 1;
-    overflow: auto;
+    overflow: hidden !important; /* Reinforce non-scrollable */
 }
 
 *, *::before, *::after {
@@ -170,6 +171,7 @@ footer {
     align-items: center;
     background: url('images/lockers_new.png') center/cover no-repeat;
     box-sizing: border-box;
+    overflow: hidden !important; /* Prevent scrolling */
 }
 
 #intro .container {
@@ -195,7 +197,6 @@ footer {
     align-items: center;
     padding-right: 60px;
     position: relative;
-    top: 20vh;
     width: 50%;
 }
 
@@ -238,6 +239,18 @@ footer {
    05. FRAME BLOCK
    ========================================================= */
 
+.tag-image {
+    position: absolute;
+    top: 0;
+    width: 350px !important;
+    max-width: 350px !important;
+    margin: 0 auto;
+    height: auto;
+    z-index: 0 !important;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
 .frame-block {
     position: relative;
     background: url('../../images/frame_block1.png') top/cover no-repeat;
@@ -248,7 +261,7 @@ footer {
     max-width: 350px !important;
     text-align: center;
     box-shadow: 0 4px 10px rgba(0,0,0,0.2);
-    margin: 20px auto !important;
+    margin: 390px auto 0 auto; /* Top margin for tag overlap */
     font-family: 'Montserrat', sans-serif;
     display: flex;
     flex-direction: column;
@@ -256,6 +269,15 @@ footer {
     justify-content: flex-start;
     padding-top: 60px;
     z-index: 2 !important;
+}
+
+.frame-bottom-image {
+    position: relative;
+    width: 350px !important;
+    max-width: 350px !important;
+    margin: -10px auto 0 auto; /* Negative margin for overlap */
+    height: auto;
+    z-index: 1 !important;
 }
 
 .frame-heading {
@@ -287,17 +309,6 @@ footer {
 
 .frame-button:hover {
     transform: scale(1.05);
-}
-
-.frame-bottom-image {
-    display: block;
-    width: 350px !important;
-    max-width: 350px !important;
-    margin: 0 auto !important;
-    height: auto;
-    transform: translateY(-5px) !important;
-    position: relative;
-    z-index: 1 !important;
 }
 
 /* =========================================================
@@ -508,6 +519,7 @@ footer {
         align-items: center;
         width: 100%;
         background: url('../../images/mob-backgrnd.png') center/cover no-repeat !important;
+        overflow: hidden !important;
     }
 
     #intro .container {
@@ -560,25 +572,28 @@ footer {
     }
 
     /* Frame block */
+    .tag-image {
+        display: none !important; /* Hide tag image in mobile */
+    }
+
     #intro .right-column .frame-block {
+        position: relative;
         width: 250px !important;
         max-width: 250px !important;
         margin: 0 auto !important;
         padding: 20px !important;
         margin-top: 10px !important;
         margin-bottom: 0 !important;
-        margin-left: 0 !important;
         height: auto;
         box-sizing: border-box;
         z-index: 2 !important;
     }
 
     .frame-bottom-image {
+        position: relative;
         width: 250px !important;
         max-width: 250px !important;
-        margin: 0 auto !important;
-        transform: translateY(-5px) !important;
-        position: relative;
+        margin: -10px auto 0 auto !important;
         z-index: 1 !important;
     }
 
