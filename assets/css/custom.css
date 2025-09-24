@@ -567,7 +567,7 @@ footer {
 
     /* Header */
     .site-header {
-        position: absolute !important; /* Changed to absolute to overlay background */
+        position: absolute !important; /* Overlays #intro background */
         top: 0;
         left: 0;
         right: 0;
@@ -576,7 +576,7 @@ footer {
         display: flex;
         justify-content: center;
         align-items: center;
-        background: transparent !important; /* Ensure transparent to show #intro background */
+        background: transparent !important;
         z-index: 1000 !important;
     }
 
@@ -587,8 +587,8 @@ footer {
     /* Intro section */
     #intro {
         height: auto !important;
-        min-height: calc(100vh + 200px) !important; /* Ensure enough height to push footer down */
-        padding: 60px 20px calc(env(safe-area-inset-bottom, 0px) + 200px) !important; /* Increased for footer */
+        min-height: calc(100vh + 300px) !important; /* Increased to push footer down */
+        padding: 60px 20px calc(env(safe-area-inset-bottom, 0px) + 250px) !important; /* Increased for footer */
         background: url('../../images/mob-backgrnd.png') center/cover no-repeat !important;
         overflow: visible !important;
         position: relative;
@@ -597,7 +597,7 @@ footer {
     #intro .container {
         flex-direction: column !important;
         align-items: center !important;
-        padding: 20px !important; /* Adjusted for content spacing */
+        padding: 20px !important;
         width: 100%;
         max-width: 100%;
     }
@@ -657,7 +657,7 @@ footer {
         width: 250px !important;
         max-width: 250px !important;
         margin: 0 auto !important;
-        padding: 20px !important;
+        padding: 30px 20px 20px 20px !important; /* Increased padding-top to push content down */
         margin-top: 10px !important;
         margin-bottom: 0 !important;
         height: auto;
@@ -741,7 +741,7 @@ footer {
     .signup-checkbox {
         font-size: 10px;
         gap: 6px;
-        margin-top: 32px !important; /* Increased to move further below button */
+        margin-top: 40px !important; /* Increased to move further below button */
         position: relative;
         z-index: 3 !important;
     }
@@ -758,10 +758,10 @@ footer {
         left: auto;
         transform: none;
         width: 100%;
-        padding: 10px 20px calc(env(safe-area-inset-bottom, 0px) + 10px) !important;
+        padding: 10px 10px calc(env(safe-area-inset-bottom, 0px) + 10px) !important; /* Adjusted left padding */
         display: flex !important;
         flex-direction: column !important;
-        align-items: flex-start !important; /* Left-align content */
+        align-items: flex-start !important;
         gap: 8px;
         background: transparent !important;
         z-index: 1000 !important;
@@ -785,7 +785,7 @@ footer {
     }
 
     .footer-mobile .footer-links {
-        font-size: 5px !important; /* 50% of 10px */
+        font-size: 3px !important; /* 50% of 6px (rounded for readability) */
         gap: 10px;
         margin-bottom: 8px;
     }
@@ -797,7 +797,7 @@ footer {
     .footer-left {
         position: relative;
         bottom: auto;
-        left: 20px; /* Align left with padding */
+        left: 10px; /* Align closer to left viewport edge */
     }
 
     .footer-icons {
@@ -806,9 +806,14 @@ footer {
         justify-content: flex-start; /* Align left */
     }
 
+    .footer-icons img {
+        width: auto !important; /* Prevent warping */
+        max-height: 20px !important; /* Adjusted for consistency */
+    }
+
     .footer-right {
         position: absolute;
-        right: 20px;
+        right: 10px; /* Adjusted for symmetry */
         bottom: 20px;
         display: flex;
         flex-direction: column;
