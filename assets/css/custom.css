@@ -703,8 +703,8 @@ footer {
     padding: 20px !important; /* Reduced padding for tighter layout */
     box-sizing: border-box;
     display: flex !important;
-    flex-direction: column !important; /* Stack vertically */
-    justify-content: center !important; /* Center content vertically */
+    flex-direction: column !important;
+    justify-content: center !important;
     align-items: center;
     width: 100%;
     min-height: 100vh !important;
@@ -715,7 +715,7 @@ footer {
   #intro .container {
     flex-direction: column !important;
     align-items: center !important;
-    padding: 0 20px !important; /* Minimal padding */
+    padding: 0 20px !important;
     width: 100%;
     max-width: 100%;
   }
@@ -724,9 +724,32 @@ footer {
   #intro .left-column {
     width: 100%;
     text-align: center;
-    margin: 0 !important; /* Remove any margins */
+    margin: 0 !important;
     padding: 0 !important;
-    margin-bottom: 20px !important; /* Controlled gap below left column */
+    margin-bottom: 20px !important;
+  }
+
+  /* Restore heading size and spacing */
+  #intro .left-column h1 {
+    font-size: 1.5rem !important;
+    line-height: 1.2 !important;
+    margin-top: 0.5rem !important;
+    margin-bottom: 0.5rem !important;
+  }
+
+  /* Restore subtext size and spacing */
+  #intro .left-column p {
+    font-size: 0.9rem !important;
+    line-height: 1.3 !important;
+    max-width: 90%;
+    margin-bottom: 0.5rem !important;
+  }
+  .locker-room-sub-text {
+    display: block !important;
+    line-height: 0.9 !important;
+    font-size: 0.9rem !important;
+    text-align: center !important;
+    margin-bottom: 0.2rem !important;
   }
 
   /* Right column adjustments */
@@ -738,18 +761,18 @@ footer {
     align-items: center;
     padding: 0 !important;
     margin: 0 !important;
-    top: 0 !important; /* Reset top positioning */
+    top: 0 !important;
   }
 
   /* Frame block specific fixes */
   #intro .right-column .frame-block {
     width: 90vw;
     max-width: 250px;
-    margin: 0 auto !important; /* Center horizontally */
-    padding: 20px !important; /* Consistent padding */
-    margin-top: 10px !important; /* Small gap above frame block */
-    margin-bottom: 20px !important; /* Small gap below */
-    margin-left: 0 !important; /* Reset desktop margin-left: -50px */
+    margin: 0 auto !important;
+    padding: 20px !important;
+    margin-top: 10px !important;
+    margin-bottom: 20px !important;
+    margin-left: 0 !important;
     height: auto;
     box-sizing: border-box;
   }
@@ -759,16 +782,58 @@ footer {
     width: 90%;
     max-width: 250px;
     margin: 0 auto !important;
-    transform: translateY(-10px) !important; /* Adjusted for consistency */
+    transform: translateY(-10px) !important;
   }
 
-  /* Ensure signup form is compact */
+  /* Restore signup form and button as stacked elements */
   .signup-form {
-    margin: 10px auto !important;
-    padding: 0 !important;
-    width: 90% !important;
+    display: flex !important;
+    flex-direction: column !important;
+    width: 100% !important;
     max-width: 400px !important;
     gap: 8px !important;
+    margin: 10px auto !important;
+    padding: 0 !important;
+    background: none !important;
+    border-radius: 0 !important;
+    overflow: visible !important;
+  }
+
+  .signup-form input[type="email"] {
+    box-sizing: border-box !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    height: 50px !important;
+    line-height: 50px !important;
+    padding: 0 15px !important;
+    font-size: 1rem !important;
+    border-radius: 50px !important;
+    background: url('../../images/pill-bg.jpg') center/cover no-repeat !important;
+    text-align: center;
+    box-shadow: 3px 3px 0px rgba(138,43,226,0.3) !important;
+    margin: 0 !important;
+    border: none;
+    outline: none;
+  }
+
+  .signup-form button {
+    height: 50px !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    font-size: 1rem !important;
+    font-weight: 700 !important;
+    border-radius: 50px !important;
+    color: #fff !important;
+    box-shadow: 3px 3px 0px rgba(138,43,226,0.3) !important;
+    background: url('../../images/button-bg.jpg') center/cover no-repeat !important;
+    border: none;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+  }
+
+  .signup-form button:hover {
+    background: #e0336b !important;
+    transform: scale(1.05) !important;
   }
 
   /* Locker section pushed to bottom */
@@ -782,12 +847,12 @@ footer {
     padding-bottom: 20px !important;
   }
 
-  /* Remove any residual top image */
+  /* Remove residual top image */
   #top-image {
     display: none !important;
   }
 
-  /* Adjust footer to avoid overlap */
+  /* Footer adjustments */
   .footer-mobile {
     position: fixed;
     bottom: 0;
@@ -799,6 +864,64 @@ footer {
     flex-direction: column !important;
     align-items: center !important;
     gap: 8px;
+  }
+
+  /* Ensure desktop logos are hidden */
+  .logo-left, .logo-right, .right-logo {
+    display: none !important;
+  }
+
+  .logo-right-mobile {
+    display: block !important;
+    margin-top: 10px !important;
+    margin-bottom: 15px !important;
+    width: 90px !important;
+    height: auto !important;
+    z-index: 10;
+  }
+
+  /* Social icons adjustments */
+  .social-icons {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    gap: 12px !important;
+    margin: 12px 0 !important;
+    z-index: 10 !important;
+  }
+
+  .social-icons a,
+  .social-icons img {
+    margin-bottom: 10px !important;
+    margin-top: 1px !important;
+    width: 50px !important;
+    height: 50px !important;
+  }
+
+  .hide-on-desktop {
+    margin-top: auto;
+    width: 100%;
+    display: flex !important;
+    justify-content: center;
+    padding-bottom: 10px;
+    margin-top: 1px !important;
+  }
+
+  .hide-on-desktop .social-icons {
+    display: flex !important;
+    flex-direction: row !important;
+    justify-content: center !important;
+    align-items: center !important;
+    gap: 15px !important;
+    margin: 0 !important;
+    padding-bottom: 0 !important;
+  }
+
+  .hide-on-desktop .social-icons a,
+  .hide-on-desktop .social-icons img {
+    width: 50px !important;
+    height: 50px !important;
+    margin: 0 !important;
   }
 }
 
