@@ -316,7 +316,7 @@ footer {
 
 .frame-paragraph {
     color: var(--text-color);
-    font-size: 0.9rem !important;
+    font-size: 1rem;
     margin-bottom: 25px;
     line-height: 1.5;
 }
@@ -382,7 +382,8 @@ footer {
     align-items: center;
     justify-content: center;
     border-radius: var(--pill-radius);
-    height: 80%;
+    height: 56px; /* 80% of 70px with equal 7px spacing */
+    margin: 7px 7px 7px 0;
     background: url('../../images/button-bg.jpg') center/cover no-repeat;
     color: var(--text-color);
     transition: transform 0.2s ease;
@@ -394,7 +395,8 @@ footer {
 }
 
 .signup-form button:disabled {
-    background: #cccccc;
+    background: url('../../images/button-bg.jpg') center/cover no-repeat;
+    opacity: 0.6;
     cursor: not-allowed;
 }
 
@@ -571,6 +573,26 @@ footer {
         overflow: auto !important;
     }
 
+    /* Header */
+    .site-header {
+        position: fixed !important;
+        top: 0;
+        left: 0;
+        right: 0;
+        padding: 10px 20px !important;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: transparent !important;
+        z-index: 1000 !important;
+    }
+
+    .logo-left {
+        display: block !important;
+    }
+
+    /* Intro section */
     #intro {
         height: auto !important;
         min-height: 100vh;
@@ -706,7 +728,8 @@ footer {
     }
 
     .signup-form button:disabled {
-        background: #cccccc !important;
+        background: url('../../images/button-bg.jpg') center/cover no-repeat !important;
+        opacity: 0.6;
         cursor: not-allowed;
     }
 
