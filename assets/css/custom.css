@@ -697,509 +697,111 @@ footer {
 
 
 @media (max-width: 768px) {
-
-  /* =========================
-     BODY & WRAPPER RESET
-  ========================= */
-  html, body, #wrapper, .inner, #intro {
-    height: auto !important;      /* let content set the height */
-    min-height: auto !important;
-    overflow: visible !important; /* enable scrolling */
-  }
-
-  /* =========================
-     LEFT LOGO TOP
-  ========================= */
-
-
-  /* Hide desktop logos */
-  .logo-left, .logo-right, .right-logo {
-    display: none !important;
-  }
-
-  .logo-right-mobile {
-    display: block !important;  
-    margin-top: 10px !important;      /* less space above */
-    margin-bottom: 15px !important;   /* less space below */
-    width: 90px !important;           /* optional: make smaller */
-    height: auto !important;
-    z-index: 10;
-  }
-
-  /* =========================
-     INTRO SECTION
-  ========================= */
-  #top-image {
-          display: none !important;
-      }
-
-  .frame-bottom-image {
-    display: block; /* ensure it's treated like a block element */
-    width: 90%;
-    max-width: 250px;
-    transform: translateY(-20px) !important;
-  }
-
-  .frame-block {
-    width: 90%;
-    max-width: 250px;
-  }
-
+  /* Ensure intro section is a clean flex column */
   #intro {
-    height: 100vh; /* keep full screen */
-    padding-bottom: 80px; /* same as footer height */
+    height: 100vh;
+    padding: 20px !important; /* Reduced padding for tighter layout */
     box-sizing: border-box;
     display: flex !important;
-    flex-direction: row !important;
-    justify-content: space-between !important;
+    flex-direction: column !important; /* Stack vertically */
+    justify-content: center !important; /* Center content vertically */
     align-items: center;
     width: 100%;
     min-height: 100vh !important;
-    background: url('../../images/mob-backgrnd.png') center center no-repeat !important;
-    background-size: cover !important;
+    background: url('../../images/mob-backgrnd.png') center/cover no-repeat !important;
   }
 
+  /* Container should stack vertically and center content */
+  #intro .container {
+    flex-direction: column !important;
+    align-items: center !important;
+    padding: 0 20px !important; /* Minimal padding */
+    width: 100%;
+    max-width: 100%;
+  }
+
+  /* Left column adjustments */
   #intro .left-column {
-    margin: 0 auto;            /* center horizontally */
-    padding: 0 20px;           /* add side breathing room */
-    text-align: center;        /* optional, cleaner on mobile */
+    width: 100%;
+    text-align: center;
+    margin: 0 !important; /* Remove any margins */
+    padding: 0 !important;
+    margin-bottom: 20px !important; /* Controlled gap below left column */
   }
 
-  #intro h1 {
-    font-size: 1.6rem;         /* scale down heading */
-    margin-bottom: 15px;       /* tighter spacing under heading */
+  /* Right column adjustments */
+  #intro .right-column {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0 !important;
+    margin: 0 !important;
+    top: 0 !important; /* Reset top positioning */
   }
 
-  #intro p {
-    font-size: 1rem;
-    margin-bottom: 20px;
+  /* Frame block specific fixes */
+  #intro .right-column .frame-block {
+    width: 90vw;
+    max-width: 250px;
+    margin: 0 auto !important; /* Center horizontally */
+    padding: 20px !important; /* Consistent padding */
+    margin-top: 10px !important; /* Small gap above frame block */
+    margin-bottom: 20px !important; /* Small gap below */
+    margin-left: 0 !important; /* Reset desktop margin-left: -50px */
+    height: auto;
+    box-sizing: border-box;
   }
 
-  /* Locker section (bottom logo + social icons) */
+  /* Bottom image adjustments */
+  .frame-bottom-image {
+    width: 90%;
+    max-width: 250px;
+    margin: 0 auto !important;
+    transform: translateY(-10px) !important; /* Adjusted for consistency */
+  }
+
+  /* Ensure signup form is compact */
+  .signup-form {
+    margin: 10px auto !important;
+    padding: 0 !important;
+    width: 90% !important;
+    max-width: 400px !important;
+    gap: 8px !important;
+  }
+
+  /* Locker section pushed to bottom */
   .locker-section {
-
     display: flex !important;
     flex-direction: column !important;
     align-items: center !important;
-    justify-content: flex-end !important; /* hug bottom of parent */
+    justify-content: flex-end !important;
     width: 100%;
-    flex-grow: 1; /* take remaining vertical space */
     margin: 0 !important;
     padding-bottom: 20px !important;
   }
 
-  .locker-section .logo-right-mobile,
-  .locker-section .social-icons {
-    margin-bottom: 1px !important;  /* hugs bottom */
-    align-self: flex-end;
-  }
-
-#intro .container {
-        flex-direction: column; /* stack columns */
-        align-items: center; /* center horizontally */
-        padding: 20px; /* optional padding */
-    }
-
-    #intro .left-column {
-        width: 100%; /* take full width */
-        text-align: center; /* optional, can keep left if desired */
-        margin-bottom: 20px; /* space between columns */
-    }
-
-    #intro .right-column {
-        width: 100%; /* take full width */
-        display: flex;
-        justify-content: center; /* center the frame block */
-    }
-
-    #intro .right-column .frame-block {
-        width: 90vw;        /* responsive width */
-        padding-top: 20px !important;
-        max-width: 250px;   /* same as original max size */
-        height: auto;       /* let it expand if content grows */
-        padding: 10px;      /* optional: inner spacing */
-        margin: 0 auto;     /* center horizontally */
-        margin-bottom: 10px !important;
-    }
-
-
-  #intro .left-column h1 {
-    font-size: 1.5rem;
-    line-height: 1.2;
-    margin-top: 0.5rem !important; /* small spacing below logo */
-    margin-bottom: 0.5rem !important;
-  }
-
-  #intro .left-column p {
-    font-size: 0.9rem;
-    line-height: 1.3;
-    max-width: 90%;
-    margin-bottom: 0.5rem !important;
-  }
-
-  #intro .locker-room-text { 
-    display: block; line-height: 0.6; font-size: 0.6rem; 
-}
-
-  .locker-room-sub-text {
-    display: block !important; 
-    line-height: 0.9 !important; 
-    font-size: 0.9rem !important;
-    text-align: center !important;
-    margin-bottom: 0.2rem !important;
-  }
-
-  .locker-room-text {
-    margin-top: 1px !important;
-  }
-
-    .logo-left,
-  .logo-right,
-  footer {
-    display: flex !important;
-    position: relative !important;  /* footer sits below content */
-    padding: 10px 20px !important;
-  }
-
-  .logo-right-mobile,
-  .footer-mobile,
-  .hide-on-desktop {
+  /* Remove any residual top image */
+  #top-image {
     display: none !important;
   }
 
-  /* =========================
-     SIGNUP FORM / JOIN BUTTON
-  ========================= */
- .join-button { 
-      margin-bottom: 12px !important; 
-  }
-
-/* =========================
-   UNIFIED SIGNUP + DISCORD STACK
-========================= */
-.signup-stack {
-  display: flex !important;
-  flex-direction: column !important;
-  align-items: center !important;
-  width: 90% !important;
-  max-width: 400px !important;
-  gap: 8px !important;              /* equal spacing between all elements */
-  margin-top: 0.5rem !important;
-  padding: 0 !important;
-}
-
-/* Input field */
-.signup-stack input[type="email"] {
-  box-sizing: border-box !important;
-  width: 100% !important;
-  height: 50px !important;           /* match buttons */
-  padding: 0 15px !important;
-  font-size: 1rem !important;
-  border-radius: 50px !important;
-  background: #fff !important;
-  text-align: center !important;
-  box-shadow: 3px 3px 0px rgba(138,43,226,0.3) !important;
-  margin: 0 !important;
-}
-
-/* JOIN button */
-.signup-stack button {
-  width: 100% !important;
-  height: 50px !important;           /* match input height */
-  font-size: 1rem !important;
-  font-weight: 700 !important;
-  border-radius: 50px !important;
-  background: #ff4081 !important;
-  color: #fff !important;
-  box-shadow: 3px 3px 0px rgba(138,43,226,0.3) !important;
-  transition: background 0.3s ease, transform 0.2s ease;
-  margin: 0 !important;
-}
-
-.signup-stack button:hover {
-  background: #e0336b !important;
-  transform: scale(1.05) !important;
-}
-
-/* Discord button */
-.signup-stack .discord-button {
-  display: flex !important;
-  align-items: center !important;
-  justify-content: center !important;
-  width: 100% !important;
-  height: 50px !important;           /* match everything */
-  font-size: 1rem !important;
-  font-weight: 700 !important;
-  border-radius: 50px !important;
-  background: #ff4081 !important;
-  color: #fff !important;
-  text-decoration: none !important;
-  box-shadow: 3px 3px 0px rgba(138,43,226,0.3) !important;
-  gap: 8px !important;               /* space between icon + text */
-  padding: 0 15px !important;
-  margin: 0 !important;
-}
-
-.signup-stack .discord-button i {
-  font-size: 1.2rem !important;
-  display: inline-block;
-}
-
-.signup-stack .discord-button:hover {
-  background: #e0336b !important;
-  transform: scale(1.05) !important;
-}
-
-
-/* Ensure input field is full width on mobile */
-
-
-.signup-form,
-#intro .signup-pill {
-    display: flex !important;
-    flex-direction: column !important;
-    width: 100% !important;
-    max-width: 100% !important; /* override any desktop max-width */
-    gap: 12px !important;
-    margin: 1rem auto !important;
-    padding: 0 !important;
-}
-
-
-
-.signup-form {
-  display: flex !important;
-  align-items: center !important; /* ensures input fills available width/height */
-  flex-direction: column !important; /* stack input + button */
-  width: 100% !important;
-  max-width: 100% !important; 
-  gap: 8px !important;
-  margin: 0 !important;
-  margin: 1rem auto !important;
-  padding: 0 !important;
-  background: none !important;        /* remove pill background */
-  border-radius: 0 !important;       /* remove pill container radius */
-  overflow: visible !important;      /* do not clip children */
-}
-
-.signup-form input[type="email"] {
-    box-sizing: border-box !important;        /* include padding in total height */
-    width: 100% !important;        /* full width of container */
-    max-width: 100% !important; 
-    height: 50px !important;       /* same as JOIN button */
-    line-height: 50px !important; /* vertically center text */
-    padding: 0 15px !important;    /* horizontal padding for text */
-    font-size: 1rem !important;
-    border-radius: 50px !important;
-    background: #fff;
-    text-align: center;
-    box-shadow: 3px 3px 0px rgba(138,43,226,0.3) !important;
-    margin-bottom: 0 !important;
-    background: url('../../images/pill-bg.jpg') center/cover no-repeat !important;
-    display: block;
-  }
-
-  .signup-form button {
-    height: 50px !important;       /* match input height */
-    width: 100% !important;
-    max-width: 100% !important; 
-    font-size: 1rem !important;
-    font-weight: 700 !important;
-    border-radius: 50px !important;
-    color: #fff !important;
-    box-shadow: 3px 3px 0px rgba(138,43,226,0.3) !important;
-    background: url('../../images/button-bg.jpg') center/cover no-repeat !important;
-  }
-
-.signup-form button:hover {
-  background: #e0336b !important;
-  transform: scale(1.05) !important;
-}
-
-  /* =========================
-     DISCORD BUTTON (Locker Room)
-  ========================= */
-/* Make "Enter the Locker Room" button full width like the Join button */
-.discord-button {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 50px !important;          /* match Join button */
-  width: 100% !important;
-  max-width: 400px !important;
-  font-size: 1rem;
-  font-weight: 700;
-  border-radius: 50px;
-  background: #2f55ff;
-  color: #fff;
-  text-decoration: none;
-  box-shadow: 3px 3px 0px rgba(138,43,226,0.3);
-  margin-top: 10px !important;
-  gap: 4px;              /* space between icon and text */
-}
-
-.discord-button i {
-  font-size: 1.2rem;
-}
-
-.discord-button:hover {
-  background: #e0336b;
-  transform: scale(1.05);
-}
-
-  /* =========================
-     LOCKER SECTION
-  ========================= */
-  .locker-room-wrapper {
-    display: flex !important;
-    flex-direction: column !important;  
-    align-items: center !important;
-    justify-content: flex-end !important; /* bottom alignment */
-    width: 100%;
-    gap: 8px !important;
-  }
-
-  .locker-right {
-    width: 100% !important;
-    text-align: center !important;
-  }
-
-  /* Right logo under locker text */
-  .locker-section .logo-right-mobile {
-    display: block !important;
-    margin: 0 auto 5px auto !important;
-    max-width: 100px !important;
-    width: 80% !important;
-    height: auto !important;
-    margin: 12px auto 0 auto;
-  }
-
-  /* =========================
-     SOCIAL ICONS
-  ========================= */
-.social-icons {
-    display: flex !important;
-    flex-direction: column !important;
-    align-items: center !important;
-    gap: 12px !important;
-    margin: 12px 0 !important;
-    z-index: 10 !important;         /* make sure it’s above background */
-}
-
-/* Reduce spacing above social icons and logo injected above them */
-.social-icons::before {
-    margin-bottom: 5px !important;   /* less space between injected logo and icons */
-    width: 80px !important;           /* optional: smaller logo */
-    height: auto !important;
-}
-
-/* Reduce spacing between social icons themselves if needed */
-.social-icons a,
-.social-icons img {
-    margin-bottom: 10px !important;   /* less gap between icons */
-    margin-top: 1px !important;
-    width: 50px !important;           /* optional: slightly smaller icons */
-    height: 50px !important;
-}
-
-  /* =========================
-     HEADER BAR RESET
-  ========================= */
-  header, #header, .wrapper.style1.fullscreen {
-    margin: 0 !important;
-    padding: 0 !important;
-    height: auto !important;
-    background: transparent !important;
-    border: none !important;
-    box-shadow: none !important;
-  }
-
-  body, html {
-    margin: 0;
-    padding: 0;
-  }
-
-  .hide-on-mob {
-    display: none !important;
-  }
-
-  .hide-on-desktop {
-    margin-top: auto; /* pushes socials down */
-    width: 100%;
-    display: flex !important;
-    justify-content: center;
-    padding-bottom: 10px; /* small breathing room */
-    margin-top: 1px !important;
-
-}
-
-.hide-on-desktop .social-icons {
-    display: flex !important;
-    flex-direction: row !important;  /* horizontal instead of vertical */
-    justify-content: center !important; /* center them horizontally */
-    align-items: center !important;    /* vertically center icons in row */
-    gap: 15px !important;              /* spacing between icons */
-    margin: 0 !important;
-    padding-bottom: 0 !important;
-}
-
-.hide-on-desktop .social-icons a,
-.hide-on-desktop .social-icons img {
-    width: 50px !important;   /* match your mobile sizing */
-    height: 50px !important;
-    margin: 0 !important;     /* remove extra top/bottom margin */
-}
-
-.footer-mobile {
+  /* Adjust footer to avoid overlap */
+  .footer-mobile {
     position: fixed;
+    bottom: 0;
     left: 50%;
     transform: translateX(-50%);
-    bottom: 0;
-
+    width: 100%;
     padding-bottom: calc(env(safe-area-inset-bottom, 0px) + 10px);
-
     display: flex !important;
-    flex-direction: column !important; /* stack vertically */
+    flex-direction: column !important;
     align-items: center !important;
-    gap: 8px; /* space between logo and icons */
-
-    z-index: 9999;
-    background: transparent;
+    gap: 8px;
   }
-
-  .footer-mobile img.logo-right-mobile {
-    display: block;
-    max-height: 40px;
-    width: auto;
-  }
-
-  .footer-mobile .social-icons {
-    display: flex;
-    flex-direction: row;
-    gap: 12px;
-  }
-
-  .footer-mobile .social-icons img {
-    max-height: 43px;
-    width: auto;
-  }
-
-      .footer-desktop .footer-left {
-        flex-direction: column;
-        align-items: flex-start; /* align to left */
-        font-size: 12px;         /* shrink text */
-    }
-
-    .footer-desktop .footer-left .footer-icons img {
-        width: 10px !important;  /* shrink icons */
-        margin-right: 3px;       /* spacing between icons */
-    }
-
-    .footer-desktop .footer-left-text {
-        margin-top: 5px;         /* spacing under icons */
-    }
-
 }
+
 
 
 
