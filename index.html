@@ -29,32 +29,29 @@
             <p class="locker-room-sub-text">Exclusive early access. Limited spots.</p>
 
             <!-- Signup form -->
-            <div class="join-button">
-              <form action="https://enverstudio.us10.list-manage.com/subscribe/post?u=0c5e017f586fcc099ead7eab3&amp;id=446283dd0c&amp;f_id=0076e7e1f0" 
-                    method="post" 
-                    target="_blank" 
-                    class="signup-form" 
-                    id="mc-embedded-subscribe-form" 
-                    name="mc-embedded-subscribe-form" 
-                    novalidate>
-
-                  <input type="email" name="EMAIL" placeholder="Email..." required id="mce-EMAIL">
-
-                  <!-- Honeypot field (for bots, keep hidden) -->
-                  <div style="position:absolute; left:-5000px;" aria-hidden="true">
-                      <input type="text" name="b_0c5e017f586fcc099ead7eab3_446283dd0c" tabindex="-1" value="">
-                  </div>
-
-                  <button type="submit" name="subscribe" id="mc-embedded-subscribe">JOIN THE GAME</button>
-
-                  <!-- Optional: success/error messages -->
-                  <div id="mce-responses" class="clear">
-                      <div class="response" id="mce-error-response" style="display:none;"></div>
-                      <div class="response" id="mce-success-response" style="display:none;"></div>
-                  </div>
-              </form>
-
-            </div>
+                <div class="join-button">
+                    <form action="https://enverstudio.us10.list-manage.com/subscribe/post?u=0c5e017f586fcc099ead7eab3&amp;id=446283dd0c&amp;f_id=0076e7e1f0" 
+                        method="post" 
+                        target="_blank" 
+                        class="signup-form" 
+                        id="mc-embedded-subscribe-form" 
+                        name="mc-embedded-subscribe-form" 
+                        novalidate>
+                        <input type="email" name="EMAIL" placeholder="Email..." required id="mce-EMAIL">
+                        <div style="position:absolute; left:-5000px;" aria-hidden="true">
+                            <input type="text" name="b_0c5e017f586fcc099ead7eab3_446283dd0c" tabindex="-1" value="">
+                        </div>
+                        <button type="submit" name="subscribe" id="mc-embedded-subscribe" disabled>JOIN THE GAME</button>
+                        <div id="mce-responses" class="clear">
+                            <div class="response" id="mce-error-response" style="display:none;"></div>
+                            <div class="response" id="mce-success-response" style="display:none;"></div>
+                        </div>
+                    </form>
+                    <div class="signup-checkbox">
+                        <input type="checkbox" id="newsConsent" name="newsConsent">
+                        <label for="newsConsent">Yes, keep me updated with FIFA Heroes news. I agree to the <a href="./privacy.html">Privacy Policy</a>.</label>
+                    </div>
+                </div>
         </div>
 
         <!-- Right column -->
@@ -84,18 +81,23 @@
     </section>
 
     <!-- Footer -->
-          <footer class="footer-desktop">
-              <div class=" footer-left">
-                  <div class="footer-icons">
-                      <img src="images/fifa.png" alt="" style="width: 20px !important;">
-                      <img src="images/fifa2.png" alt="" style="width: 20px !important;">
-                      <img src="images/enver.png" alt="" style="width: 75px !important;">
-                  </div>
-                  <div class="footer-left-text">© 2025 Enver Studio. FIFA Heroes. All rights reserved.</div>
-              </div>
-                <div class="footer-right">
+        <footer class="footer-desktop">
+            <div class="footer-left">
+                <div class="footer-icons">
+                    <img src="images/fifa.png" alt="" style="width: 20px !important;">
+                    <img src="images/fifa2.png" alt="" style="width: 20px !important;">
+                    <img src="images/enver.png" alt="" style="width: 75px !important;">
+                </div>
+                <div class="footer-left-text">© 2025 Enver Studio. FIFA Heroes. All rights reserved.</div>
+            </div>
+            <div class="footer-right">
+                <div class="footer-links">
+                    <a href="./termsofuse.html">Terms Of Use</a>
+                    <a href="./privacy.html">Privacy Policy</a>
+                </div>
+                <div class="social-icons">
                     <a href="https://x.com/PlayFIFAHeroes" target="_blank" aria-label="X">
-                        <img src="images/x.png" alt="Instagram">
+                        <img src="images/x.png" alt="X">
                     </a>
                     <a href="https://www.instagram.com/fifaheroes/" target="_blank" aria-label="Instagram">
                         <img src="images/instagram.png" alt="Instagram">
@@ -107,7 +109,8 @@
                         <img src="images/tiktok.png" alt="TikTok">
                     </a>
                 </div>
-          </footer>
+            </div>
+        </footer>
 
 
     <!-- Scripts -->
@@ -118,6 +121,7 @@
     <script src="assets/js/breakpoints.min.js"></script>
     <script src="assets/js/util.js"></script>
     <script src="assets/js/main.js"></script>
+    <script src="scripts/form.js"></script>
 
 </body>
 </html>
