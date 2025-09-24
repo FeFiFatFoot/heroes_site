@@ -1,43 +1,13 @@
 /* =========================================================
-   00. CUSTOM CSS - JAMES
-   ---------------------------------------------------------
-========================================================= */
+   CUSTOM CSS - FIFA HEROES
+   =========================================================
+   Author: Enver Studio
+   Description: Styles for FIFA Heroes main page and Terms of Use page
+   ========================================================= */
 
 /* =========================================================
-   GLOBAL VARIABLES
-   Colors, fonts, spacing
-========================================================= */
-:root {
-  /* Colors */
-  --primary-color: #ff4081;
-  --primary-hover: #e0336b;
-  --secondary-color: #6f2be0;
-  --light-bg: #ffffff;
-  --dark-bg: #000000;
-  --text-color: #ffffff;
-  --body-font-color: #333333;
-
-  /* Shadows */
-  --shadow-purple: 8px 8px 0px #6f2be0, 16px 16px 0px #b97cff;
-
-  /* Fonts */
-  --heading-font: 'GT Ultra', 'Arial Black', sans-serif;
-  --body-font: 'Helvetica Neue', Arial, sans-serif;
-
-  /* Sizes */
-  --h1-desktop: 3rem;
-  --h1-mobile: 2rem;
-  --p-desktop: 1.125rem;
-  --p-mobile: 0.95rem;
-
-  /* Spacing */
-  --section-padding: 60px 20px;
-  --pill-padding: 12px 20px;
-  --pill-radius: 50px;
-}
-
-/* Global variables - end */
-
+   01. GLOBAL STYLES
+   ========================================================= */
 
 html, body {
     margin: 0;
@@ -46,146 +16,261 @@ html, body {
     width: 100%;
     display: flex;
     flex-direction: column;
-}
-
-.site-footer {
-  margin-top: auto;
+    background: transparent !important; /* Prevent default background color */
+    font-family: 'Montserrat', sans-serif;
 }
 
 body {
-    display: flex;
-    flex-direction: column;
-    overflow: hidden; /* keeps no scrolling */
+    overflow: hidden; /* Prevent scrolling */
+}
+
+#wrapper {
+    display: block;
+    margin: 0;
+    padding: 0;
 }
 
 .main-content {
     flex: 1;
     overflow: auto;
-    margin-top: 0; /* No extra margin needed */
-    margin-bottom: 0;
 }
 
-*, *::before, *::after { box-sizing: inherit; }
-
-#wrapper { display: block; margin: 0; padding: 0; }
-
-/* Main template content */
-#main.wrapper,
-#main.wrapper .inner {
-    display: block;
-    flex-direction: initial;
-    align-items: initial;
-    padding-top: initial;
-    padding-bottom: initial;
-    margin: initial;
+*, *::before, *::after {
+    box-sizing: border-box;
 }
 
-#main .inner {
-    max-width: 1200px;
+/* Root variables */
+:root {
+    --primary-color: #ff4081;
+    --primary-hover: #e0336b;
+    --secondary-color: #6f2be0;
+    --text-color: #ffffff;
+    --shadow-purple: 8px 8px 0px #6f2be0, 16px 16px 0px #b97cff;
+    --h1-desktop: 3rem;
+    --h1-mobile: 1.5rem;
+    --p-desktop: 1.25rem;
+    --p-mobile: 0.9rem;
+    --pill-radius: 50px;
+}
+
+/* =========================================================
+   02. HEADER
+   ========================================================= */
+
+.site-header {
+    position: fixed !important;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000 !important;
+    background: transparent !important;
     width: 100%;
-    margin: 0 auto;
-    padding: 2rem 1.5rem;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.logo-left img {
+    max-width: 150px;
+    height: auto;
+    display: block;
 }
 
 /* =========================================================
-   01. LOGOS
-========================================================= */
+   03. FOOTER
+   ========================================================= */
 
-/* Desktop: top-left & top-right fixed logos */
-.logo-left, .logo-right {
-    position: fixed;
-    top: 20px;
-    z-index: 1200;
+.footer-desktop {
+    position: fixed !important;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000 !important;
+    background: transparent !important;
+    width: 100%;
+    padding: 15px 30px;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
-.logo-left, .logo-right, .logo-left-mobile, .logo-right-mobile {
-    z-index: 9999 !important;
+footer {
+    position: fixed !important;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: transparent !important;
+    color: var(--text-color);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+    z-index: 1000 !important;
 }
 
-.logo-left-mobile{
-    display: none;
+.footer-icons {
+    display: flex;
+    gap: 18px;
 }
 
-.logo-left { left: 20px; }
-.logo-right { right: 20px; }
+.footer-icons img {
+    height: auto;
+    display: block;
+    margin-bottom: 5px;
+}
 
-/* Logo images */
-.logo-left img { max-width: 150px; height: auto; display: block; }
-.logo-right img { max-width: 140px; height: auto; display: block; }
+.footer-left {
+    position: absolute;
+    bottom: 40px;
+    left: 60px;
+}
 
-/* Centered logo for other pages */
-.logo-center { display: block; margin: 0 auto 30px; max-width: 120px; }
+.footer-left-text {
+    margin-top: 10px;
+    font-size: 12px;
+    color: var(--text-color);
+}
+
+.footer-right {
+    position: absolute;
+    right: 20px;
+    bottom: 20px;
+    display: flex;
+    gap: 15px;
+    align-items: center;
+}
+
+.footer-right a {
+    text-decoration: none !important;
+    border: none !important;
+    outline: none !important;
+}
+
+.footer-right img {
+    max-height: 40px;
+    width: auto;
+}
+
+.footer-right a:hover {
+    transform: scale(1.1);
+}
 
 /* =========================================================
-   02. ABOUT PAGE LOGO OVERRIDE
-========================================================= */
+   04. INTRO / HERO SECTION
+   ========================================================= */
 
-#about .logo-header img {
-    width: 120px !important;
-    max-width: 120px !important;
-    height: auto !important;
-    display: inline-block;
-    margin: 0 auto 30px;
+#intro {
+    position: relative;
+    height: 100vh;
+    min-height: 100vh;
+    padding: 80px 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: url('images/lockers_new.png') center/cover no-repeat;
+    box-sizing: border-box;
 }
 
-#about .logo-header {
-    position: relative !important;
-    top: 0 !important;
-    left: auto !important;
-    transform: none !important;
+#intro .container {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+    max-width: 100%;
+    padding: 50px;
+}
+
+#intro .left-column {
+    text-align: left;
+    margin-right: auto;
+    flex: 1;
+}
+
+#intro .right-column {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-right: 60px;
+    position: relative;
+    top: 20vh;
+    width: 50%;
+}
+
+#intro h1 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 900;
+    font-size: var(--h1-desktop);
+    line-height: 1.2;
+    color: var(--text-color);
+    margin: 0;
+}
+
+#intro p {
+    font-size: var(--p-desktop);
+    line-height: 1.5;
+    color: var(--text-color);
+    max-width: 700px;
+    text-align: left;
+}
+
+.locker-room-sub-text {
+    display: block;
+    line-height: 1.4;
+    font-size: 1rem;
+}
+
+.locker-section {
+    margin-top: auto;
+    width: 100%;
     text-align: center;
-    margin: 0 auto 20px;
-    z-index: 2;
 }
 
-#about .logo-left img,
-#about .logo-right img { max-height: 60px; width: auto; }
+.locker-section .social-icons {
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 20px;
+}
 
 /* =========================================================
-   02.1 RIGHT FRAME BLOCK
-========================================================= */
+   05. FRAME BLOCK
+   ========================================================= */
 
 .frame-block {
-    position: relative;   
+    position: relative;
     background: url('../../images/frame_block1.png') top/cover no-repeat;
     background-color: transparent;
     border-radius: 20px;
     padding: 30px;
-    max-width: 350px;
-    width: 90%;
-    text-align: center; /* keeps text/button centered */
+    width: 350px !important;
+    max-width: 350px !important;
+    text-align: center;
     box-shadow: 0 4px 10px rgba(0,0,0,0.2);
-
-    /* Desktop alignment */
-    margin: 20px 0 20px 0; /* remove auto to not interfere with centering inside */
+    margin: 20px auto !important;
     font-family: 'Montserrat', sans-serif;
-
-    /* push the block itself to the right */
     display: flex;
-    flex-direction: column; 
-    align-items: center; /* centers content inside frame-block */
-    justify-content: flex-start; /* top-aligned by default */
-    padding-top: 60px; /* extra push from top */
-    margin-left: -50px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    padding-top: 60px;
+    z-index: 2 !important;
 }
 
-
-/* Heading */
 .frame-heading {
-    color: #fff;
+    color: var(--text-color);
     font-size: 1.8rem;
     margin-bottom: 15px;
 }
 
-/* Paragraph */
 .frame-paragraph {
-    color: #fff;
+    color: var(--text-color);
     font-size: 1rem;
     margin-bottom: 25px;
     line-height: 1.5;
 }
 
-/* Button */
 .frame-button {
     display: inline-flex;
     align-items: center;
@@ -200,174 +285,73 @@ body {
     transition: transform 0.2s;
 }
 
-.frame-button i {
-    margin-right: 8px;
-    font-size: 1.2rem;
-}
-
 .frame-button:hover {
     transform: scale(1.05);
 }
 
-/* Responsive */
-@media (max-width: 480px) {
-    .frame-heading {
-        font-size: 1.5rem;
-    }
-    .frame-paragraph {
-        font-size: 0.95rem;
-    }
-    .frame-button {
-        font-size: 0.95rem;
-        padding: 10px 16px;
-    }
+.frame-bottom-image {
+    display: block;
+    width: 350px !important;
+    max-width: 350px !important;
+    margin: 0 auto !important;
+    height: auto;
+    transform: translateY(-5px) !important;
+    position: relative;
+    z-index: 1 !important;
 }
-
 
 /* =========================================================
-   03. INTRO / HERO SECTION
-========================================================= */
+   06. SIGNUP FORM
+   ========================================================= */
 
-/* Desktop background (default) */
-#intro {
-    position: relative;
-    height: auto !important;
-    min-height: calc(100vh - 80px); /* Adjust based on header/footer height */
-    padding: 20px 50px !important; /* Remove large top/bottom padding */
-    display: flex !important;
-    flex-direction: column !important;
-    justify-content: center;
+.signup-form {
+    display: flex;
     align-items: center;
-    background: url('images/lockers_new.png') center/cover no-repeat;
-}
-
-#top-image {
-    position: absolute; /* relative to .right-column */
-    top: -43vh; /* move up so the top aligns with viewport; adjust height of image accordingly */
-    left: 50%; /* center over the right column */
-    transform: translateX(-50%);
-    z-index: 10;
-    width: 195px; /* adjust size */
-}
-
-
-
-.locker-section {
-    margin-top: auto; /* push it to bottom of flex container */
+    background: white;
+    border-radius: var(--pill-radius);
+    overflow: hidden;
     width: 100%;
-    text-align: center;
-  }
-
-  .locker-section .social-icons {
-    justify-content: center; /* center icons horizontally */
-    gap: 15px;
-    margin-bottom: 20px; /* small spacing from bottom of page */
-  }
-
-  .locker-section .logo-right-mobile {
-    margin-bottom: 10px; /* space between logo and icons */
-  }
-
-.hide-on-desktop {
-    display: none !important;
+    max-width: 480px;
+    height: 70px;
+    padding: 0 10px;
+    box-sizing: border-box;
 }
 
-#intro .container {
-    display: flex;
-    justify-content: flex-start; /* align all columns to start */
-    align-items: center; /* vertical center */
-    width: 100%;
-    max-width: 100%; /* let it span full width */
-    padding: 50px 50px; /* optional padding from screen edges */
-}
-
-#intro .left-column {
-    text-align: left; /* left-align text */
-    margin-right: auto; /* pushes right column away */
-}
-
-
-#intro .right-column {
+.signup-form input[type="email"] {
     flex: 1;
-    display: flex;
-    flex-direction: column;   /* stack children vertically */
-    justify-content: center;  /* vertical centering of content */
-    align-items: center;      /* horizontal centering of content */
-    padding-right: 60px;       /* optional, you can remove if centering */
-    position: relative;       /* needed for absolute-positioned top-image */
-    top: 20vh;
-    width: 50%;               /* adjust width as needed */
+    height: 100%;
+    padding: 0 12px;
+    font-size: 1rem;
+    color: black;
+    border: none;
+    outline: none;
 }
 
-
-
-
-.frame-bottom-image {
-    display: block; /* ensure it's treated like a block element */
-    width: 90%;
-    max-width: 350px;
-    margin: 0 auto; /* center horizontally if needed */
-    height: auto;
-    transform: translateY(-10px); /* moves image up by 10px */
+.signup-form input::placeholder {
+    color: black !important;
+    opacity: 1;
 }
 
-
-/* Optional: adjust spacing in left column */
-.left-column h1 {
-    margin-bottom: 20px;
-    font-size: 2.5rem;
+.signup-form button {
+    flex: 0 0 auto;
+    border: none;
+    padding: 0 12px;
+    font-weight: 700;
+    cursor: pointer;
+    border-radius: var(--pill-radius);
+    height: 80%;
+    background: url('../../images/button-bg.jpg') center/cover no-repeat;
+    color: var(--text-color);
+    transition: transform 0.2s ease;
 }
 
-.left-column p {
-    margin-bottom: 30px;
+.signup-form button:hover {
+    transform: scale(1.05);
 }
 
-/* Right column frame block styling */
-
-
-#intro .columns {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.left-column {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    justify-content: center; /* optional, ensures left content is centered vertically */
-    align-items: flex-start;
-}
-
-
-
-.right-column > * {
-    margin: 0; /* remove extra spacing from children */
-}
-
-
-
-#intro h1 {
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 900;
-    font-size: 3rem;
-    line-height: 1.2;
-    color: white;
-    margin: 0;
-}
-
-#intro p {
-    font-size: 1.25rem;
-    line-height: 1.5;
-    color: white;
-    max-width: 700px;
-    word-wrap: break-word;
-    overflow-wrap: break-word;
-    text-align: left;
-}
-
-/* Right column: social icons */
-
+/* =========================================================
+   07. SOCIAL ICONS
+   ========================================================= */
 
 #intro .social-icons {
     display: flex;
@@ -381,14 +365,9 @@ body {
     width: 120px;
     height: 120px;
     display: inline-block;
-    outline: none !important;       /* remove focus outline */
-    text-decoration: none !important; /* remove underline */
-    border: none !important;         /* remove any border */
-    box-shadow: none !important;    /* remove any shadow that looks like a line */
-}
-
-.social-icons a:focus {
-    outline: none !important;       /* remove outline when focused */
+    outline: none !important;
+    text-decoration: none !important;
+    border: none !important;
 }
 
 #intro .social-icons a img {
@@ -398,769 +377,22 @@ body {
     display: block;
 }
 
+#intro .social-icons a:hover {
+    transform: scale(1.1);
+}
+
 .logo-right-mobile {
     display: none;
 }
 
-#intro .social-icons a:hover { transform: scale(1.1); }
-
-/* Locker section */
-.locker-section,
-#intro .locker-room-wrapper {
-    display: flex;
-    align-items: flex-start;
-    gap: 20px;
-    flex-wrap: wrap;
-}
-
-.locker-left { flex: 0 0 auto; }
-.locker-right { flex: 1 1 0; min-width: 150px; word-wrap: break-word; }
-
-#intro .locker-room-text { display: block; line-height: 1.4; font-size: 1rem; }
-
 /* =========================================================
-   04. SIGNUP PILL / BUTTONS
-========================================================= */
+   08. TERMS OF USE PAGE
+   ========================================================= */
 
-/* Desktop: combined pill */
-
-.signup-form input::placeholder { color: black !important; opacity: 1; }       /* Standard */
-.signup-form input::-webkit-input-placeholder { color: black !important; }    /* Chrome, Safari, Opera */
-.signup-form input::-moz-placeholder { color: black !important; opacity: 1; } /* Firefox 19+ */
-.signup-form input:-ms-input-placeholder { color: black !important; }         /* IE 10+ */
-.signup-form input:-moz-placeholder { color: black !important; opacity: 1; }  /* Firefox 18- */
-
-.signup-form,
-#intro .signup-pill {
-    display: flex;
-    align-items: center;
-    background: white;
-    border-radius: 50px;
-    overflow: hidden;
-    width: 100%;
-    max-width: 480px;
-    height: 70px;
-    padding: 0 10px;
-    box-sizing: border-box;
-}
-
-
-.signup-form input {
-    color: black;
-}
-
-.signup-form input[type="email"],
-#intro .signup-pill input[type="email"] {
-    flex: 1;
-    height: 100%;
-    padding: 0 12px;
-    font-size: 1rem;
-    color: black;
-    border: none;
-    outline: none;
-}
-
-.signup-form input[type="email"],
-.signup-form button {
-  margin: 0 !important;         /* prevent margin from breaking pill height */
-}
-
-.signup-form button,
-#intro .signup-pill button {
-    flex: 0 0 auto;
-    border: none;
-    padding: 0 12px;
-    font-weight: 700;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 50px;
-    height: 80%;
-    background: url('../../images/button-bg.jpg') center/cover no-repeat;
-    color: #fff;
-    transition: transform 0.2s ease;
-}
-
-.signup-form button:hover,
-#intro .signup-pill button:hover { transform: scale(1.05); }
-
-/* Locker buttons */
-.locker-room,
-#intro .button.locker {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    gap: 8px;
-    padding: 9px 18px;
-    border-radius: 28px;
-    background: #ff4081;
-    color: #fff;
-    font-weight: 600;
-    text-decoration: none;
-    transition: background 0.3s ease;
-}
-
-.locker-room:hover,
-#intro .button.locker:hover { background: #e0336b; }
-
-/* =========================================================
-   04.1 FOOTER
-========================================================= */
-
- /* =========================================================
-   04.1 FOOTER (Always Same on All Devices)
-========================================================= */
-
-footer {
-    position: relative !important;
-    bottom: auto;
-    left: auto;
-    width: 100%;
-    background: rgba(0,0,0,0);
-    color: #fff;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 15px 30px;
-    z-index: 100;
-}
-
-.footer-icons {
-  display: flex;
-  justify-content: flex-start;
-  align-items: flex-start;
-  gap: 18px;
-}
-
-.footer-icons div {
-  text-align: center;
-}
-
-.footer-icons img {
-  height: auto;
-  display: block;
-  margin-bottom: 5px;
-}
-
-.footer-right {
-  position: absolute;
-  right: 20px;
-  bottom: 20px;
-  display: flex;
-  gap: 15px;
-  align-items: center;
-}
-
-.footer-right a {
-  text-decoration: none !important;
-  border: none !important;
-  outline: none !important;
-  color: white;
-  font-size: 24px;
-  transition: transform 0.3s ease;
-}
-
-.footer-right a:hover {
-  transform: scale(1.1);
-}
-
-.footer-right i {
-  font-size: 20px;
-  cursor: pointer;
-}
-
-.footer-left img {
-  width: 14px;
-  height: auto;
-  margin-top: -3px;
-}
-
-.footer-left {
-  position: absolute;
-  bottom: 40px;
-  left: 60px;
-}
-
-.footer-desktop {
-    position: relative !important; /* Normal flow, not fixed */
-    left: auto;
-    right: auto;
-    z-index: 100;
-    background: transparent !important;
-    width: 100%;
-    padding: 15px 30px;
-    box-sizing: border-box;
-}
-
-.footer-desktop .left {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-}
-
-.footer-desktop .right {
-  display: flex;
-  gap: 15px;
-}
-
-.footer-desktop img {
-  max-height: 40px;
-  width: auto;
-}
-
-
-
-    .footer-right a:hover {
-        transform: scale(1.1); /* subtle hover effect */
-    }
-
-    /* Example icons */
-    .footer-right i {
-        font-size: 20px;
-        cursor: pointer;
-    }
-
-    .footer-left img {
-        width: 14px;           /* smaller size */
-        height: auto;          /* keep aspect ratio */
-        margin-top: -3px;      /* move icons slightly upward */
-    }
-
-    /* Optional: add text below left icons */
-    .footer-left-text {
-      margin-top: 10px; /* space between icons and text */
-      font-size: 12px;  /* optional: adjust text size */
-      color: #fff;      /* optional: text color */
-    }
-
-    .footer-left {
-        position: absolute; /* or relative if inside a positioned container */
-        bottom: 40px;       /* distance from bottom of the screen */
-        left: 60px;         /* distance from left side of the screen */
-    }
-
-
-.footer-desktop .left {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-}
-
-.footer-desktop .right {
-    display: flex;
-    gap: 15px;
-}
-
-
-
-
-
-/* =========================================================
-   05. RESPONSIVE / MOBILE ADJUSTMENTS
-========================================================= */
-
-@media (max-width: 900px) {
-  #intro {
-    flex-direction: column;
-    padding: 3.5rem 2rem;
-    text-align: center;
-  }
-  #intro .left-column,
-  #intro .right-column {
-    width: 100%;
-    align-items: center;
-  }
-  #intro .right-column {
-    margin-top: 0 !important;
-    padding-top: 0 !important;
-    justify-content: center;
-  }
-  #intro .social-icons {
-    gap: 15px;
-    justify-content: center;
-  }
-  #intro .social-icons a {
-    width: 30px;
-    height: 30px;
-  }
-  .tabs-section .tab-card {
-    width: 95%;
-  }
-  .tabs-section .tab-content {
-    min-height: 280px;
-    padding: 18px;
-  }
-  .tabs-section .tab-container {
-    padding: 4px;
-    gap: 6px;
-  }
-  .tabs-section .tab-link {
-    padding: 8px 14px;
-    font-size: 0.9rem;
-  }
-}
-
-
-@media (max-width: 768px) {
-  /* Header */
-  .site-header {
-    position: relative !important; /* Normal flow */
-    padding: 10px 20px !important;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-
-  /* Ensure intro section is a clean flex column */
-  #intro {
-    height: auto !important; /* Let content set height */
-    min-height: 100vh;
-    padding: 20px !important;
-    box-sizing: border-box;
-    display: flex !important;
-    flex-direction: column !important;
-    justify-content: flex-start !important; /* Start from top */
-    align-items: center;
-    width: 100%;
-    background: url('../../images/mob-backgrnd.png') center/cover no-repeat !important;
-  }
-
-  /* Container should stack vertically and center content */
-  #intro .container {
-    flex-direction: column !important;
-    align-items: center !important;
-    padding: 0 20px !important;
-    width: 100%;
-    max-width: 100%;
-  }
-
-  /* Left column adjustments */
-  #intro .left-column {
-    width: 100%;
-    text-align: center;
-    margin: 0 !important;
-    padding: 0 !important;
-    margin-bottom: 20px !important;
-  }
-
-  /* Restore heading size and spacing */
-  #intro .left-column h1 {
-    font-size: 1.5rem !important;
-    line-height: 1.2 !important;
-    margin-top: 0.5rem !important;
-    margin-bottom: 0.5rem !important;
-  }
-
-  /* Restore subtext size and spacing */
-  #intro .left-column p {
-    font-size: 0.9rem !important;
-    line-height: 1.3 !important;
-    max-width: 90%;
-    margin-bottom: 0.5rem !important;
-  }
-  .locker-room-sub-text {
-    display: block !important;
-    line-height: 0.9 !important;
-    font-size: 0.9rem !important;
-    text-align: center !important;
-    margin-bottom: 0.2rem !important;
-  }
-
-  /* Right column adjustments */
-  #intro .right-column {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: 0 !important;
-    margin: 0 !important;
-    top: 0 !important;
-  }
-
-  /* Frame block specific fixes */
-  #intro .right-column .frame-block {
-    width: 90vw;
-    max-width: 250px;
-    margin: 0 auto !important;
-    padding: 20px !important;
-    margin-top: 10px !important;
-    margin-bottom: 20px !important;
-    margin-left: 0 !important;
-    height: auto;
-    box-sizing: border-box;
-  }
-
-  /* Bottom image adjustments */
-  .frame-bottom-image {
-    width: 90%;
-    max-width: 250px;
-    margin: 0 auto !important;
-    transform: translateY(-10px) !important;
-  }
-
-  /* Restore signup form and button as stacked elements */
-  .signup-form {
-    display: flex !important;
-    flex-direction: column !important;
-    width: 100% !important;
-    max-width: 400px !important;
-    gap: 8px !important;
-    margin: 10px auto !important;
-    padding: 0 !important;
-    background: none !important;
-    border-radius: 0 !important;
-    overflow: visible !important;
-  }
-
-  .signup-form input[type="email"] {
-    box-sizing: border-box !important;
-    width: 100% !important;
-    max-width: 100% !important;
-    height: 50px !important;
-    line-height: 50px !important;
-    padding: 0 15px !important;
-    font-size: 1rem !important;
-    border-radius: 50px !important;
-    background: url('../../images/pill-bg.jpg') center/cover no-repeat !important;
-    text-align: center;
-    box-shadow: 3px 3px 0px rgba(138,43,226,0.3) !important;
-    margin: 0 !important;
-    border: none;
-    outline: none;
-  }
-
-  .signup-form button {
-    height: 50px !important;
-    width: 100% !important;
-    max-width: 100% !important;
-    font-size: 1rem !important;
-    font-weight: 700 !important;
-    border-radius: 50px !important;
-    color: #fff !important;
-    box-shadow: 3px 3px 0px rgba(138,43,226,0.3) !important;
-    background: url('../../images/button-bg.jpg') center/cover no-repeat !important;
-    border: none;
-    cursor: pointer;
-    transition: transform 0.2s ease;
-  }
-
-  .signup-form button:hover {
-    background: #e0336b !important;
-    transform: scale(1.05) !important;
-  }
-
-  /* Locker section adjustments */
-  .locker-section {
-    display: flex !important;
-    flex-direction: column !important;
-    align-items: center !important;
-    justify-content: flex-end !important;
-    width: 100%;
-    margin: 0 !important;
-    padding-bottom: 20px !important;
-  }
-
-  /* Footer adjustments */
-  .footer-mobile {
-    position: relative !important; /* Normal flow */
-    width: 100%;
-    padding: 10px 20px !important;
-    display: flex !important;
-    flex-direction: column !important;
-    align-items: center !important;
-    gap: 8px;
-    background: transparent;
-  }
-
-  .footer-mobile img.logo-right-mobile {
-    display: block;
-    max-height: 40px;
-    width: auto;
-  }
-
-  .footer-mobile .social-icons {
-    display: flex;
-    flex-direction: row;
-    gap: 12px;
-  }
-
-  .footer-mobile .social-icons img {
-    max-height: 43px;
-    width: auto;
-  }
-
-  /* Remove residual top image */
-  #top-image {
-    display: none !important;
-  }
-
-  /* Ensure desktop logos are hidden */
-  .logo-left, .logo-right, .right-logo {
-    display: none !important;
-  }
-
-  .logo-right-mobile {
-    display: block !important;
-    margin-top: 10px !important;
-    margin-bottom: 15px !important;
-    width: 90px !important;
-    height: auto !important;
-    z-index: 10;
-  }
-
-  /* Social icons adjustments */
-  .social-icons {
-    display: flex !important;
-    flex-direction: column !important;
-    align-items: center !important;
-    gap: 12px !important;
-    margin: 12px 0 !important;
-    z-index: 10 !important;
-  }
-
-  .social-icons a,
-  .social-icons img {
-    margin-bottom: 10px !important;
-    margin-top: 1px !important;
-    width: 50px !important;
-    height: 50px !important;
-  }
-
-  .hide-on-desktop {
-    margin-top: auto;
-    width: 100%;
-    display: flex !important;
-    justify-content: center;
-    padding-bottom: 10px;
-    margin-top: 1px !important;
-  }
-
-  .hide-on-desktop .social-icons {
-    display: flex !important;
-    flex-direction: row !important;
-    justify-content: center !important;
-    align-items: center !important;
-    gap: 15px !important;
-    margin: 0 !important;
-    padding-bottom: 0 !important;
-  }
-
-  .hide-on-desktop .social-icons a,
-  .hide-on-desktop .social-icons img {
-    width: 50px !important;
-    height: 50px !important;
-    margin: 0 !important;
-  }
-}
-
-
-
-
-
-@media (max-width: 600px) {
-    #intro .social-icons a { width: 25px; height: 25px; }
-}
-
-/* =========================================================
-   06. ABOUT PAGE
-========================================================= */
-
-#about {
-    position: relative;
-    width: 100%;
-    min-height: 100vh;
-    padding: 20px 20px 60px;
-    background: url('../images/about-lockers.png') center/cover no-repeat;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    color: #fff;
-    box-sizing: border-box;
-    z-index: 0;
-    overflow: hidden;
-}
-
-#about::before {
-    content: '';
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-    background: url('../../images/about-lockers.png') no-repeat;
-    background-size: 100% 100%;
-    background-position: top left;
-    z-index: -1;
-}
-
-#about .logo-header img { max-width: 120px; height: auto; display: inline-block; }
-
-/* Tabs section */
-#about .tabs-section {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
-    max-width: 920px;
-    margin: 0 auto;
-    transform: translateY(-4px);
-    z-index: 2;
-}
-
-#about .tabs-section .tab-container {
-    display: flex;
-    justify-content: center;
-    gap: 6px;
-    margin-bottom: 20px;
-    padding: 2px 3px;
-    width: fit-content;
-    border-radius: 50px !important;
-    border: 1px solid orange !important;
-    background: url('../../images/tab-pill-bg.jpg') center/cover no-repeat !important;
-    position: relative;
-}
-
-/* Tab links */
-#about .tabs-section .tab-link {
-    background: rgba(255, 255, 255, 0.2);
-    color: #fff;
-    border: none;
-    padding: 5px 10px;
-    border-radius: 999px;
-    font-weight: 600;
-    font-size: 0.8rem;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 60px;
-    line-height: normal;
-}
-
-#about .tabs-section .tab-link.active {
-    background: rgba(255, 255, 255, 0.8);
-    color: #000;
-}
-
-/* Tab content */
-
-.tab-content {
-    color: black !important;
-    text-align: left;
-  }
-
-.tab-content h2, h3, h4, strong {
-    color: #01042c !important;
-  }
-
-.outlined-text {
-        color: white;
-    text-shadow:
-        4px 0 0 #01042c,
-       -4px 0 0 #01042c,
-        0 4px 0 #01042c,
-        0 -4px 0 #01042c,
-        3px 3px 0 #01042c,
-       -3px -3px 0 #01042c,
-        3px -3px 0 #01042c,
-       -3px 3px 0 #01042c;                   /* fill color */
-}
-
-
-#about .tabs-section .tab-card { width: 100%; max-width: 900px; margin: 0 auto 40px; }
-#about .tabs-section .tab-content {
-    display: none;
-    height: calc(65vh);
-    overflow-y: auto;
-    background: #fff;
-    color: #111;
-    border-radius: 8px;
-    padding: 25px 20px;
-    position: relative;
-    z-index: 2;
-    min-height: calc(60vh);
-    max-height: calc(100vh - 150px);
-    margin-bottom: 30px;
-    box-shadow:
-        3px 3px 0px rgba(138,43,226,0.9),
-        4px 4px 0px rgba(138,43,226,0.9),
-        5px 5px 0px rgba(138,43,226,0.9),
-        6px 6px 0px rgba(138,43,226,0.9),
-        7px 7px 0px rgba(138,43,226,0.9),
-        8px 8px 0px rgba(138,43,226,0.9),
-        9px 9px 0px rgba(138,43,226,0.9),
-        10px 10px 0px rgba(138,43,226,0.9),
-        12px 12px 0px rgba(138,43,226,0.9),
-        15px 15px 0px rgba(138,43,226,0.9);
-    font-family: 'Montserrat', sans-serif;
-    font-size: 1rem;
-    line-height: 1.6;
-    scrollbar-width: thin;           
-    scrollbar-color: #9940ff #f5f5f5; 
-}
-
-/* WebKit browsers */
-#about .tabs-section .tab-content::-webkit-scrollbar {
-    width: 8px;                       /* scrollbar width */
-}
-
-#about .tabs-section .tab-content::-webkit-scrollbar-track {
-    background: #f5f5f5;
-    border-radius: 10px;
-}
-
-#about .tabs-section .tab-content::-webkit-scrollbar-thumb {
-    background-color: #ff4081;
-    border-radius: 10px;
-    border: 2px solid #f5f5f5;
-}
-
-#about .tabs-section .tab-content::-webkit-scrollbar-button {
-    width: 0 !important;
-    height: 0 !important;
-    display: none !important;
-}
-
-
-#about .tabs-section .tab-content.active { display: block; }
-
-/* =========================================================
-   07. UTILITIES / HELPERS
-========================================================= */
-
-.tab-buttons { display:flex; justify-content:center; gap:10px; margin-bottom:15px; }
-
-
-
-/* Make header and footer fixed and transparent */
-.site-header, .footer-desktop {
-    position: fixed;
-    left: 0;
-    right: 0;
-    z-index: 100;
-    background: transparent !important; /* force transparency */
-}
-
-.site-header {
-    position: relative !important; /* Normal flow, not fixed */
-    left: auto;
-    right: auto;
-    z-index: 100;
-    background: transparent !important;
-    width: 100%;
-    padding: 20px; /* Adjust as needed for spacing */
-    box-sizing: border-box;
-}
-
-/* Scrollable content area */
 .terms-content {
     position: absolute;
-    top: 80px; /* adjust to match header height */
-    bottom: 100px; /* adjust to match footer height */
+    top: 80px;
+    bottom: 100px;
     margin: 0 auto;
     max-width: none;
     width: 90%;
@@ -1168,34 +400,33 @@ footer {
     right: 0;
     overflow-y: auto;
     padding: 40px 20px;
-    color: white;
+    color: var(--text-color);
     font-family: 'Montserrat', sans-serif;
     line-height: 1.6;
-    -ms-overflow-style: none;  /* IE and Edge */
-    scrollbar-width: none;     /* Firefox */
+    scrollbar-width: none;
 }
 
 .terms-content::-webkit-scrollbar {
-    width: 0px;             /* remove scrollbar for Webkit browsers */
+    width: 0;
     background: transparent;
 }
 
-/* Optional: overlay for readability */
 .terms-content::before {
     content: "";
     position: absolute;
-    top: 0; left: 0;
-    width: 100%; height: 100%;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
     background: rgba(0,0,0,0.5);
     z-index: -1;
 }
 
-/* Headings and lists styling */
 .terms-content h2 {
     margin-top: 40px;
 }
 
-.terms-content p, 
+.terms-content p,
 .terms-content li {
     margin-bottom: 15px;
 }
@@ -1209,175 +440,293 @@ footer {
 .terms-content h3,
 .terms-content li,
 .terms-content strong {
-    color: #ffffff !important;
+    color: var(--text-color) !important;
     margin-top: 30px;
     margin-bottom: 15px;
 }
 
 /* =========================================================
-   08. ROOT VARIABLES
-========================================================= */
-
-:root {
-    --about-logo-top: 1px;
-    --about-logo-width: 180px;
-    --about-logo-gap: 12px;
-}
-
-.about-logo {
-    margin-bottom: 20px !important;  /* space below logo */
-    display: block !important;       /* ensure it’s block so margin applies */
-    text-align: center !important;   /* optional: center logo */
-}
-
-.logo-header.about-logo {
-    position: relative !important;   /* normal flow */
-    top: auto !important;
-    left: auto !important;
-    transform: none !important;
-    margin: 0px auto 0px auto !important; /* space above and below */
-    text-align: center !important;
-    max-width: var(--about-logo-width) !important;
-    display: block !important;
-    z-index: 999 !important;
-}
-
-.logo-header.about-logo img {
-    display: block;
-    max-width: var(--about-logo-width) !important;
-    width: auto !important;
-    height: auto !important;
-}
+   09. RESPONSIVE / MOBILE ADJUSTMENTS
+   ========================================================= */
 
 @media (max-width: 900px) {
-    :root { --about-logo-top: 12px; --about-logo-width: 90px; --about-logo-gap: 10px; }
+    #intro {
+        flex-direction: column;
+        padding: 3.5rem 2rem;
+        text-align: center;
+    }
+
+    #intro .left-column,
+    #intro .right-column {
+        width: 100%;
+        align-items: center;
+    }
+
+    #intro .right-column {
+        margin-top: 0 !important;
+        padding-top: 0 !important;
+        justify-content: center;
+        top: 0;
+    }
+
+    #intro .social-icons {
+        gap: 15px;
+        justify-content: center;
+    }
+
+    #intro .social-icons a {
+        width: 30px;
+        height: 30px;
+    }
 }
 
 @media (max-width: 768px) {
+    /* Header */
+    .site-header {
+        position: fixed !important;
+        top: 0;
+        left: 0;
+        right: 0;
+        padding: 10px 20px !important;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: transparent !important;
+        z-index: 1000 !important;
+    }
 
-#about .tabs-section .tab-link {
-    white-space: normal !important;   /* allow text to wrap */
-    word-break: break-word !important; /* break long words if needed */
-    text-align: center !important;    /* center the text */
+    /* Intro section */
+    #intro {
+        height: 100vh !important;
+        min-height: 100vh !important;
+        padding: 60px 20px 80px 20px !important;
+        box-sizing: border-box;
+        display: flex !important;
+        flex-direction: column !important;
+        justify-content: center !important;
+        align-items: center;
+        width: 100%;
+        background: url('../../images/mob-backgrnd.png') center/cover no-repeat !important;
+    }
+
+    #intro .container {
+        flex-direction: column !important;
+        align-items: center !important;
+        padding: 0 20px !important;
+        width: 100%;
+        max-width: 100%;
+    }
+
+    #intro .left-column {
+        width: 100%;
+        text-align: center;
+        margin: 0 !important;
+        padding: 0 !important;
+        margin-bottom: 20px !important;
+    }
+
+    #intro .left-column h1 {
+        font-size: var(--h1-mobile) !important;
+        line-height: 1.2 !important;
+        margin-top: 0.5rem !important;
+        margin-bottom: 0.5rem !important;
+    }
+
+    #intro .left-column p {
+        font-size: var(--p-mobile) !important;
+        line-height: 1.3 !important;
+        max-width: 90%;
+        margin-bottom: 0.5rem !important;
+    }
+
+    .locker-room-sub-text {
+        display: block !important;
+        line-height: 0.9 !important;
+        font-size: var(--p-mobile) !important;
+        text-align: center !important;
+        margin-bottom: 0.2rem !important;
+    }
+
+    #intro .right-column {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 0 !important;
+        margin: 0 !important;
+        top: 0 !important;
+    }
+
+    /* Frame block */
+    #intro .right-column .frame-block {
+        width: 250px !important;
+        max-width: 250px !important;
+        margin: 0 auto !important;
+        padding: 20px !important;
+        margin-top: 10px !important;
+        margin-bottom: 0 !important;
+        margin-left: 0 !important;
+        height: auto;
+        box-sizing: border-box;
+        z-index: 2 !important;
+    }
+
+    .frame-bottom-image {
+        width: 250px !important;
+        max-width: 250px !important;
+        margin: 0 auto !important;
+        transform: translateY(-5px) !important;
+        position: relative;
+        z-index: 1 !important;
+    }
+
+    /* Signup form */
+    .signup-form {
+        display: flex !important;
+        flex-direction: column !important;
+        width: 100% !important;
+        max-width: 400px !important;
+        gap: 8px !important;
+        margin: 10px auto !important;
+        padding: 0 !important;
+        background: none !important;
+        border-radius: 0 !important;
+        overflow: visible !important;
+    }
+
+    .signup-form input[type="email"] {
+        box-sizing: border-box !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        height: 50px !important;
+        line-height: 50px !important;
+        padding: 0 15px !important;
+        font-size: 1rem !important;
+        border-radius: var(--pill-radius) !important;
+        background: url('../../images/pill-bg.jpg') center/cover no-repeat !important;
+        text-align: center;
+        box-shadow: 3px 3px 0px rgba(138,43,226,0.3) !important;
+        margin: 0 !important;
+        border: none;
+        outline: none;
+    }
+
+    .signup-form button {
+        height: 50px !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        font-size: 1rem !important;
+        font-weight: 700 !important;
+        border-radius: var(--pill-radius) !important;
+        color: var(--text-color) !important;
+        box-shadow: 3px 3px 0px rgba(138,43,226,0.3) !important;
+        background: url('../../images/button-bg.jpg') center/cover no-repeat !important;
+        border: none;
+        cursor: pointer;
+        transition: transform 0.2s ease;
+    }
+
+    .signup-form button:hover {
+        background: var(--primary-hover) !important;
+        transform: scale(1.05) !important;
+    }
+
+    /* Footer */
+    .footer-mobile {
+        position: fixed !important;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 100%;
+        padding: 10px 20px calc(env(safe-area-inset-bottom, 0px) + 10px) !important;
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        gap: 8px;
+        background: transparent !important;
+        z-index: 1000 !important;
+    }
+
+    .footer-mobile img.logo-right-mobile {
+        display: block;
+        max-height: 40px;
+        width: auto;
+    }
+
+    .footer-mobile .social-icons {
+        display: flex;
+        flex-direction: row;
+        gap: 12px;
+    }
+
+    .footer-mobile .social-icons img {
+        max-height: 43px;
+        width: auto;
+    }
+
+    /* Hide desktop logos */
+    .logo-left, .logo-right, .right-logo {
+        display: none !important;
+    }
+
+    .logo-right-mobile {
+        display: block !important;
+        margin-top: 10px !important;
+        margin-bottom: 15px !important;
+        width: 90px !important;
+        height: auto !important;
+        z-index: 10;
+    }
+
+    .social-icons {
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        gap: 12px !important;
+        margin: 12px 0 !important;
+        z-index: 10 !important;
+    }
+
+    .social-icons a,
+    .social-icons img {
+        margin-bottom: 10px !important;
+        margin-top: 1px !important;
+        width: 50px !important;
+        height: 50px !important;
+    }
+
+    .hide-on-desktop {
+        margin-top: auto;
+        width: 100%;
+        display: flex !important;
+        justify-content: center;
+        padding-bottom: 10px;
+        margin-top: 1px !important;
+    }
+
+    .hide-on-desktop .social-icons {
+        display: flex !important;
+        flex-direction: row !important;
+        justify-content: center !important;
+        align-items: center !important;
+        gap: 15px !important;
+        margin: 0 !important;
+        padding-bottom: 0 !important;
+    }
+
+    .hide-on-desktop .social-icons a,
+    .hide-on-desktop .social-icons img {
+        width: 50px !important;
+        height: 50px !important;
+        margin: 0 !important;
+    }
 }
 
-  nav.tab-container {
-    display: flex !important;
-    flex-direction: row !important;
-    flex-wrap: nowrap !important;       /* prevent stacking */
-    justify-content: space-between !important;
-    align-items: center !important;
-    background: #f5f5f5 !important;
-    border-radius: 60px !important;
-    padding: 6px !important;
-    margin: 0 auto !important;
-    width: 100% !important;
-    box-sizing: border-box !important;
-    gap: 8px !important;
-    overflow-x: auto !important;
-  }
-
-  nav.tab-container button.tab-link {
-    flex: 1 1 auto !important;
-    min-width: 0 !important;
-    font-size: 8px !important;
-    line-height: 1.2 !important;
-    padding: 6px 8px !important;
-    border-radius: 60px !important;
-    background: transparent !important;
-    color: #ffffff !important;
-    text-align: center !important;
-    white-space: nowrap !important;
-    box-sizing: border-box !important;
-  }
-
-  nav.tab-container button.tab-link.active {
-    background: #ffffff !important;
-    color: #000000 !important;
-  }
-
-  nav.tab-container {
-      margin-bottom: 10px !important;  /* small gap below buttons */
-      background: url('../../images/tab-pill-bg.jpg') center/cover no-repeat !important;
-  }
-
-  /* Content boxes squared */
-  .tab-card .tab-content {
-      border-radius: 0 !important;     /* remove rounded corners */
-      padding: 1rem !important;        /* keep some internal spacing */
-      background: #fff !important;     /* optional: box background */
-      box-shadow: 0 1px 3px rgba(0,0,0,0.1) !important;  /* optional subtle shadow */
-  }
-
-  .tab-card .tab-content h1{
-    font-size: 1.4rem !important;
-}
-
-  .tab-card .tab-content h2{
-    font-size: 1rem !important;
-}
-
-  .tab-card .tab-content h3{
-    font-size: 0.9rem !important;
-}
-
-  .tab-card .tab-content p li{
-    font-size: 0.7rem !important;
-}
-
-  .tab-content {
-    color: black;
-  }
-
-
-  .outlined-text {
-        color: white;
-    text-shadow:
-        1px 0 0 #01042c,
-       -1px 0 0 #01042c,
-        0 1px 0 #01042c,
-        0 -1px 0 #01042c,
-        1px 1px 0 #01042c,
-       -1px -1px 0 #01042c,
-        1px -1px 0 #01042c,
-       -1px 1px 0 #01042c;                   /* fill color */
-}
-
-  #about .logo-header {
-      display: flex !important;
-      flex-direction: column !important;
-      align-items: center !important;
-      justify-content: flex-start !important;
-      padding: 5px 0 !important;     /* very small padding above */
-      margin: 5px !important;           /* remove extra space */
-  }
-
-  .logo-left-mobile {
-      width: 150px !important;        /* smaller logo */
-      height: auto !important;
-      display: block !important;
-      z-index: 10 !important;
-      margin: -10px auto -5px auto !important;
-  }
-
-  /* Optional: tighten the tabs section right below */
-  #about .tabs-section {
-      margin-top: 4px !important;     /* minimal gap below logo */
-  }
-
-  #intro .hide-on-desktop {
-    position: absolute !important;
-    left: 50% !important;
-    transform: translateX(-50%) !important;
-    bottom: 0 !important;
-
-    /* Add safe area awareness */
-    padding-bottom: calc(env(safe-area-inset-bottom, 0px) + 10px) !important;
-
-    display: flex !important;
-    justify-content: center !important;
-    gap: 12px !important;
-    width: auto !important;
-    z-index: 9999 !important;
-  }
+@media (max-width: 600px) {
+    #intro .social-icons a {
+        width: 25px;
+        height: 25px;
+    }
 }
