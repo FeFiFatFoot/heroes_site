@@ -59,8 +59,10 @@ body {
 }
 
 .main-content {
-    flex: 1; /* grows to take all available space */
-    overflow: auto; /* optional: allow scroll only within content if needed */
+    flex: 1;
+    overflow: auto;
+    margin-top: 0; /* No extra margin needed */
+    margin-bottom: 0;
 }
 
 *, *::before, *::after { box-sizing: inherit; }
@@ -227,14 +229,17 @@ body {
 ========================================================= */
 
 /* Desktop background (default) */
-  #intro {
+#intro {
     position: relative;
     height: auto !important;
-    min-height: calc(100vh - 80px); /* 80px = header height */
-    padding-top: 40px; /* extra spacing */
-    padding-bottom: 80px !important; /* make space before footer */
-    display: block !important;  /* stack naturally */
-  }
+    min-height: calc(100vh - 80px); /* Adjust based on header/footer height */
+    padding: 20px 50px !important; /* Remove large top/bottom padding */
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: center;
+    align-items: center;
+    background: url('images/lockers_new.png') center/cover no-repeat;
+}
 
 #top-image {
     position: absolute; /* relative to .right-column */
@@ -508,17 +513,17 @@ body {
 ========================================================= */
 
 footer {
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  background: rgba(0,0,0,0); /* fully transparent */
-  color: #fff;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 15px 30px;
-  z-index: 1000;
+    position: relative !important;
+    bottom: auto;
+    left: auto;
+    width: 100%;
+    background: rgba(0,0,0,0);
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+    z-index: 100;
 }
 
 .footer-icons {
@@ -578,13 +583,14 @@ footer {
 }
 
 .footer-desktop {
-  height: 80px;
-  background: transparent;
-  color: #fff;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 0 20px;
+    position: relative !important; /* Normal flow, not fixed */
+    left: auto;
+    right: auto;
+    z-index: 100;
+    background: transparent !important;
+    width: 100%;
+    padding: 15px 30px;
+    box-sizing: border-box;
 }
 
 .footer-desktop .left {
@@ -1140,11 +1146,14 @@ footer {
 }
 
 .site-header {
-    top: 0;
-}
-
-.footer-desktop {
-    bottom: 0;
+    position: relative !important; /* Normal flow, not fixed */
+    left: auto;
+    right: auto;
+    z-index: 100;
+    background: transparent !important;
+    width: 100%;
+    padding: 20px; /* Adjust as needed for spacing */
+    box-sizing: border-box;
 }
 
 /* Scrollable content area */
