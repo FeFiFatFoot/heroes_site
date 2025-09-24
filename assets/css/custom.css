@@ -193,11 +193,11 @@ footer {
     flex: 1;
     display: flex;
     flex-direction: column;
-    justify-content: flex-start; /* Changed from center to move group higher */
+    justify-content: flex-start;
     align-items: center;
     padding-right: 60px;
     position: relative;
-    top: 0; 
+    top: -20px; /* Move group higher */
     width: 50%;
 }
 
@@ -242,10 +242,10 @@ footer {
 
 .tag-image {
     position: absolute;
-    top: -80px; /* Offset #intro's padding-top: 80px */
+    top: -100px; /* Increased offset to align with page top */
     width: 350px !important;
     max-width: 350px !important;
-    margin: 0 auto 0px auto; /* Add negative margin-bottom for overlap */
+    margin: 0 auto 0px auto;
     height: auto;
     z-index: 0 !important;
     left: 50%;
@@ -278,7 +278,7 @@ footer {
     max-width: 350px !important;
     margin: -10px auto 0 auto; /* Negative margin for overlap */
     height: auto;
-    z-index: 1 !important;
+    z-index: 999 !important;
 }
 
 .frame-heading {
