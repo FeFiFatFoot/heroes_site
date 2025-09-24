@@ -587,7 +587,7 @@ footer {
     #intro {
         height: auto !important;
         min-height: 100vh;
-        padding: 60px 20px calc(env(safe-area-inset-bottom, 0px) + 80px) !important;
+        padding: 60px 20px calc(env(safe-area-inset-bottom, 0px) + 120px) !important; /* Increased padding for footer */
         background: url('../../images/mob-backgrnd.png') center/cover no-repeat !important;
         overflow: visible !important;
     }
@@ -625,10 +625,13 @@ footer {
     .locker-room-sub-text {
         display: block !important;
         line-height: 0.9 !important;
-        font-size: var(--p-mobile) !important;
+        font-size: 0.7rem !important; /* Your custom size */
         text-align: center !important;
         margin-bottom: 0.2rem !important;
-        font-size: 0.7rem !important;
+    }
+
+    .locker-heading {
+        font-size: 1.4rem !important; /* Your custom size */
     }
 
     #intro .right-column {
@@ -643,7 +646,7 @@ footer {
     }
 
     /* Frame block */
-    .tag-image {
+    #top-image {
         display: none !important; /* Hide on mobile */
     }
 
@@ -668,15 +671,11 @@ footer {
     }
 
     .frame-heading {
-        font-size: 1.4rem !important;
-    }
-
-    #top-image {
-      display: none !important;
+        font-size: 1.4rem !important; /* Your custom size */
     }
 
     .frame-paragraph {
-        font-size: 0.7rem !important;
+        font-size: 0.7rem !important; /* Your custom size */
     }
 
     /* Signup form */
@@ -740,7 +739,8 @@ footer {
     .signup-checkbox {
         font-size: 10px;
         gap: 6px;
-        margin-top: 8px;
+        margin-top: 16px !important; /* Increased to move below button */
+        z-index: 2;
     }
 
     .signup-checkbox input[type="checkbox"] {
@@ -750,10 +750,10 @@ footer {
 
     /* Footer */
     .footer-mobile {
-        position: fixed !important;
-        bottom: 0;
-        left: 50%;
-        transform: translateX(-50%);
+        position: relative !important; /* Changed from fixed to avoid overlap */
+        bottom: auto;
+        left: auto;
+        transform: none;
         width: 100%;
         padding: 10px 20px calc(env(safe-area-inset-bottom, 0px) + 10px) !important;
         display: flex !important;
@@ -777,7 +777,7 @@ footer {
     }
 
     .footer-mobile .social-icons img {
-        max-height: 40px;
+        max-height: 20px !important; /* 50% of 40px */
         width: auto;
     }
 
@@ -787,8 +787,11 @@ footer {
         margin-bottom: 8px;
     }
 
-    /* Hide desktop logos */
+    .footer-left-text {
+        font-size: 6px !important; /* 50% of 12px */
+    }
 
+    /* Hide desktop logos */
     .logo-right-mobile {
         display: block !important;
         margin-top: 10px !important;
@@ -808,8 +811,8 @@ footer {
 
     .social-icons a,
     .social-icons img {
-        width: 40px !important;
-        height: 40px !important;
+        width: 20px !important; /* 50% of 40px */
+        height: 20px !important;
     }
 
     .hide-on-desktop {
